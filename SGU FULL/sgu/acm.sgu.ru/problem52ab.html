@@ -1,0 +1,90 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=401 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 401. Geologist Dubrovsky </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>401. Geologist Dubrovsky</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Geologist Dubrovsky travels a lot around the world and often faces different unusual phenomena.
+And now he found a unique place on the planet, where <i>N</i> rivers flow in parallel tight next to each other.
+The distance between each pair of neighbouring rivers can be neglected. Rivers flow from the south to the north.
+Geologist stays on the left bank of the most western river and wants to get to the right bank of the most eastern river.
+
+The flow speed of <i>i</i>-th river is <i>v</i><sub><i>i</i></sub> meters per second and its width is <i>w</i><sub><i>i</i></sub> meters.
+Geologist Dubrovsky swims with the speed <i>u</i> meters per second in still water.
+If he swims across river, his real speed is a vector sum of his own speed vector and the speed
+vector of the river flow.
+
+What is the maximal distance Dubrovsky can get from his original position by the time of sunset,
+if he has only <i>t</i> seconds left?
+Remember that his destination point is a point on the right bank of the easternmost river.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains three integer numbers <i>N</i>, <i>u</i> and <i>t</i>
+(1 &le; <i>N</i> &le; 50; 1 &le; <i>u</i>,<i>t</i> &le; 1000).
+Each of the following <i>N</i> lines contains a pair of integers <i>w</i><sub><i>i</i></sub>, <i>v</i><sub><i>i</i></sub>
+(1 &le; <i>w</i><sub><i>i</i></sub>, <i>v</i><sub><i>i</i></sub> &le; 1000) describing corresponding parameters of the <i>i</i>-th river.
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>To the first line of the output write the desired distance or -1 if geologist can't
+reach the right bank of the most eastern river in <i>t</i> seconds.
+The distance with a relative or absolute error of at most 10<sup>-6</sup> will be considered correct.
+If solution exists the second line of the output should contain
+the sequence <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>,..., <i>t</i><sub><i>N</i></sub>, where <i>t</i><sub><i>i</i></sub> is the time spent crossing the
+river <i>i</i> in the case of optimal track. The track is optimal if as a result Dubrovsky gets
+to the point on the right bank of the easternmost river, which is the farthest from his
+original position.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 1 1
+1 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1.4142135624
+1.0000000000
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 1 6
+1 1
+2 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+11.5911099155
+2.0000000000 4.0000000000
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=401 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

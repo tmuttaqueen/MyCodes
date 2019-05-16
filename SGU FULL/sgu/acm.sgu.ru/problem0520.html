@@ -1,0 +1,76 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=338 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 338. Casino </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>338. Casino</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Consider the following dice game. Player rolls a regular dice (with the numbers 1 through 6 on its sides) several times and calculates total amount of points each time. Player can finish his turn after any roll. Thus, player should make at least one roll. If the sum exceeds 21, player loses. When player finishes, croupier rolls a dice using the same scheme. Player wins, if he or she has more points than croupier. More formally, if player has <i>S</i><sub><i>p</i></sub> points and croupier has <i>S</i><sub><i>c</i></sub> points, than player wins if and only if (<i>S</i><sub><i>p</i></sub> &le; 21 <i>and</i> (<i>S</i><sub><i>c</i></sub> > 21 <i>or</i> <i>S</i><sub><i>c</i></sub> < <i>S</i><sub><i>p</i></sub>)). The optimal croupier's strategy allows casino to win in more than 2/3 cases. But Andrew found the possibility to raise his chances to win! He will play together with Big Man. Big Man will bet <i>X</i> euros each game, while Andrew will bet 1 euro each game. In case of the win player gets his bet doubled. In case of the loss player gets nothing.<br /><br />The scheme of the game is like following.<br /><br />1. Big Man rolls dice several times and stops following the "best" strategy&mdash;the strategy that would be optimal if he played with croupier and without Andrew (he is really Big and doesn't care about little Andrew).<br /><br />2. Than Andrew rolls dice several times. Andrew knows the amount of points Big Man has. Andrew is very smart boy and he realizes that croupier's strategy maximizes profit of the casino. So, Andrew uses optimal strategy using all those facts.<br /><br />3. Finally, croupier rolls dice several times. As mentioned above, croupier uses optimal strategy.<br /><br />We call strategy <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/a3139c44a4d4838ab18265828a8079ad.png'/> if it maximizes expected profit. If after the next roll any player or croupier have the same expected profit with the current value, he or she will prefer to roll the dice.<br /><br />As Andrew calculated if <i>X</i> is big enough, he has almost 50 percents chance to win!<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input contains one integer <i>X</i> (0 &le; <i>X</i> &le; 1000).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print one number&mdash;probability of Andrew's win. Your answer must be accurate up to 10<sup>-5</sup>.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0.331176
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0.345634
+</pre>
+ </td>
+ </tr>
+</table><br>
+%<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+%5
+%</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+%0.454301
+%</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=338 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

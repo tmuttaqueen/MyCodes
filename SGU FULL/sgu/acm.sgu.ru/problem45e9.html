@@ -1,0 +1,33 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=439 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 439. A Secret Book </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>439. A Secret Book</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Many organizers of math contests notice that their students are not really good in solving so-called two-step problems, which are the problems that can be solved by solving two weakly related sub-problems consecutively. In fact, it is easier to them to solve one-step problem which is much more complex than both sub-problems of the two-step problem. Now, you have got a book with the annotation on cover which says that this book holds an explanation of the mystery of that paradox. Unfortunately, the book is locked with a special lock, but there is a detailed instruction on how to open it.<br /><br />The lock is made of two tapes with capital Latin letters printed on them. All letters on both tapes have identical width. The second tape is placed directly below the first, and they are aligned by left border. To have better understanding of this, you can think of these tapes as two strings of letters printed with monospaced font, one under another. The length of the second tape (string) is strictly less than the length of the first one. Using the lock mechanism, you can shift any tape left or right by one letter. This shift is cyclic, that is, after a shift to the left, string "<i>ABRA</i>" becomes "<i>BRAA</i>". To open the lock, you must shift the second tape so that the lexicographic order of resulting string will be the least possible. After that you must shift the first tape in such way that the beginning of the first string will match the whole second string. For example, let us assume that the first tape contains string "<i>KADAABRA</i>" and the second tape contains "<i>ABRA</i>". On the first step we should shift the second string by one letter to the right, so we get "<i>AABR</i>" (the lexicographically smallest shift of the string "<i>ABRA</i>"). After that we shift the first string by three letters to the left, resulting in string "<i>AABRAKAD</i>" which begins with "<i>AABR</i>". Additionally, the lock mechanism accepts combinations where any one letter in the second string differs from the corresponding letter in the first string. Thus, if the first string is "<i>KADABRA</i>" and the second is "<i>AABR</i>", it is acceptable to shift first string to get "<i>DABRAKA</i>", which begins with "<i>DABR</i>" that differs from "<i>AABR</i>" by one letter, and the lock will be opened.<br /><br />Given the strings on the two tapes, find a way to open the lock. It is guaranteed that the solution exists.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of input contains two integers <i>N</i> and <i>M</i> which indicate the number of letters on the first and second tapes, respectively (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/5ba574f9e7a7a25930df2ffd533040c9.png'/>). The second line consists of <i>N</i> capital Latin letters &mdash; the string printed on the first tape. The third line consists of <i>M</i> capital Latin letters &mdash; the string printed on the second tape.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output two lines. The first line should contain the resulting string on the second tape. The second line should contain the resulting string on the first tape. If several solutions are possible, output a solution which shifts the first tape the minimal number of times. If more than one solution still exists, output a solution where the first tape is being shifted to the left.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+7 4
+KADABRA
+ABRA
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+AABR
+DABRAKA
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=439 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

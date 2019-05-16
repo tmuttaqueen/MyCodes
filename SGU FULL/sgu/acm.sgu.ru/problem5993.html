@@ -1,0 +1,37 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=536 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 536. Berland Chess </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>536. Berland Chess</h4></div><div align=center>Time limit per test: 4
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ Berland Chess is a single-player game played on a <i>n</i> x <i>m</i> rectangular chessboard. The chessboard has <i>n</i> rows, <i>m</i> columns, and is divided into <i>n</i> x <i>m</i> squares.<br /><br />There are two colors of pieces that can be present on the chessboard &mdash; white and black. You play as White. According to the rules, the chessboard always has the only white piece &mdash; the white king, the only piece you have in your possession. All black pieces standing on the chessboard belong to your opponent, a computer-controlled chess robot running "Chess Bermaster" software. There are four kinds of chess pieces: <ul> <li>"<pre style='display:inline;font-size:120%;'>*</pre>" &mdash; white king, <li>"<pre style='display:inline;font-size:120%;'>K</pre>" &mdash; black knight, <li>"<pre style='display:inline;font-size:120%;'>B</pre>" &mdash; black bishop, <li>"<pre style='display:inline;font-size:120%;'>R</pre>" &mdash; black rook. </ul><br /><br />No other pieces are allowed. Each chess piece has its own method of movement. Moves are made to vacant squares except when capturing an opponent's piece. Here are the rules of a single move, described for each chess piece: <ul> <li>white king moves exactly one square horizontally, vertically, or diagonally; <li>black knight moves two squares horizontally then one square vertically, or one square horizontally then two squares vertically; <li>black bishop moves any number of vacant squares in any diagonal direction; <li>black rook moves any number of vacant squares vertically or horizontally. </ul><br /><br />With the exception of any movement of the knight, pieces cannot jump over each other. Moves of a knight are not blocked by other pieces as it just jumps to the new location.<br /><br />The goal of the game is to capture all opponent's black pieces by the white king. Fortunately for you, "Chess Bermaster" is stuck in the infinite loop today due to a bug in software, so black pieces will not be moving during the game at all.<br /><br />You may never move white king into a position where he could be captured by one of the black pieces. When you capture a black piece yourself, the corresponding black piece gets removed from the chessboard and the white king replaces it on its square. <br /><br />Find the minimum number of moves it will take the white king to capture all the black pieces.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of input contains two integer numbers <i>n</i>, <i>m</i> (1 &le; <i>n</i>, <i>m</i> &le; 15) &mdash; the number of rows and columns on the chessboard, correspondingly. The next <i>n</i> lines contain <i>m</i> characters each &mdash; configuration of the chessboard. Each character will be one of the following: <ul> <li>"<pre style='display:inline;font-size:120%;'>.</pre>" &mdash; an empty space, <li>"<pre style='display:inline;font-size:120%;'>*</pre>" &mdash; white king, <li>"<pre style='display:inline;font-size:120%;'>K</pre>" &mdash; black knight, <li>"<pre style='display:inline;font-size:120%;'>B</pre>" &mdash; black bishop, <li>"<pre style='display:inline;font-size:120%;'>R</pre>" &mdash; black rook. </ul><br /><br />There will be exactly one white king on the chessboard, and it will not be under attack in its initial position. The total number of pieces on the chessboard will never exceed 15. There are no restrictions on number of black pieces by specific kinds. For example, it is allowed that the chessboard contains three or more black knights.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print a single integer &mdash; the minimum number of moves it will take the white king to capture all black pieces. If there are no black pieces on the chessboard, output <pre style='display:inline;font-size:120%;'>0</pre>. If it's impossible to capture all black pieces, output the only integer <pre style='display:inline;font-size:120%;'>-1</pre>.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>7 9
+.........
+.........
+.........
+..R.K.R..
+.........
+.........
+*........
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>9
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=536 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

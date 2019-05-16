@@ -1,0 +1,96 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=542 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 542. Gena vs Petya </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>542. Gena vs Petya</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Gena and Petya love playing the following game with each other. There are <i>n</i> piles of stones, the <i>i</i>-th pile contains <i>a</i><sub><i>i</i></sub> stones. The players move in turns, Gena moves first. A player moves by choosing any non-empty pile and taking an arbitrary positive number of stones from it. If the move is impossible (that is, all piles are empty), then the game finishes and the current player is considered a loser.<br /><br />Gena and Petya are the world famous experts in unusual games. We will assume that they play optimally.<br /><br />Recently Petya started to notice that Gena wins too often. Petya decided that the problem is the unjust rules as Gena always gets to move first! To even their chances, Petya decided to cheat and take and hide some stones before the game begins. Since Petya does not want Gena to suspect anything, he will take the same number of stones <i>x</i> from each pile. This number <i>x</i> can be an arbitrary non-negative integer, strictly less that the minimum of <i>a</i><sub><i>i</i></sub> values.<br /><br />Your task is to find the number of distinct numbers <i>x</i> such that Petya will win the game.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line contains the number of piles <i>n</i> (1 &le; <i>n</i> &le; 2 &middot; 10<sup>5</sup>). The second line contains <i>n</i> space-separated integers <i>a</i><sub><i>i</i></sub> (1 &le; <i>a</i><sub><i>i</i></sub> &le; 10<sup>18</sup>) &mdash; the piles' sizes.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print the number of ways to choose <i>x</i> so that Petya will win the resulting game considering that both players play optimally.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2
+3 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3
+3 4 5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+2 7 4 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+4 6 8 10
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>Consider the first example. Petya can choose any <i>x</i> between 0 and 2. After it Gena starts the game with two piles of equal sizes and looses the game. In the second example there is a single possible value of <i>x</i>, equal to 2. In the third example the sought <i>x</i> is also only one &mdash; it's <i>x</i>=0. In the fourth example there are two possible values of <i>x</i> &mdash; they are 0 and 3.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=542 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

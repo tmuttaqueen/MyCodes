@@ -1,0 +1,46 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=392 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 392. Cyclic Troubles </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>392. Cyclic Troubles</h4></div><div align=center>Time limit per test: 2 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />A package has been delivered to the King of Berland containing a game called "Bercycles". It's an entertaining single-player game with simple rules:<br /><br /><ul> <li>You're given a rectangular field consisting of <i>R</i> rows and <i>C</i> columns, which result in <i>R</i>*<i>C</i> cells total. Each cell contains a lowercase Latin letter and an arrow pointing one of the four following directions: left, right, up, or down. <li>You choose the cell at which you wish to start the game and make a number of moves. At each move you have to write down the letter from the current cell and move one cell in the direction shown by the arrow at this cell. You can stop moving any time you want. If you leave the field, the process stops automatically and you're not allowed to move anymore. <li>The letters you write down during your movements form a word that you <i>read</i> during the game. </ul><br /><br />After reading the rules the King of Berland realized that he is in trouble. He is given a number of words and for each word he is to determine whether it is possible to play the game and <i>read</i> this word. Please help the King to solve this challenging problem.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of input file contains integer numbers <i>R</i> and <i>C</i> (1 &le; <i>R</i> &le; 30, 1 &le; <i>C</i> &le; 30) &mdash;&nbsp;number of rows and columns correspondingly. The following <i>R</i> lines describe arrows on the field. Each of these <i>R</i> lines contains exactly <i>C</i> characters. Each character denotes a direction:<br /><br /><ul> <li>'<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/e187d869489d10336547ede7bb4e6d13.png'/>' character - LEFT <li>'<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/f8a67054dae99218bc93803243660897.png'/>' character - RIGHT <li>'<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/d36c5c8cf424189ac3064d8bb2b37874.png'/>' character - UP <li>'<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/644abb6ccbb059b645286a226c61d7b9.png'/>' character - DOWN </ul><br /><br />Then <i>R</i> more lines follow, describing letters on the field. Each of these <i>R</i> lines contains exactly <i>C</i> characters. Each character is a lowercase Latin letter 'a'-'z'.<br /><br />Then one more line follows containing a single integer number <i>Q</i> (1 &le; <i>Q</i> &le; 50) &mdash;&nbsp;number of queries. Each of the following <i>Q</i> lines contains a word for which you should solve the problem. <br /><br />To reduce the size of input files, these <i>Q</i> words are given to you in a compressed form. A compressed form of a word may contain non-empty letter sequence <i>F</i> enclosed in parentheses, followed by a positive integer number <i>K</i>. It means that the fragment <i>F</i> should be repeated <i>K</i> times.<br /><br />For example, the string "a(xy)2y(ab)3abz" is one of the compressed forms of the string "axyxyyababababz". Note: parentheses may not be enclosed into each other, so "a(xy)2y((ab)2)2z" is not a compressed form of the same word. Leading zeroes are not allowed as well in a compressed form, so no queries like "(ab)02" will be given to you.<br /><br />Input file will not contain any malformed compressed words. The length of each compressed query will be between 1 and 2000 characters. When decompressed, the length of each query will be no longer than 10<sup>9</sup> characters.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>For each query you should print a single line to the output file. If the corresponding compressed word can be read on the field, then the line should contain "YES (<i>X</i>,<i>Y</i>)", where <i>X</i> and <i>Y</i> correspond to the row and column in the field where you should start in order to read the given word. Rows and columns are numbered starting from 1.<br /><br />If the word can't be found in the field, you should print a single word "NO" in the line. If there is more than one solution, print the one with a minimal row <i>X</i>. If there is more than one solution with the same minimal row, print one that minimizes column <i>Y</i>. Please see sample output for further clarifications on the output file format.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 4
+&gt;&gt;&gt;v
+&lt;^&lt;&lt;
+abcd
+efgh
+6
+abcdhgf
+bcdhgf
+(bcdhgf)100
+a(bcdhgf)100bc
+b(cdhgfbc)1d
+hello
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+YES (1,1)
+YES (1,2)
+YES (1,2)
+YES (1,1)
+YES (1,2)
+NO
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=392 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

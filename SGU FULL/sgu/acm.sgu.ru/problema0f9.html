@@ -1,0 +1,103 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=346 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 346. Snooker </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>346. Snooker</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Snooker is a cue sport that is played on a large (12 <i>ft</i> * 6 <i>ft</i>, 3.6 <i>m</i> * 1.8 <i>m</i>) baize-covered table with pockets in each of the four corners and in the middle of each of the long side cushions. It is played using a cue, one white ball (the cue ball), 15 red balls (worth 1 point each) and 6 balls of different colours (worth 2-7 points each). [Wikipedia, the free encyclopedia]<br /><br />Snooker is played by two players or two teams. The main rule in snooker is to alternate potting reds and colours &mdash; that's how yellow, green, brown, blue, pink and black balls are called. They cost from 2 to 7 points each in this particular order. Alternating means that after potting a red ball, the player has to pot any colour ball and vice versa. If the player has potted any colour ball and there are still some reds or he has potted last red by the previous shot, this potted colour ball is put back on the table. If there are no reds and a colour was out back for the last time, the player has to pot all colours in the increasing order of their cost. If there is at least one red ball ath the table, the player can start his break (a sequence of continuously potted balls) only with the red ball. These rules will be enough for this problem.<br /><br />For example, let's consider two reds on the table. The player may pot them in order like "red - black - red - pink - yellow - green - brown - blue - pink - black" which is correct break, but "red - red" or "red - black - pink" is not correct.<br /><br />Professional players always estimate "score on the table"&nbsp;&mdash; maximal score one can achieve by correctly potting all the balls on the table. Obviously, this can be done by alternating reds with black, because black is the most expensive colour ball. Your task is to find this maximal score.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains 7 numbers, representing the number of the balls of each color in a particular order: red, yellow, green, brown, blue, pink and black. The number of all balls except red will be from 0 to 1, the number of red balls will be from 0 to 15. The second line contains one word: "RED" if the last potted ball was red, "COLOUR" if the last potted ball was colour, and "NONE" if the next shot will be the first in the player's brake. You may assume that if there is at least one red ball, there are all colours. Also you may assume that if there are no reds, colours have been potted in the correct order.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Write to the output file the desired maximum score.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 1 1 1 1 1 1
+COLOUR
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+43
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 1 1 1 1 1 1
+RED
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+50
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0 0 0 1 1 1 1
+NONE
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+22
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0 1 1 1 1 1 1
+RED
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+34
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>"Red - black - red - black - yellow - green - brown - blue - pink - black" costs 1 + 7 + 1 + 7 + 2 + 3 + 4 + 5 + 6 + 7 = 43 points.<br /><br />"Black - red - black - red - black - yellow - green - brown - blue - pink - black" costs 7 + 1 + 7 + 1 + 7 + 2 + 3 + 4 + 5 + 6 + 7 = 50 points.<br /><br />According to the rules, player has to pot brown ball next, so "brown - blue - pink - black" costs 4 + 5 + 6 + 7 = 22 points.<br /><br />"Black - yellow - green - brown - blue - pink - black" costs 7 + 2 + 3 + 4 + 5 + 6 + 7 = 34 points.<br /><br /></div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=346 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

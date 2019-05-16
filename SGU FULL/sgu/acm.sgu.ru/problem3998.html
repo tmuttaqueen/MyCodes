@@ -1,0 +1,67 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=547 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 547. Divide The Kingdom </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>547. Divide The Kingdom</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Once upon a time, long, long ago there lived a King and a Queen who ruled over a distant kingdom called Berland.<br /><br />Their kingdom contained <i>n</i> cities connected by <i>n</i>-1 bi-directional roads. The roads were constructed in such a way that Berland citizens were able to reach any city from any other city by walking along these roads.<br /><br />One day the King and the Queen decided that they want to break up the relationship. Yes, it's not common when it comes to a royal marriage, but it's something they decided to do and we have to respect their decision. Of course, now they want to divide the kingdom and start living separately from each other. Each of them wants to take a part of the existing kingdom. Moreover, they want their own parts to be very special, so their requirements are quite complicated.<br /><br />So, the King wants to pick a nonempty subset of cities from the existing kingdom. He will be satisfied only if all following conditions are met: <ul> <li>his subset of cities is connected (i.e. for every pair of his cities <i>A</i> and <i>B</i>, there is always a path from <i>A</i> to <i>B</i> that passes only through the King's cities), <li>he does not share any cities with the Queen, <li>none of his cities are directly connected by a road to any of the Queen's cities, <li>if you consider distances between all pairs of his cities, the length of the longest path must be equal to <i>D</i><sub>1</sub>, <li>if you consider all pairs of his cities which are located at distance <i>D</i><sub>1</sub> from each other and then calculate the number of different cities within all these pairs, this number must not exceed <i>C</i><sub>1</sub> (formally, if his subset contains the only city then the number of such pairs equals 0). </ul><br /><br />The Queen wants to pick a nonempty subset of cities as well. Her requirements are essentially the same as the King's ones, with the exception of the numbers she has in mind &mdash; <i>D</i><sub>2</sub> and <i>C</i><sub>2</sub> respectively. Obviously, she is not allowed to take cities which have been already taken by the King, her subset of cities should be connected and none of her cities should be adjacent to the King's cities.<br /><br />Now, what about the remaining cities, the ones that will not belong to either the King or the Queen after the kingdom is divided? The answer is simple &mdash; they have to be destroyed along with all roads coming into them, and all people should be evacuated from these cities. Destroying the <i>i</i>-th city will cost <i>p</i><sub><i>i</i></sub> burles.<br /><br />Can you help the King and the Queen with the separation? You task is to figure out whether it's possible to perform separation of the kingdom according to the rules described above. If the separation is possible, you have to find a way with the minimum possible cost of cities that will be destroyed.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains a positive integer <i>n</i> (3 &le; <i>n</i> &le; 200) &mdash; the number of cities in the kingdom. The second line contains integers <i>D</i><sub>1</sub>, <i>C</i><sub>1</sub>, <i>D</i><sub>2</sub>, <i>C</i><sub>2</sub> (0 &le; <i>D</i><sub>1</sub>, <i>D</i><sub>2</sub> &le; <i>n</i>-1, 1 &le; <i>C</i><sub>1</sub>, <i>C</i><sub>2</sub> &le; <i>n</i>). The third line contains <i>n</i> integer costs <i>p</i><sub><i>i</i></sub> (1 &le; <i>p</i><sub><i>i</i></sub> &le; 1000). Each of the next <i>n</i>-1 lines contains two integer numbers <i>a</i><sub><i>j</i></sub> and <i>b</i><sub><i>j</i></sub> (1 &le; <i>a</i><sub><i>j</i></sub>, <i>b</i><sub><i>j</i></sub> &le; <i>n</i>), meaning that the <i>j</i>-th road connects cities <i>a</i><sub><i>j</i></sub> and <i>b</i><sub><i>j</i></sub>.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>If there is no solution, write "<pre style='display:inline;font-size:120%;'>-1</pre>" (without the quotes) in a single output line.<br /><br />Otherwise, output the total cost of destroyed cities in the first line, and print the numbers of destroyed cities in the increasing order in the second line. If there are multiple solutions, you may print any of them.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>10
+4 2 0 1
+5 2 5 2 5 5 5 5 5 2
+1 4
+6 1
+1 2
+7 1
+3 7
+10 7
+9 10
+7 8
+8 5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>6
+2 4 10
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+1 2 1 2
+9 9 9 9
+1 2
+2 3
+3 4
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>-1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>In the first test case, the optimal solution is as follows:<br /><br /><center> <img src="http://acm.sgu.ru/Problems/39/divide.png"/> </center><br /><br /><ul> <li>In the first place, city 10 is destroyed and the kingdom falls apart into two parts. The smallest part contains an isolated city 9, and it already satisfies the Queen's requirements. <li>The second remaining part is a little bit too large for the King. The maximum distance between pairs of cities (2,5), (4,5), (6,5) is 4, exactly as the King wants. But the number of these cities [2, 4, 5, 6] is 4, while the King's desire is to have not more than 2. So, it's additionally required to destroy cities 2 and 4. <li>Overall, destroying cities [2, 4, 10] costs 6 burles. It's an optimal solution from the cost perspective. </ul><br /><br />In the second test case there is no solution. Obviously, at least one city should be deleted from the kingdom, while <i>D</i><sub>1</sub>=1 requires two adjacent cities, and <i>D</i><sub>2</sub>=1 requires another two adjacent cities. So, we could possibly achieve the required outcome with 5 cities in a line, but not with 4.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=547 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

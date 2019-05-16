@@ -1,0 +1,71 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=508 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 508. Black-white balls </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>508. Black-white balls</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ <i>n</i> black and white balls were put into a bag. Petya doesn't know exactly how many black balls are there among them. He knows, however, that there are 0, 1,..., <i>n</i> black balls among all balls in the bag with equal probability.<br /><br />Petya took <i>l</i> balls from the bag at random, and <i>l</i><sub>1</sub> of them turned out black, while <i>l</i><sub>2</sub> other turned out white (<i>l</i><sub>1</sub> + <i>l</i><sub>2</sub> = <i>l</i>). Now he wants to predict how many black balls were there initially in the bag. Of course, if <i>l</i> < <i>n</i>, he can't be sure in his prediction, but he wants to predict a segment [a, <i>b</i>], such that the amount <i>k</i> of black balls belongs to it with probability at least <i>p</i>.<br /><br />You are given <i>n</i>, <i>l</i><sub>1</sub>, <i>l</i><sub>2</sub> and <i>p</i>, and you must find such <i>a</i> and <i>b</i> that <i>b</i> - <i>a</i> is minimal possible. If there are several such pairs (<i>a</i>, <i>b</i>), choose the one with the smallest <i>a</i>.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>In the first line there are four integer numbers: 1 &le; <i>n</i> &le; 50 &mdash; the number of balls in the bag, 0 &le; <i>l</i><sub>1</sub> &le; <i>n</i>&nbsp;&mdash; the number of black balls out of the <i>l</i> balls that Petya took from the bag, 0 &le; <i>l</i><sub>2</sub> &le; <i>n</i> - <i>l</i><sub>1</sub>&nbsp;&mdash; the number of white balls that Petya took from the bag, 0 &le; <i>p</i> &le; 100&nbsp;&mdash; the required confidence in percent.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output numbers <i>a</i> and <i>b</i> separated by a space, 0 &le; <i>a</i> &le; <i>b</i> &le; <i>n</i>.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>50 1 24 100
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>1 26
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>50 1 49 100
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>1 1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>50 1 10 95
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>1 15
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=508 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

@@ -1,0 +1,62 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=548 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 548. Dragons and Princesses </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>548. Dragons and Princesses</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Once upon a time there lived the Knight. Being very courageous he decided to make a long journey full of fights and adventures. The map of this journey can be represented as a row with <i>n</i> cells numbered from 1 to <i>n</i> from left to right. Initially the Knight is located at the leftmost cell (cell number 1). He should pass all the cells one by one and finish his way at the rightmost cell (cell number <i>n</i>). He is not allowed to move back or skip some cells, he will visit all the cells from the first to the last.<br /><br />Each cell except the first one contains either a dragon or a princess. Each dragon has a chest with gold coins. The dragon at the cell <i>i</i> keeps <i>g</i><sub><i>i</i></sub> coins. Every time the Knight steps to a cell with a dragon he has a choice &nbsp;&mdash; to kill the dragon or just to pass through. The Knight is very strong and dexterous, so it is not a problem for him to kill any dragon on his way. If a dragon is killed the Knight gets all the gold dragon possessed.<br /><br />When the Knight steps to the cell with a princess, she wonders how many dragons he has killed. If that number is greater or equal to her beauty <i>b</i><sub><i>i</i></sub>, the princess considers the Knight brave enough and instantly asks him to marry her. Being a true gentleman, the Knight cannot refuse and his adventure immediately ends.<br /><br />The Knight loves the princess who lives in the cell number <i>n</i> and wants to marry her. Also during the journey he wants to collect as much gold as possible. Please help him to accomplish this task.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains a single integer <i>n</i> (2 &le; <i>n</i> &le; 2&middot;10<sup>5</sup>) &mdash; the number of cells. The next <i>n</i>-1 lines describe cells from 2 to <i>n</i>. <br /><br />If the cell number <i>i</i> contains a dragon, the <i>i</i>-th line of the input contains letter "<pre style='display:inline;font-size:120%;'>d</pre>" followed by a single integer <i>g</i><sub><i>i</i></sub> (1 &le; <i>g</i><sub><i>i</i></sub> &le; 10<sup>4</sup>) &mdash; the number of coins the dragon keeps. The letter and the integer are separated by a single space.<br /><br />If the cell number <i>i</i> contains a princess, the <i>i</i>-th line of the input contains letter "<pre style='display:inline;font-size:120%;'>p</pre>" followed by a single integer <i>b</i><sub><i>i</i></sub> (1 &le; <i>b</i><sub><i>i</i></sub> &le; 2&middot;10<sup>5</sup>) &mdash; the beauty of the princess. The letter and the integer are separated by a single space. It is guaranteed that the last cell contains a princess.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>On the first line of the output print a single integer &mdash; the maximum number of gold coins the Knight can collect. On the second line print a single integer <i>k</i> &mdash; the number of dragons to kill. The third line should contain <i>k</i> integers &mdash; the numbers of the cells where the Knight should kill a dragon. The cell numbers should be printed in the increasing order.<br /><br />If there are several optimal solutions, output any of them. If the Knight can't marry his beloved princess, just print <pre style='display:inline;font-size:120%;'>-1</pre> in the first line of the output.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>6
+d 10
+d 12
+p 2
+d 1
+p 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>13
+2
+3 5
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>6
+d 10
+d 12
+p 2
+d 1
+p 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>-1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=548 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

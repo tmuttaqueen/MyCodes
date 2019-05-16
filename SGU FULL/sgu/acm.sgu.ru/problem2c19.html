@@ -1,0 +1,34 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=307 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 307. Cipher </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>307. Cipher</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />ASN has just invented a brand new cipher. Its key is just a <i>H</i> <i>x</i> <i>W</i> matrix of 0's and 1's. A tool by Macrosoft is recommended to be used as a manager of those keys. This tool stores a fingerprint for each key to protect from storage failures. Such a fingerprint is an (<i>H</i>-1) <i>x</i> (<i>W</i>-1) matrix consisting of 2 <i>x</i> 2 sums; i.e., if <i>A</i> is the key and <i>B</i> is the fingerprint, then <i>B</i><sub><i>ij</i></sub>=A<sub><i>ij</i></sub>+<i>A</i><sub><i>i</i>+1,<i>j</i></sub>+<i>A</i><sub><i>i</i>,<i>j</i>+1</sub>+<i>A</i><sub><i>i</i>+1,<i>j</i>+1</sub>. Given the fingerprint, you are to find at least one key with such fingerprint, or to report that the fingerprint is corrupt (in case no key can produce it).<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains two numbers, <i>H</i> and <i>W</i> (2 &le; <i>H</i>, <i>W</i> &le; 300). The next <i>H</i>-1 lines contain <i>W</i>-1 characters each with no spaces in between, describing the fingerprint. Each of those characters will be either <pre style='display:inline;font-size:120%;'>0</pre>, <pre style='display:inline;font-size:120%;'>1</pre>, <pre style='display:inline;font-size:120%;'>2</pre>, <pre style='display:inline;font-size:120%;'>3</pre>, or <pre style='display:inline;font-size:120%;'>4</pre>.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output the key using the format similar to that of the input file: output <i>H</i> lines containing <i>W</i> characters (<pre style='display:inline;font-size:120%;'>0</pre> or <pre style='display:inline;font-size:120%;'>1</pre>) each, with no spaces in between.<br /><br />If the fingerprint is corrupt, output <pre style='display:inline;font-size:120%;'>CORRUPT</pre> on the only line of output.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 4
+222
+222
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0110
+1001
+0110
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=307 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

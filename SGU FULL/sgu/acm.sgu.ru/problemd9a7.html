@@ -1,0 +1,330 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=452 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 452. Colony Maintenance </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>452. Colony Maintenance</h4></div><div align=center>Time limit per test: 1.5 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+It is the year of 2xxx. 
+Human beings have migrated out of the Earth and resided in space colonies. 
+Because of the severe environment of the space, which comes from cosmic rays and meteorites, those colonies have to be continuously repaired by maintenance robots. 
+In this problem, you are requested to write a program that calculates the shortest distance for a robot to move from the present point to the next repair point on a colony.
+
+Each colony can be modeled as a polycube, that is, one or more cubes of the same size all joined by their faces. 
+Note that, as forming a polycube, all cubes of each colony are connected. 
+This implies every cube has at least one face coincident with a face of another cube, except for colonies with a single cube. 
+The figure below illustrates a couple of example colonies.
+
+<br/>
+<center>
+<img src="http://acm.sgu.ru/problems/0/p452_01.png"/>
+</center>
+<br/>
+
+The maintenance robot can move only on the surface of the polycubes, that is, on faces not in common with other cubes. 
+In addition, due to the structure of the colonies, move of the robot beyond a face is restricted to the following cases: 
+(a) the robot is moving between adjacent faces of the same cube; 
+(b) the robot is moving between adjacent faces of adjacent cubes; and 
+(c) the robot is moving along the inner side of an L-shape, namely, the robot is moving between adjacent faces of two cubes that have the common adjacent cube. 
+Here, adjacent faces denote those with the common edge, and adjacent cubes denote those with the common face.
+
+<br/>
+<center>
+<img src="http://acm.sgu.ru/problems/0/p452_02.png"/>
+</center>
+<br/>
+
+For the purpose of this problem, we consider an <i>xyz</i>-space (i.e. a three-dimensional space with the Cartesian coordinate system) where all cubes are placed in such a way that each edge is parallel to <i>x</i>-axis, <i>y</i>-axis, or <i>z</i>-axis. 
+Also, the edge length of the cubes is scaled to 100.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input has the following format:
+
+<pre>
+<i>n</i>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub> <i>z</i><sub>1</sub>
+...
+<i>x</i><sub><i>n</i></sub> <i>y</i><sub><i>n</i></sub> <i>z</i><sub><i>n</i></sub>
+<i>sx</i> <i>sy</i> <i>sz</i> <i>dx</i> <i>dy</i> <i>dz</i>
+</pre>
+
+<i>n</i> is the number of cubes of a colony (1 &le; <i>n</i> &le; 16). 
+(<i>x</i><sub><i>i</i></sub>,<i>y</i><sub><i>i</i></sub>,<i>z</i><sub><i>i</i></sub>) represents the coordinates of the center of the <i>i</i>-th cube, where each coordinate value is guaranteed to be a multiple of 100 (i.e. the edge length of the cubes). 
+(<i>sx</i>,<i>sy</i>,<i>sz</i>) and (<i>dx</i>,<i>dy</i>,<i>dz</i>) represent the robot's present point and the next repair point respectively. 
+You may assume that these two points are always different and that neither of them lies on any edge.
+All coordinate values are integers between -2000 and 2000 inclusive. 
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>For each dataset, print the distance of the shortest route from the present point to the next repair point. 
+The distance may be printed with any number of digits after the decimal point, provided the absolute error does not exceed 10<sup>-8</sup>.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+0 0 0
+0 0 50 30 40 50
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+50.0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+0 0 0
+50 0 0 0 50 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+100.0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+0 0 0
+100 0 0
+0 0 50 100 0 50
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+100.0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+0 0 0
+100 0 0
+0 100 0
+100 50 0 50 100 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+100.0
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+7
+0 0 0
+100 0 0
+-100 0 0
+0 100 0
+0 -100 0
+0 0 100
+0 0 -100
+150 0 0 -150 0 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+416.2277660168
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+6
+0 0 0
+100 0 0
+0 100 0
+100 100 0
+0 0 100
+100 100 100
+100 0 50 0 100 50
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+141.4213562373
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+6
+0 0 0
+100 0 0
+0 100 0
+100 100 0
+0 0 100
+100 100 100
+100 100 150 0 0 150
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+316.2277660168
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+6
+0 0 0
+100 0 0
+0 100 0
+100 100 100
+100 0 100
+0 100 100
+0 0 50 100 100 50
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+341.4213562373
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+8
+0 0 0
+-100 0 0
+-100 100 0
+-100 200 0
+0 200 0
+100 200 0
+100 200 100
+100 100 100
+0 0 50 100 100 50
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+341.4213562373
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+<br /><div align = left style='margin-top:1em;'><b>Note</b></div>The figure below shows how the robot will move in the last example:
+
+<br/>
+<center>
+<img src="http://acm.sgu.ru/problems/0/p452_03.png"/>
+</center>
+<br/>
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=452 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

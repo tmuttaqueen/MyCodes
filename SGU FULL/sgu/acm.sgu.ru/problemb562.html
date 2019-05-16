@@ -1,0 +1,77 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=553 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 553. Sultan's Pearls </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>553. Sultan's Pearls</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Sultan Suleiman was so rich that legends spread far and wide about his treasures. This problem is going to be about one of those legends. <br /><br />One of the sultan's favorite treasures was a string of finest pearls that he kept on the bedside table. He never touched the string as it had too many pearls on it to wear. The sultan's cunning servant decided to take advantage of this fact and "borrow" a few pearls. The string consisted of <i>n</i> pearls, <i>m</i> of them hung down from the bedside table. In this problem we will consider the pearls indexed by integers from 1 to <i>n</i>, starting from the end that lies on the table, that is, pearls 1, 2,..., <i>n</i>-<i>m</i> were located on the table and pearls <i>n</i>-<i>m</i>+1, <i>n</i>-<i>m</i>+2,..., <i>n</i> hung down from it.<br /><br /><center> <img src="http://acm.sgu.ru/Problems/39/pearls.png"/><br> Sample for <i>n</i>=10 and <i>m</i>=3. </center><br /><br />The servant decided to take exactly one pearl from one end of the string every day. But he had to be perfectly careful as every evening the sultan enjoyed looking at the string and counting the number of the hanging pearls. That's why after the servant took a pearl from the hanging end, he had to pull the string one pearl lower so that the number of the hanging pearls equalled <i>m</i> again. Certainly, if the servant took a pearl from the lying end, he had to leave the hanging part as it was.<br /><br />Each pearl has some mass, and the string may fall down if the hanging part is too heavy. Of course, the servant must avoid that. The string must remain motionless after every action of the servant.<br /><br />More formally, assume that the <i>i</i>-th pearl in the string has mass of <i>w</i><sub><i>i</i></sub>. Also let's say that the total mass of the hanging <i>m</i> pearls equals <i>W</i><sub><i>h</i></sub>, and the total mass of the pearls on the table equals <i>W</i><sub><i>t</i></sub>. Then the hanging part pulls the whole string down, if <i>W</i><sub><i>h</i></sub> > <i>k</i> &middot; <i>W</i><sub><i>t</i></sub>, where <i>k</i> is the coefficient of friction of the pearls against the table. The coefficient <i>k</i> is the same for all pearls.<br /><br />The pearls on the string had not only different masses but also different prices: the <i>i</i>-th pearl costs <i>c</i><sub><i>i</i></sub> dinars. The servant's aim was to steal the pearls for the maximum sum and avoid the sultan's suspicions. His plan didn't come out very well: he made a mistake somewhere in his calculations, his theft was discovered and he was executed.<br /><br />Nobody is going to execute you, of course, so we suggest you to solve the problem that proved to be too hard for the sultan's servant.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line contains three integers <i>n</i>, <i>m</i> and <i>k</i> (2 &le; <i>n</i> &le; 2 &middot; 10<sup>5</sup>, 1 &le; <i>m</i> < <i>n</i>, 1 &le; <i>k</i> &le; 10). Each of the following <i>n</i> lines contains two integers <i>w</i><sub><i>i</i></sub> and <i>c</i><sub><i>i</i></sub> &mdash; the mass and the price of the <i>i</i>-th pearl (1 &le; <i>w</i><sub><i>i</i></sub>, <i>c</i><sub><i>i</i></sub> &le; 1000). It is guaranteed that initially the string is motionless, that is, the hanging part doesn't pull the whole string down.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>In the first line print two space-separated integers <i>p</i> and <i>s</i> &mdash; the number of pearls you can take to get the maximum sum of money, and the sum you can get. In the second line print the string consisting of <i>p</i> characters '<pre style='display:inline;font-size:120%;'>H</pre>' or '<pre style='display:inline;font-size:120%;'>T</pre>'. If the pearl that is the <i>i</i>-th to take should be taken from the hanging end, then the <i>i</i>-th character of the string must be '<pre style='display:inline;font-size:120%;'>H</pre>', otherwise &mdash; '<pre style='display:inline;font-size:120%;'>T</pre>'. If there are multiple optimal solutions, print any of them.<br /><br />If the servant can't take any pearl, just print one line containing two zeroes. You may leave the second line empty or do not print it at all.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>5 2 1
+5 3
+4 2
+6 4
+3 2
+2 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2 5
+TT
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>20 7 2
+3 4
+8 4
+8 5
+6 14
+5 10
+3 18
+2 5
+2 4
+1 6
+3 11
+4 3
+3 5
+2 8
+4 6
+9 14
+7 2
+7 6
+6 4
+8 2
+10 5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>11 60
+HTHTHTHHHHH
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>There is the explanation to the second sample.<br /><br />Initially the mass of pearls on the table was <i>W</i><sub><i>t</i></sub> = 50, and the mass of the hanging pearls was <i>W</i><sub><i>h</i></sub> = 51. However, as the coefficient of friction equals 2, the string is motionless (50 &middot; 2 = 100 > 51).<br /><br />On the first step we take a pearl from the hanging part of the string (<i>H</i>), then we need to pull the string one pearl lower so that the hanging part contained 7 strings again. After that <i>W</i><sub><i>t</i></sub> = 48, and <i>W</i><sub><i>h</i></sub> = 43 (the pearl number 20 with value 5 will be stolen and the pearl number 13 will be the topmost pearl in the hanging part of the string).<br /><br />On the second step we take a pearl from the end of the string that lies on the table (<i>T</i>). <i>W</i><sub><i>h</i></sub> = 43 still, <i>W</i><sub><i>t</i></sub> = 45, (45 &middot; 2 > 43), the total price of the stolen treasure is <i>S</i> = 9.<br /><br />The table describes the values of <i>W</i><sub><i>t</i></sub>, <i>W</i><sub><i>h</i></sub> and <i>S</i> after each step.<br /><br /><table border="1"> <tr><td>Step</td> <td>End</td> <td><i>W</i><sub><i>t</i></sub></td> <td><i>W</i><sub><i>h</i></sub></td> <td><i>S</i></td></tr><br /><br /><tr><td>1</td><td>H</td><td>48</td><td>43</td><td>5</td></tr> <tr><td>2</td><td>T</td><td>45</td><td>43</td><td>9</td></tr> <tr><td>3</td><td>H</td><td> 42 </td><td>38</td><td>11</td></tr> <tr><td>4</td><td>T</td><td> 34 </td><td>38</td><td>15</td></tr> <tr><td>5</td><td>H</td><td> 30 </td><td>36</td><td>19</td></tr> <tr><td>6</td><td>T</td><td> 22 </td><td>36</td><td>24</td></tr> <tr><td>7</td><td>H</td><td> 19 </td><td>32</td><td>30</td></tr> <tr><td>8</td><td>H</td><td> 18 </td><td>26</td><td>32</td></tr> <tr><td>9</td><td>H</td><td> 16 </td><td>19</td><td>46</td></tr> <tr><td>10</td><td>H</td><td>14 </td><td>17</td><td>52</td></tr> <tr><td>11</td><td>H</td><td>11 </td><td>18</td><td>60</td></tr><br /><br /></table><br /><br />Note that after the 11-th step it is impossible to take any more pearls without disrupting the balance.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=553 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

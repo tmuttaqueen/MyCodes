@@ -1,0 +1,117 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=341 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 341. Circuits </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>341. Circuits</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Consider a digital electric circuit operating with binary signals in a discrete time. It contains input signals, wires, junctions and logical gates. We will use six kinds of logical gates: NOT, AND, NAND, OR, NOR, DFF. Each of them returns one output signal. The amount of input signals and details about return value are showed in the following table.<br /><br /><table border=1> <tr> <td>Gate</td><td>Inputs</td><td>Return value</td> </tr> <tr> <td> NOT </td><td> 1 </td><td> Opposite to the input signal value. </td> </tr> <tr> <td> AND </td><td> 1 or more </td><td> Conjunction of the input signal values. </td> </tr> <tr> <td> NAND</td><td> 1 or more </td><td> Negation of the conjunction of the input signal values. </td> </tr> <tr> <td> OR </td><td> 1 or more </td><td> Disjunction of the input signal values. </td> </tr> <tr> <td> NOR </td><td> 1 or more </td><td> Negation of the disjunction of the input signal values. </td> </tr> <tr> <td> DFF </td><td> 1 </td><td> Same as the input signal. Returned with the delay of one tick of discrete time. </td> </tr> </table><br /><br />The scheme will operate in the following manner. Before the first tick of the discret time each DFF gate is initialized with zero value. Then during certain amount of ticks several junctions (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/b13372b51bf9ffdd4dbebdd977c62343.png'/> junctions) will be feeded with input values. You are to write a program that will calculate binary values on a certain set of junctions (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/b97b67ac5deee67777a43c9eff900535.png'/> junctions).<br /><br />Your program will be given the description of the logical scheme, the set of junctions in which we are interested and the input values for each consecutive tick of the discrete time.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input file consists of two blocks. First block contains several lines. If the first symbol of a line is a sharp "#", than the line contains a comment. You can ignore it. You can also ignore empty lines. A line describing the input signal looks like <pre style='display:inline;font-size:120%;'>INPUT(junction)</pre>, where <pre style='display:inline;font-size:120%;'>junction</pre> is the name of the junction. A line describing the interesting junction looks like <pre style='display:inline;font-size:120%;'>OUTPUT(junction)</pre>, where <pre style='display:inline;font-size:120%;'>junction</pre> is the name of the junction. A junction name consists of small and capital Latin letters and digits and the underline character "_". The length of each name is less than 64 characters. <br /><br />All other lines of the first block contain the description of new junctions. Such line can look like <pre style='display:inline;font-size:120%;'>j1&nbsp;= op(j2)</pre>, where <pre style='display:inline;font-size:120%;'>j1</pre> and <pre style='display:inline;font-size:120%;'>j2</pre> are the names of junctions and <pre style='display:inline;font-size:120%;'>op</pre> is either <pre style='display:inline;font-size:120%;'>NOT</pre> or <pre style='display:inline;font-size:120%;'>DFF</pre>. It can also look like <pre style='display:inline;font-size:120%;'>j1&nbsp;= op(j2[,&nbsp;j3...])</pre>, where <pre style='display:inline;font-size:120%;'>j</pre>'s are the junction names and <pre style='display:inline;font-size:120%;'>op</pre> is <pre style='display:inline;font-size:120%;'>AND</pre>, <pre style='display:inline;font-size:120%;'>NAND</pre>, <pre style='display:inline;font-size:120%;'>OR</pre> or <pre style='display:inline;font-size:120%;'>NOR</pre>. There will be no more than 5 &middot; 10<sup>3</sup> junctions.<br /><br />The second block of the input file starts with the line <pre style='display:inline;font-size:120%;'>INPUT VALUES</pre>. Each of the following lines contains a sequence of zeroes and ones. Amount of digits equals to the amount of input signals. You should match these binary values to the input signal values, in the order the input signals given. There are no more than 500 lines in this block. Please refer to the sample for the details.<br /><br />The input file size is less than 320 KB.<br /><br />You may assume that the input data is correct. You may assume that the given circuit will operate correctly.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>For each line of the input signal values, print one line containing zeroes and ones. The digits should correspond to the values of the output signals, preserving their order in the input file.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+INPUT(a)
+INPUT(b)
+x = DFF(a)
+t = OR(a, b)
+y = AND(x, t)
+OUTPUT(x)
+OUTPUT(y)
+INPUT VALUES
+10
+11
+00
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+00
+11
+10
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+# 4 inputs
+# 1 output
+# 3 D-type flipflops
+# 2 inverters
+# 8 gates (1 AND+1 NAND+2 ORs+4 NORs)
+
+
+INPUT(G0)
+INPUT(G1)
+INPUT(G2)
+INPUT(G3)
+
+
+OUTPUT(G17)
+
+
+G5 = DFF(G10)
+G6 = DFF(G11)
+G7 = DFF(G13)
+
+
+G14 = NOT(G0)
+G17 = NOT(G11)
+
+
+G8 = AND(G14, G6)
+
+
+G15 = OR(G12, G8)
+G16 = OR(G3, G8)
+
+
+G9 = NAND(G16, G15)
+
+
+G10 = NOR(G14, G11)
+G11 = NOR(G5, G9)
+G12 = NOR(G1, G7)
+G13 = NOR(G2, G12)
+
+
+INPUT VALUES
+0000
+0001
+0010
+0100
+1000
+1010
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+0
+0
+0
+1
+1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=341 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

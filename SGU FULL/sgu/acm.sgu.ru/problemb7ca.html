@@ -1,0 +1,117 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=479 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 479. Funny Feature </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>479. Funny Feature</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />In the process of preparation to Halloween it was decided to plant some pumpkins on the <i>n</i> &times; <i>m</i> meters rectangular platform. The platform is divided to <i>n</i> &times; <i>m</i> identical square cells with 1 meter length sides.<br /><br />The arrangement of pumpkins was carefully prepared, and you are given the resulting plan. For each cell of this platform it is given how many pumpkins should be planted in it. All these quantities appear to be from 1 to 5, inclusive. <br /><br />Special pumpkin-landing machine was bought to plant Halloween symbols. It can perform a simple operation: plant pumpkin to the cell, specified by its coordinates (the first coordinate ranges 1 to <i>n</i>, and the second one ranges 1 to <i>m</i>). <br /><br />At the last moment an unpleasant feature of the machine was discovered. Every time this machine plants a pumpkin to the specified cell, one more pumpkin is also planted to all cells, which are adjacent to the specified one and already have at least one pumpkin in it. One cell is called adjacent to another one if they share a side.<br /><br />Besides for technical reasons you cannot specify the same cell twice.<br /><br />Now Halloween celebration is under the threat of failure. You are asked to write the program which finds the sequence of <i>n</i> &times; <i>m</i> operations leading to demanded landing of pumpkins, or informs that it is impossible.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of input contains two integers <i>n</i> and <i>m</i> &nbsp;&mdash; sizes of the field (1 &le; <i>n</i>,<i>m</i> &le; 200). Next <i>n</i> lines contain <i>m</i> integers from 1 to 5 &nbsp;&mdash; how many pumpkins should be planted in each cell of the platform. Numbers in lines are separated by single spaces.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>If the solution exists, print <i>n</i> &times; <i>m</i> lines with two numbers in each: a line and a column numbers, where the next pumpkin should be landed. If there are multiple solutions, print any of them.<br /><br />If the solution does not exist, print a single line "<pre style='display:inline;font-size:120%;'>No solution</pre>" (quotes for clarity).<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 2
+1 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 2
+1 1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 3
+1 3 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 2
+1 3
+1 1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 3
+2 4 2
+2 1 2
+3 2 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 2
+3 1
+3 3
+1 1
+1 3
+3 2
+2 1
+2 3
+2 2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 1
+1
+1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+No solution
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=479 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

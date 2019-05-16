@@ -1,0 +1,117 @@
+#include<bits/stdc++.h>
+
+
+using namespace std;
+
+#define intl long long
+#define pii pair<int,int>
+#define xx first
+#define yy second
+#define mp make_pair
+#define pb push_back
+
+const int MAXN = 300005;
+
+string s;
+int n, q;
+string r[3];
+set<int>all[26];
+int nxt[26];
+
+int val[26][100005];
+
+bool isPos()
+{
+    int p[3], sz[3], cur[3];
+    cur[0] = cur[1] = cur[2] = -1;
+    sz[0] = r[0].size();
+    sz[1] = r[1].size();
+    sz[2] = r[2].size();
+
+    p[0] = p[1] = p[2] = 0;
+    int mx[3];
+    int f = 1;
+
+    for( int i = 0; i < sz[0] + sz[1] + sz[2]; i++  )
+    {
+        memset( mx, 61, sizeof mx );
+        for( int j = 0; j < 3; j++ )
+        {
+            for( int k = p[j] + 1; k < sz[j]; k++ )
+            {
+                auto ind = all[r[j][k] - 'a'].upper_bound( cur[j] );
+
+                mx[j] = min( mx[j], *ind );
+            }
+        }
+        int ind;
+        for( int j = 0; j < 3; j++) if( p[j] < sz[j] ) ind = j;
+
+        if( mx[1] < mx[0] && mx[2] >= mx[1] && p[1] < sz[1] ) ind = 1;
+        else if( mx[2] < mx[0] && mx[2] < mx[1] && p[2] < sz[2] ) ind = 2;
+        else if( mx[0] <= mx[1] && mx[0] <= mx[2] && p[0] < sz[0] ) ind = 0;
+
+
+        int d = r[ ind ][ p[ind]++ ] - 'a';
+        cout << ind << " " << d << endl;
+        int dd = all[d].upper_bound( cur[ind] );
+
+        cur[ind] = *dd;
+        if( cur[ind] >= n ) return 0;
+        all[d].erase(dd);
+        //cout << ind << " " << d << endl;
+        //if( nxt[d] >= n ) return 0;
+        //nxt[d] = val[d][ nxt[d] ];
+    }
+    return 1;
+
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+    cin >> n >> q;
+    cin >> s;
+    for( int i = 0; i < n; i++ )
+    {
+        all[ s[i] - 'a' ].push_back(i);
+    }
+    for( int i = 0; i < 26; i++ )
+    {
+        all[i].push_back(1e9);
+    }
+
+    r[0] = "";
+    r[1] = "";
+    r[2] = "";
+    while(q--)
+    {
+        string  t, p;
+        int rr;
+        cin >> t;
+        if( t[0] == '+')
+        {
+            cin >> rr >> p;
+            rr--;
+            r[rr] += p[0];
+        }
+        else
+        {
+            cin >> rr;
+            rr--;
+            r[rr].pop_back();
+        }
+        if( isPos() )
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
+    }
+
+    return 0;
+}

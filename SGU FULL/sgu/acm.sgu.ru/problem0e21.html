@@ -1,0 +1,64 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=214 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>214. Weird Dissimilarity
+</h4></div><div align=center>time limit per test: 1 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>The issue of this problem is to find out how far two strings over alphabet &Sigma; are, with respect to one weird definition of dissimilarity. For any two characters c<sub>1</sub> and c<sub>2</sub> from &Sigma; consider <em>dissimilarity</em> d(c<sub>1</sub>, c<sub>2</sub>) of c<sub>1</sub> from c<sub>2</sub> &mdash; non-negative integer number. If we take two strings &alpha; and beta of equal length l, <em>distance</em> from &alpha; to &beta; is dist(&alpha;, &beta;) = sum(i=1..l, d(&alpha;[i], &beta;[i])).
+<br>
+<br>You are given two strings &lambda; and &mu;. Consider all possible pairs of strings &alpha; and &beta; of equal length over &Sigma;, such that &lambda; is a subsequence of &alpha; and &mu; is a subsequence of &beta; (string &omega; of length n is a subsequence of a string &xi; of length m if there exist 1 &le; i<sub>1</sub> &lt; i<sub>2</sub> &lt; ... &lt; i_n &le; m such  that &omega;[j] = &xi;[i<sub>j</sub>] for all 1 &le; j &le; n). Choose among them &alpha;' and &beta;' such that dist(&alpha;', &beta;') is minimal possible. <em>Dissimilarity</em> of &lambda; from &mu; is defined as  D(&lambda;, &mu;) = dist(&alpha;', &beta;'). 
+<br>
+<br>Your task is to find the dissimilarity of &lambda; from &mu;  and to provide &alpha;' and &beta;' such that D(&lambda;, &mu;) = dist(&alpha;', &beta;').
+<br>
+</div><div align = left><br><b>Input</b></div><div align = left>
+<br>The first line of the input file contains &Sigma; &mdash; several different characters that form the alphabet for the strings we consider (1 &le; |&Sigma;| &le; 200, all characters have ASCII code greater than space).  Next two lines contain &lambda; and &mu; respectively. Length of each of the given strings does not exceed 2000. Next |&Sigma;| lines contain |&Sigma;| non-negative  integer numbers each, j-th number of i-th line contains dissimilarity of i-th character from j-th. 
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>
+<br>On the first line of the output file print D(&lambda;, &mu;). On the second and third lines of the output file print &alpha;' and &beta;', such that D(&lambda;, &mu;) = dist(&alpha;', &beta;'), &lambda; is a subsequence of &alpha;' and &mu; is a subsequence of &beta;'. Length of each of &alpha;' and &beta;' must not exceed 4000.
+<br>
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>ab
+<br>ab
+<br>ba
+<br>2 1
+<br>4 1
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>4
+<br>aba
+<br>bba
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=214'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=214'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Andrew Stankevich
+</td></tr><tr><td>Resource:</td><td>Petrozavodsk Summer Trainings 2003
+</td></tr><tr><td>Date:</td><td>2003-08-30
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:41:16</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=214 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+</html> 

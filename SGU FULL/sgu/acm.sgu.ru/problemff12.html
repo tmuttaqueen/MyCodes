@@ -1,0 +1,66 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=413 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 413. Berland Division </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>413. Berland Division</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+It is widely known that Berland consists of an even number of cities connected by bidirectional roads.
+It is possible to travel between every pair of cities using the roads. There is no such pair of
+cities which is connected by more than one road, and there is no road wich connects a city to itself.
+Due to the raised conflicts Berland can not exist as a single country. People don't want to share
+one roof anymore. It was decided to create the Berland Union and divide the Berland into 
+several countries. There were two basic conditions. Firstly, every country must consist of not less than
+two cities, because no city can survive without help of other cities. Secondly, there must be exactly one
+path between each pair of cities from one country, which passes through the cities of this country.
+Help to create the division plan which fulfills these two requirements. Note that you don't need to
+minimize the number of countries. 
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>Input contains several test cases. The number of test cases <i>tst</i> (1 &le; <i>tst</i> &le; 50) is given on the first line of the input.
+Each test decription consists of a line with two integers <i>n</i> and <i>m</i> (2 &le; <i>n</i> &le; 100, 1 &le; <i>m</i> &le; 1000, <i>n</i>&nbsp;&mdash; even)&nbsp;&mdash;
+number of cities and roads correspondingly. Each of the following <i>m</i> lines contains two integer numbers
+<i>a</i> and <i>b</i> (1 &le; <i>a</i> < <i>b</i> &le; <i>n</i>), describing the road between <i>a</i> and <i>b</i>. The total number of cities in all of the cases
+doesn't exceed 100, and the total number of roads doesn't exceed 1000.
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>For each test case output <i>n</i> numbers on a separate line: <i>i</i>-th number should be the number of country which <i>i</i>-th city belongs to.
+Countries must be numerated from 1 to <i>k</i>, where <i>k</i> is the number of countries in your plan. If there are several solutions,
+output any of them.
+ 
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+4 3
+1 2
+2 3
+1 4
+4 4
+1 2
+2 3
+1 4 
+1 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 1 1 1
+1 2 2 1
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=413 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

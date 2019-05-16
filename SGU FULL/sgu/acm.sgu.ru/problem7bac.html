@@ -1,0 +1,38 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=509 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 509. Chameleons All Around </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>509. Chameleons All Around</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ There are <i>n</i> chameleons moving along a circle of length <i>L</i> with speed 1, each moving either clockwise or counter-clockwise. <i>i</i>-th chameleon is initially located at point <i>p</i><sub><i>i</i></sub> and has color <i>c</i><sub><i>i</i></sub>, which is represented by an integer number.<br /><br />When two chameleons meet, the following happens: <li>The one that was traveling counter-clockwise changes color to the color of the clockwise one. <li>They turn around, so the one that was traveling counter-clockwise now travels clockwise, and vice versa. <br /><br />It's not so difficult to figure out that the ordering of chameleons among the circle always stays the same, and it is impossible for more than two chameleons to meet at the same point.<br /><br />What will be the locations and colors of all chameleons at time <i>T</i> (the input data describes time 0)?<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains an integer <i>n</i>, <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/33922864e51c97a398d07ef4979f8817.png'/>. The second line contains an integer <i>L</i>, 1 &le; <i>L</i> &le; 10<sup>9</sup>. The next <i>n</i> lines contain 3 integers each, <i>p</i><sub><i>i</i></sub>, <i>c</i><sub><i>i</i></sub>, <i>d</i><sub><i>i</i></sub>&nbsp;&mdash; the location, color and direction of <i>i</i>-th chameleon, 0 &le; <i>p</i><sub><i>i</i></sub> < <i>L</i>, 1 &le; <i>c</i><sub><i>i</i></sub> &le; 10<sup>9</sup>, <i>d</i><sub><i>i</i></sub> is either -1 or 1. The last line contains an integer <i>T</i>, 0 &le; <i>T</i> &le; 10<sup>18</sup>.<br /><br />The coordinate system is chosen in such a way that increasing one's coordinate means moving clockwise, and points on the circle have coordinates between 0 (inclusive) and <i>L</i> (exclusive). <i>d</i><sub><i>i</i></sub> can take one of two values: 1 for moving clockwise, and -1 for moving counter-clockwise.<br /><br />All <i>p</i><sub><i>i</i></sub> are different.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output <i>n</i> lines with 3 numbers each, one floating-point (location) and two integers (color and direction), having the same meaning as the input numbers, but describing time <i>T</i>. The chameleons should be described in the same order as in the input file. It is guaranteed that no chameleons will meet at exactly <i>T</i>. Your answer will be accepted when each number is within 10<sup>-9</sup> relative or absolute error of the correct answer. Please note that the coordinate you output should always be more than or equal to 0 and strictly less than <i>L</i>. Your answer will not be accepted when you output a coordinate very close to <i>L</i> but the correct answer is 0.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+13
+2 1 1
+0 2 -1
+12 3 1
+5 2 1
+23
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2.000 2 1
+12.000 1 1
+9.000 3 1
+3.000 3 -1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=509 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

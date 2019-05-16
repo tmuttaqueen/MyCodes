@@ -1,0 +1,133 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=461 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 461. Wiki Lists </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>461. Wiki Lists</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />In this task you need to write a small part of wiki-to-HTML translator. You have to deal only with enumerated and regular lists.<br /><br />Wiki dialect in this task defines lists as follows&nbsp;&mdash; the character "<pre style='display:inline;font-size:120%;'>#</pre>" defines an enumerated list and "<pre style='display:inline;font-size:120%;'>*</pre>" defines a regular list. These symbols are called list markers.<br /><br />Wiki-text should be processed line by line. A group of two or more consecutive lines should be treated as elements of the same list (enumerated, or regular) if these lines start with the same list marker symbol.<br /><br />A group of two or more consecutive list elements should be considered as a nested list if these elements start with the same list marker symbol. This rule should be applied recursively.<br /><br />HTML equivalent of a wiki-text is formed using the well-known HTML syntax. An enumerated list starts with "&lt;ol&gt;", then all list elements are written, and then the list ends with "&lt;/ol&gt;". HTML equivalent of a regular list is similar to the one for enumerated list, but it starts with "&lt;ul&gt;" and ends with "&lt;/ul&gt;". An element of any list is represented by "&lt;li&gt;", then the contents of the element are written followed by "&lt;/li&gt;".<br /><br />The rules given above unambiguously define the way to make HTML from wiki-text. Please refer to the sample tests for clarifications.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>Input contains a wiki-text with no less than 1 and no more than 1000 lines. The total length of all input lines is not greater than 1000 characters. The depth of nested lists is not limited. Input contains only lowercase and uppercase Latin letters, digits, symbols "<pre style='display:inline;font-size:120%;'>*</pre>" and "<pre style='display:inline;font-size:120%;'>#</pre>", and line breaks. Each line contains at least one character different from "<pre style='display:inline;font-size:120%;'>*</pre>" and "<pre style='display:inline;font-size:120%;'>#</pre>", so there will be no empty lines in the output.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print HTML equivalent of the given wiki-text to the output. All tags should be placed on separate lines with no spaces.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+FirstLine
+*ItemX
+*ItemY
+#Item1
+#Item2
+*ItemZ
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+FirstLine
+&lt;ul&gt;
+&lt;li&gt;
+ItemX
+&lt;/li&gt;
+&lt;li&gt;
+ItemY
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Item1
+&lt;/li&gt;
+&lt;li&gt;
+Item2
+&lt;/li&gt;
+&lt;/ol&gt;
+*ItemZ</pre>
+ </td>
+ </tr>
+</table><br>
+ 
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+*ab
+*x#x
+*#1
+*#2
+#3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+&lt;ul&gt;
+&lt;li&gt;
+ab
+&lt;/li&gt;
+&lt;li&gt;
+x#x
+&lt;/li&gt;
+&lt;li&gt;
+&lt;ol&gt;
+&lt;li&gt;
+1
+&lt;/li&gt;
+&lt;li&gt;
+2
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+#3
+</pre>
+ </td>
+ </tr>
+</table><br>
+ 
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+***1
+**2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;
+*1
+&lt;/li&gt;
+&lt;li&gt;
+2
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=461 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

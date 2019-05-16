@@ -1,0 +1,67 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=274 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>274. Spam-filter
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>After tremendous last-year success not yet well-known, but already grown-up company H&#38;H decided to create a new software masterpiece -- a world-leading spam-filter. 
+<br>Due to Your poor last year -- a world-leading spam-filter. Due to your poor last year project performance, you are given a small and boring task again. 
+<br>Your task is to write a simple email-validator.
+<br>
+<br>Valid email address can be described as follows: 
+<br><pre>&lt;letter&gt; ::= a|b|...|z|A|B|...|Z
+<br>&lt;symbol&gt; ::= &lt;letter&gt;|0|1|...|9|_|-
+<br>&lt;word&gt; ::= &lt;symbol&gt;|&lt;symbol&gt;&lt;word&gt;
+<br>&lt;prefix&gt; ::= &lt;word&gt;|&lt;prefix&gt;.&lt;word&gt;
+<br>&lt;domain&gt; ::= &lt;letter&gt;&lt;letter&gt;|&lt;letter&gt;&lt;letter&gt;&lt;letter&gt;
+<br>&lt;suffix&gt; ::= &lt;prefix&gt;.&lt;domain&gt;
+<br>&lt;address&gt; ::= &lt;prefix&gt;@&lt;suffix&gt;</pre>
+</div><div align = left><br><b>Input</b></div><div align = left>The first line of the input file contains integer number N (1 &lt;= N &lt;= 100) -- the number of email addresses to be checked. Each of the following N lines contains one email address. Email address is the non-empty sequence of characters with ASCII codes from 32 to 255 no more then 100 characters long. 
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>For each address from the input write a separate line with the word YES, if the email address is valid and NO if it is not.
+<br>
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>3
+<br>abc@abc
+<br>abc@abc.abc
+<br>_@-.ru
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>NO
+<br>YES
+<br>YES
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=274'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=274'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Ilya V. Elterman
+</td></tr><tr><td>Resource:</td><td>ACM ICPC 2004-2005, NEERC, Southern Subregional Contest
+</td></tr><tr><td>Date:</td><td>Saratov, October 7, 2004
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:45:01</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=274 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html> 

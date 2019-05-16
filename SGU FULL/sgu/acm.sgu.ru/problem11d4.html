@@ -1,0 +1,36 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=475 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 475. Be a Smart Raftsman </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>475. Be a Smart Raftsman</h4></div><div align=center>Time limit per test: 2.5 second(s)<br />Memory limit: 65536 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+<br /><br />On Halloween, when other people are gathering to tell terrifying stories (see problem H. &quot;Hero of our time&quot;), to torment poor pumpkins (see problem J. &quot;Jealous Cucumber&quot;), to create demonic teams (see problem C. &quot;Coach's Trouble&quot;), in other words, to do all that stuff, you don't want to be ordinary, so now you are planning to try some extreme sports. Rafting would be the best choise, because when water is cold enough (as it is now!) rafting is extremely extreme. <br><br /><br />You are members of a rafting crew which consists of <i>n</i> participants. You navigate the river, and your goal is to pass <i>m</i> consecutive riffles and to get from the start to the finish as soon as possible. The <i>i</i>-th riffle is characterized by critical weight <i>c</i><sub><i>i</i></sub>, and the <i>j</i>-th participant is characterized by his or her weight <i>w</i><sub><i>j</i></sub>. If your raft goes through the <i>i</i>-th riffle with people on board with total weight exceeding <i>c</i><sub><i>i</i></sub>, it capsizes. This part of rafting is the most exciting, but it requires additional time to get on the raft after capsize. So sometimes it is better to take a group of people with total weight not exceeding critical weight on the raft, while others pass the distance by foot. <br><br /><br />More formally, consider <i>m</i> + 1 points <i>p</i><sub>0</sub>, <i>p</i><sub>1</sub>,..., <i>p</i><sub><i>m</i></sub>, where <i>p</i><sub>0</sub> is the start and <i>p</i><sub><i>m</i></sub> is the finish. Each of the intermediate points <i>p</i><sub><i>i</i></sub> (1 &le; <i>i</i> &le; <i>m</i>-1) is located between the <i>i</i>-th and (<i>i</i> + 1)-th riffle. It takes <i>D</i><sub><i>i</i></sub> minutes for the raft to get from <i>p</i><sub><i>i</i>-1</sub> to <i>p</i><sub><i>i</i></sub>, if it passes the <i>i</i>-th riffle with capsize, and <i>d</i><sub><i>i</i></sub> minutes otherwise. The <i>j</i>-th participant can get from <i>p</i><sub><i>i</i>-1</sub> to <i>p</i><sub><i>i</i></sub> in <i>t</i><sub><i>j</i></sub> minutes by foot. It takes him or her <i>s</i><sub><i>j</i></sub> minutes to get on the raft or to get off the raft on the bank. Before each of the riffles your group is divided into two parts. The first part rafts through the riffle (with or without capsize), and the second part goes on the bank to the next intermediate point. At this point they always wait for the raft, or the raft waits for all the walkers, if it arrives sooner. Then some participants who are on the raft can get off, and some participants who are on the bank can get on the raft. They can't start doing it before the raft and all the walkers arrive to the point. The total time required for this action is equal to the sum of <i>s</i><sub><i>j</i></sub> for people changing their place. Then you pass the next riffle and so on, until you get to the finish. Note that no one can start moving to the next point until others have changed places. <br><br /><br />Remember, that you start at the point <i>p</i><sub>0</sub> having all your group on the bank (not on the raft), and you must finish at the point <i>p</i><sub><i>m</i></sub> also with all participants on the bank and the raft with you. You are not allowed to leave the raft at the start or at some intermediate point, and walk to the finish without it. You can take all the group to the raft to pass a riffle, but you can't leave the raft empty during the trip. Your task is to calculate the minimal time required to reach the finish. <br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains two numbers <i>n</i> and <i>m</i> (1 &le; <i>n</i> &le; 10, 1 &le; <i>m</i> &le; 1000). Following <i>n</i> lines describe participants. Each of them consists of three integers <i>w</i><sub><i>j</i></sub>, <i>t</i><sub><i>j</i></sub>, <i>s</i><sub><i>j</i></sub>. Following <i>m</i> lines also contains three integers each&nbsp;&mdash; <i>c</i><sub><i>i</i></sub>, <i>D</i><sub><i>i</i></sub> and <i>d</i><sub><i>i</i></sub> for the <i>i</i>-th riffle. All numbers in the input are positive integers not exceeding 10000.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output the minimal time.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 3
+50 5 1
+70 20 1
+30 15 10
+60 100 10
+70 100 10
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+51
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>Consider an optimal strategy for the example: <li>both participants get on the raft (2 minutes), <li>they pass the first riffle with capsize (15 minutes), <li>second participant gets off (1 minute), <li>first participant raft through the riffle, while his mate walks (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/187f2e79c5eb6c26eb74c6e6f54fdcfb.png'/> minutes), <li>they swap places (2 minutes), <li>they get to the finish&nbsp;&mdash; first one by foot, second one by raft (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/10bebbf9752dc913932ef356f834851c.png'/>), <li>second participant gets off (1 minute). <br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=475 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

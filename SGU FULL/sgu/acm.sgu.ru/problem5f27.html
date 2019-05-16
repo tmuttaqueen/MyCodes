@@ -1,0 +1,99 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=425 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 425. Control function </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>425. Control function</h4></div><div align=center>Time limit per test: 2 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />A matrix <i>T</i> of non-negative integers with <i>n</i> rows and <i>m</i> columns is called a <i>control matrix</i> when its first row is different from all other rows. Formally speaking, <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/913ad0a8b3ce40633488343fa67bf421.png'/> <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/f2e7b24e16b1d10cc140f0b68168fd0f.png'/> <i>T</i><sub>1j</sub> &ne; <i>T</i><sub><i>ij</i></sub>.<br /><br />A function <i>f</i> from non-negative integers to non-negative integers is called a <i>control function</i> for the given control matrix <i>T</i> when the matrix <i>f</i>(<i>T</i>) obtained by applying <i>f</i> to every element of <i>T</i> is also a control matrix. Formally speaking, <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/913ad0a8b3ce40633488343fa67bf421.png'/> <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/f2e7b24e16b1d10cc140f0b68168fd0f.png'/> <i>f</i>(<i>T</i><sub>1j</sub>) &ne; <i>f</i>(<i>T</i><sub><i>ij</i></sub>).<br /><br />Find a control function with all values not exceeding 50 for the given control matrix <i>T</i>.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains two integers <i>n</i> and <i>m</i> (1 &le; <i>n</i>, <i>m</i> &le; 1000). The next <i>n</i> lines contain <i>m</i> integers each, representing the matrix <i>T</i><sub><i>ij</i></sub> (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/f03bde8a6e4009dc08db461c54251024.png'/>). It is guaranteed that the matrix <i>T</i> is a control matrix. <br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output "<i>Yes</i>" (without quotes) to the first line of the output file if such a function exists, and "<i>No</i>" (without quotes) otherwise. If the answer is positive, then output the function via "<i>key -> value</i>" pairs (without quotes). Order keys in increasing order. All different numbers from matrix <i>T</i> must appear as a key exactly once, and no other keys should be printed.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 5
+1 2 3 4 5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+Yes
+1 -> 0
+2 -> 0
+3 -> 0
+4 -> 0
+5 -> 0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 2
+1 2
+1 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+Yes
+1 -> 1
+2 -> 1
+3 -> 0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 2
+0 2
+4 5
+7 6
+3 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+Yes
+0 -> 1
+1 -> 0
+2 -> 1
+3 -> 0
+4 -> 1
+5 -> 0
+6 -> 1
+7 -> 0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=425 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

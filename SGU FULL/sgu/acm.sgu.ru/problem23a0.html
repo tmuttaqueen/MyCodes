@@ -1,0 +1,79 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=455 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 455. Sequence analysis </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>455. Sequence analysis</h4></div><div align=center>Time limit per test: 2 second(s)<br />Memory limit: 4096
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+<i>
+Due to the slow 'mod' and 'div' operations with int64 type, all Delphi solutions for the problem 455 (Sequence analysis) run much slower than the same code written in C++ or Java. We do not guarantee that Delphi solution exists. </i> <br/><br /><br />You are given a sequence of signed 64-bit integers defined as follows: <ul> <li><i>x</i><sub>0</sub> = 1, <li><img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/facbf5949d0e39006c20ef3f70f04d53.png'/>, </ul> where <pre style='display:inline;font-size:120%;'>mod</pre> is a remainder operator. All arithmetic operations are evaluated without overflow checking. Use standard "remainder" operator for programming languages (it differs from the mathematical version; for example <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/c8b76878f844d236c2e2d90d05676c25.png'/> in programming, while <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/cbf91ed48f465270e2a7c47cd355f9fb.png'/> in mathematics). Use "<pre style='display:inline;font-size:120%;'>long long</pre>" type in C++, "<pre style='display:inline;font-size:120%;'>long</pre>" in Java and "<pre style='display:inline;font-size:120%;'>int64</pre>" in Delphi to store <i>x</i><sub><i>i</i></sub> and all other values.<br /><br />Let's call a sequence element <i>x</i><sub><i>p</i></sub> repeatable if it occurs later in the sequence &mdash; meaning that there exists such <i>q</i>, <i>q</i> > <i>p</i>, that <i>x</i><sub><i>q</i></sub> = <i>x</i><sub><i>p</i></sub>. The first repeatable element <i>M</i> of the sequence is such an element <i>x</i><sub><i>m</i></sub> that <i>x</i><sub><i>m</i></sub> is repeatable, and none of the <i>x</i><sub><i>p</i></sub> where <i>p</i> < <i>m</i> are repeatable.<br /><br />Given <i>A</i>, <i>B</i> and <i>C</i>, your task is to find the index of the second occurence of the first repeatable element <i>M</i> in the sequence if the index is less or equal to 2 &middot; 10<sup>6</sup>. Per definition, the first element of the sequence has index 0.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The only line of input contains three signed 64-bit integers: <i>A</i>, <i>B</i> and <i>C</i> (<i>B</i> > 0, <i>C</i> > 0).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print a single integer &nbsp;&mdash; the index of the second occurence of the first repeatable member if it is less or equal to 2 &middot; 10<sup>6</sup>. Print -1 if the index is more than 2 &middot; 10<sup>6</sup>.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 2 9
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2305843009213693951 1 9223372036854775807
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+-2 1 5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>In the first sample test the sequence starts with the following numbers: 1, 3, 7, 6, 3, 7. The first repeatable element is 3. The second occurence of 3 has index 4. <br /><br />In the second sample test the sequence starts with the following numbers: 1, 2305843009213693951, -4611686018427387903, 6917529027641081855, 0, 0, 0. The first repeatable element is 0. The second occurence of 0 has index 5. <br /><br />In the third sample test the sequence starts with the following numbers: 1, -2, 4, -3, 1, -2, 4. The first repeatable element is 1. The second occurence of 1 has index 4.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=455 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

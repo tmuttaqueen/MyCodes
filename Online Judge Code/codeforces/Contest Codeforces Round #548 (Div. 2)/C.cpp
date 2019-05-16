@@ -1,0 +1,84 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define intl long long
+#define pii pair<int,int>
+#define xx first
+#define yy second
+#define mp make_pair
+#define pb push_back
+
+const int MAXN = 300005, mod = 1e9+7;
+
+intl val[MAXN];
+
+vector<pii>edge[MAXN];
+
+int cnt[MAXN];
+intl ans = 0;
+
+void dfs( int u, int p, int et )
+{
+    int type = 1;
+    cnt[u]++;
+    for( pii vr: edge[u] )
+    {
+        int v = vr.xx, t = vr.yy;
+
+        if( v == p )
+        {
+            type = t;
+        }
+        else
+        {
+            dfs(v, u, t);
+            if( t == 0 )
+                cnt[u] += cnt[v];
+        }
+    }
+
+    if( et == 1 )
+    {
+        ans += val[ cnt[u] ];
+        ans %= mod;
+    }
+
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+    intl n, k;
+    cin >> n >> k;
+
+    for( int i = 1; i <= n; i++ )
+    {
+        intl v = 1;
+        for( int j = 1; j <= k; j++ )
+        {
+            v = (v*i)%mod;
+        }
+        val[i] = v;
+    }
+
+    for( int i = 1; i < n; i++ )
+    {
+        int u, v, t;
+        cin >> u >> v >> t;
+        edge[u].push_back( mp(v,t) );
+        edge[v].push_back( mp(u,t) );
+    }
+
+    dfs(1, -1, 1);
+
+    ans = (val[n] - ans)%mod;
+    ans = (ans+mod)%mod;
+
+    cout << ans << endl;
+
+
+    return 0;
+}

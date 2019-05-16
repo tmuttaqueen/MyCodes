@@ -1,0 +1,155 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=503 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 503. Running City </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>503. Running City</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Andrew has just made a breakthrough in urban orienteering: he realized that
+each urban orienteering contest, like the upcoming "Running City
+Petrozavodsk", can be represented as a simple problem in graph
+theory. Your task is to get from point <i>A</i> to point <i>B</i> in the
+city as fast as you can. City map consists of roads (corresponding
+to edges of a graph) and road intersections (corresponding to nodes of a
+graph).
+Points <i>A</i> and <i>B</i> are road intersections, of course. You know the
+running times for all roads in the city. However, you won't be able 
+to solve your problem with a usual Dijkstra algorithm, because there
+are some additional difficulties.
+
+There are some <i>routes</i> in the city which slow you down. Some friends in the
+organizing committee gave you the secret map where those routes are marked.
+A route can be any simple path (no intersection can appear twice) in the graph.
+
+The difficulty is: if you run through the whole route, a group of volunteers waits 
+for you in the end of the route, and the celebration begins<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/63975f390397d0e50d9e6152d7f57799.png'/>&nbsp;It slows you down
+by the time equal to the time you spent running through the route. So it's
+like if you ran through the route 2 times. Also, if your path contains
+several such routes as subpaths, then each of them counts. For example, 
+there can be two exactly equal routes in the input, and if your path contains
+such route, then it's actually as if you ran 3 times through the route.
+
+Find the shortest time to get from one node to another in such a strange
+graph with "bonuses".
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>First line of the input file contains five integers <i>n</i>, <i>m</i>, <i>r</i>, <i>S</i>, <i>T</i> &mdash;
+number of nodes, edges, special routes in the graph, start node
+and finish node respectively.
+<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/e190cc93638816e5ec7c2c24bbc2b922.png'/>, <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/0445d06a6e1c46479fb708076d614739.png'/>, <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/4892f71e46c4902b4f44fc39dd335e2b.png'/>, 1 &le; <i>S</i>, <i>T</i> &le; <i>n</i>, <i>S</i> &ne; <i>T</i>.
+The nodes in the graph are numbered from 1 to <i>n</i>.
+Each of the following <i>m</i> lines contains three integers <i>a</i>, <i>b</i>, <i>c</i>, 
+(<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/e0209edcdd39c68e984ded36cdc35c13.png'/>), where <i>a</i> and <i>b</i>
+are nodes and <i>c</i> is the time to run through the edge (<i>a</i>, <i>b</i>). 
+The graph is directed: you can't run from <i>b</i> to <i>a</i> along the edge (<i>a</i>, <i>b</i>).
+There are no more than 10 edges going out from each node. Each of the next <i>r</i>
+lines contains a description of a special route. It begins with integer
+<i>k</i> &mdash; the number of edges in the route. Then <i>k</i> integers follow &mdash;
+the numbers of the edges in the route. Edges are numbered from 1 to <i>m</i> in the
+same order that they are written above. Sum of lengths of all routes
+is not more than 2m. Each edge occurs no more than in 10 special routes.
+Each special route is correct: no vertex can appear twice in any given
+route, and the end of each edge of the route except the last one coincides with the start of the next edge.
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>If there is a way from <i>S</i> to <i>T</i>, print the minimal time to get from <i>S</i>
+to <i>T</i> and any optimal path, otherwise just print -1. The format of
+output in case a way exists: on the first line print the minimal time,
+on the second line print the number of edges in the path and on the
+last line print the sequence of numbers of edges (ranging from 1 to <i>m</i>)
+that form the optimal path.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 3 1 1 3
+1 2 2
+2 3 1
+1 3 2
+1 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+2
+1 2 
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 3 3 1 3
+1 2 2
+2 3 2
+1 3 1
+1 3
+1 3
+1 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4
+2
+1 2 
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 3 3 1 4
+1 2 3
+2 3 2
+3 4 1
+3 1 2 3
+2 2 3
+1 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+16
+3
+1 2 3 
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=503 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

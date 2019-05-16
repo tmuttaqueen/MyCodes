@@ -1,0 +1,62 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=291 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>291. Evolution
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>Qc has discovered n new amusing cultures of bacteria. The bacteria are grown in a special container divided into q<i>x</i>c cells. Initially one bacterium of each culture is put into some cell of the box. After that they start to grow.
+<br>Each second the following actions take place. 
+<br>First the bacteria of the first culture divide simultaneously. Each bacterium divides into five ones, and if the dividing bacterium occupied the cell (x, y), the five bacteria try to occupy cells (x, y), (x-1, y), (x+1, y), (x, y-1) and (x, y+1). If the required cell does not exist, or is occupied by the bacterium of the other culture, the corresponding bacterium dies. If the cell that the bacterium goes to is already occupied by the bacterium of the same culture, the younger bacterium kills the older one and occupies the cell. If two bacteria of the same generation try to occupy the same cell, the random one wins and kills the other one.
+<br>After bacteria of the first culture divide, bacteria of the second culture do, after that the bacteria of the third culture, and so on. It takes one second for all n cultures to divide. 
+<br>All cultures divide in the described way each second.
+<br>Given the initial positions of bacteria of all cultures, Qc wants to know how many cells are occupied by each culture after t seconds. 
+<br>
+</div><div align = left><br><b>Input</b></div><div align = left>The first line of the input contains four integer numbers: 1 &lt;= q, c, &lt;= 1000, 1 &lt;= n &lt;= 22204 --- the number of cultures and 0 &lt;= t &lt;= 10^9. Next n lines contains n pairs of integer numbers (xi, yi) --- initial positions of bacteria of each culture. No two bacteria initially occupy the same cell. Size q is for x coordinates, c is for y.
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>Print n lines of output, each line must contain a single integer --- the answer for the i-th culture.
+<br>
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>10 10 3 3
+<br>3 3
+<br>6 2
+<br>7 9
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>21
+<br>15
+<br>21
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=291'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=291'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Anton Golubev, Petrazavodsk SU
+</td></tr><tr><td>Resource:</td><td>Anton Golubev (Hedgehog)'s Contest #2 from Annual Summer Russian Teams Meeting in Petrozavodsk State University
+</td></tr><tr><td>Date:</td><td>August 26, 2005
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:45:35</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=291 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html> 

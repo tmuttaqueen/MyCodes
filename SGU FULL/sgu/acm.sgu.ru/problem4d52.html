@@ -1,0 +1,32 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=477 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 477. Doors </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>477. Doors</h4></div><div align=center>Time limit per test: 3 second(s)<br />Memory limit: 65536 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />It seems that the Museum of the Modern Technology is the only place where they don't celebrate Halloween! How can they be so far from all the mistical and mysterious? You can hardly believe that two weeks ago the Museum staff have destroyed the last detail that could bring with its ominous creak a bit of Halloween atmosphere to the realm of technology. They have replaced the old wooden doors with new automatic ones, and now they are scratching their heads over how to configure the doors. <br /><br />By the order of the Director, two automatic doors were purchased. An automatic door is characterized by parameter <i>t</i>, called the <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/d647aad3f46e13f009ba5cd566985688.png'/>, which can be set to an integer value from 1 to 10<sup>9</sup> during the door installation. Then the door functions on the following principle. If a person passes through the door at time <i>p</i>, the door opens at time <i>p</i> - <i>t</i> and closes at time <i>p</i> + <i>t</i>. There is an exceptional case when several people go in a row with a time interval not exceeding 2 <i>t</i> between any two consecutive people. In this case the door opens only once, <i>t</i> seconds before the first person in the row, and it closes <i>t</i> seconds after the last person in the row has passed through it. It is very important to set the optimal values of the door parameters. On the one hand, if the doors open and close too often, it will annoy visitors. On the other hand, if both doors stay opened for a long time, visitors can get cold.<br /><br />More formally, two lists of time moments are given. At the moments <i>p</i><sub>1</sub> < <i>p</i><sub>2</sub> <... < <i>p</i><sub><i>n</i></sub> people have passed through the first door, and at the moments <i>q</i><sub>1</sub> < <i>q</i><sub>2</sub> <... < <i>q</i><sub><i>m</i></sub> people have passed through the second one. The task is to use the given statistics to find the optimal <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/9e804c9d6a54ea1886c634da747bbe2c.png'/> for the doors&nbsp;&mdash; <i>t</i><sub>1</sub> for the first door and <i>t</i><sub>2</sub> for the second one that satisfy the following conditions:<br /><br /> <li>The total number of openings of the doors must be minimal possible. <li>There is no continuous interval of time that both doors are opened during this interval and its length exceeds the given value <i>d</i>. <br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains three integers <i>n</i>, <i>m</i> and <i>d</i> (1 &le; <i>n</i>, <i>m</i> &le; 5000, 1 &le; <i>d</i> &le; 10<sup>9</sup>). The second line contains numbers <i>p</i><sub><i>i</i></sub>, and the third line contains numbers <i>q</i><sub><i>i</i></sub>, given in the ascending order (1 &le; <i>p</i><sub><i>i</i></sub>, <i>q</i><sub><i>i</i></sub> &le; 10<sup>9</sup>).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output two integers <i>t</i><sub>1</sub> and <i>t</i><sub>2</sub>, separated by a single space. If there are multiple solutions, output any. If there is no solution, output "<pre style='display:inline;font-size:120%;'>No solution</pre>". <br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 2 4
+1 6 13
+7 11
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=477 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

@@ -1,0 +1,63 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=472 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 472. Sokoban </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>472. Sokoban</h4></div><div align=center>Time limit per test: 1.5 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br /><i>Sokoban (warehouse keeper) is a transport puzzle in which the player pushes boxes around a maze, viewed from above, and tries to put them in designated locations. Only one box may be pushed at a time, and boxes cannot be pulled. The problem of solving Sokoban puzzles has been proven to be NP-hard.</i><br /><br /><i>From Wikipedia, the free encyclopedia</i><br /><br />Probably, everybody at least once in his life played this famous game. And despite the fact the problem is NP-hard you are required to write a program which solves this puzzle for quite huge mazes; moreover, it is needed to find the best solution to the puzzle. Specifically, from all possible solutions you are to select the one with the smallest number of box pushes. From all such solutions you need the one that minimizes the total number of moves. To simplify your task a bit, only puzzles with one box will be given to your program to solve.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>Maze for solving is given in the input file, maze has a size up to 100 x 100 cells. Every line of input file represents one row of the maze, all lines have the same length (and equal to the width of the maze). Space character represents a passable cell, where box and sokoban may stay, and "<pre style='display:inline;font-size:120%;'>#</pre>" character represents an impassable wall. "<pre style='display:inline;font-size:120%;'>@</pre>" character represents sokoban itself, "<pre style='display:inline;font-size:120%;'>&#36;</pre>" represents a cell in which the box is initially located, and "<pre style='display:inline;font-size:120%;'>.</pre>" represents a cell where sokoban should put the box. Cells in which sokoban, box and destination cell are initially located are passable. Input file will contain every of the characters "<pre style='display:inline;font-size:120%;'>@</pre>", "<pre style='display:inline;font-size:120%;'>&#36;</pre>" and "<pre style='display:inline;font-size:120%;'>.</pre>" exactly once. Maze will be closed in a sense that sokoban will be unable to leave it.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>If there is no solution for the given maze, write to the output file the only message "<pre style='display:inline;font-size:120%;'>Impossible.</pre>". Otherwise write one of the best (in the abovementioned sense) solutions. Each move is represented by one of the four characters: "<pre style='display:inline;font-size:120%;'>u</pre>" means moving up, "<pre style='display:inline;font-size:120%;'>r</pre>"&nbsp;&mdash; right, "<pre style='display:inline;font-size:120%;'>d</pre>"&nbsp;&mdash; down and "<pre style='display:inline;font-size:120%;'>l</pre>"&nbsp;&mdash; left. Use capital letters (i.e. "<pre style='display:inline;font-size:120%;'>U</pre>", "<pre style='display:inline;font-size:120%;'>R</pre>", "<pre style='display:inline;font-size:120%;'>D</pre>" and "<pre style='display:inline;font-size:120%;'>L</pre>") to represent moves when sokoban pushes the box.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+#### 
+#&nbsp;&nbsp;##
+#@&#36;&nbsp;#
+#.#&nbsp;#
+#&nbsp;&nbsp;&nbsp;#
+#####
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+ddrruuLulD
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+#### 
+#&nbsp;&nbsp;##
+#@&#36;&nbsp;#
+#.#&nbsp;#
+#&nbsp;#&nbsp;#
+#####
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+Impossible.
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=472 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

@@ -1,0 +1,61 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=549 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 549. Dumbbells </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>549. Dumbbells</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />A sports shop has <i>n</i> dumbbells in store. Each of them is characterised by its mass <i>m</i><sub><i>i</i></sub> and cost <i>c</i><sub><i>i</i></sub>. Recently the shop manager faced the following non-trivial problem. He has to find the maximum number of sports sets that satisfy the following requirements:<br /><br /><ul> <li>each set must contain exactly <i>k</i> dumbbells; <li>each set must have dumbbells of <i>k</i> distinct masses; <li>for each pair of sets the masses of dumbbells must coincide <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/a6a63eed34558763a4af1e3dbce771cc.png'/>, that is, the masses in the sets must be equal as <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/4da2937574ba9de230f259edfb9e4d85.png'/>. </ul><br /><br />The manager's task is to make the maximum number of such sets. If there are several ways to make the maximum possible number of sets, he should choose the one that has the maximum total cost of dumbbells that are contained in the chosen sets. Note that the primary goal is to maximize the number of sets and maximization of the total cost is the secondary goal.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains integers <i>n</i> and <i>k</i> (1 &le; <i>n</i>,<i>k</i> &le; 4000). Next <i>n</i> lines contain descriptions of the dumbbells, one per line. Each description consists of a pair of integers <i>m</i><sub><i>i</i></sub>, <i>c</i><sub><i>i</i></sub> (1 &le; <i>m</i><sub><i>i</i></sub>,<i>c</i><sub><i>i</i></sub> &le; 4000), <i>m</i><sub><i>i</i></sub> is the mass of the <i>i</i>-th dumbbell, and <i>c</i><sub><i>i</i></sub> is its cost.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>In the only output line print two integers &mdash; <i>t</i> and <i>s</i>, where <i>t</i> is the maximum number of sets, and <i>s</i> is the maximum total cost of dumbbells in <i>t</i> choosen sets. If the manager can't make at least one set, print a pair of zeroes.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>7 2
+16 1
+4 6
+16 7
+7 100
+32 9
+4 6
+32 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2 22
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4 2
+1 2
+2 1
+4 3
+1 7
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>1 10
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>In the first sample the manager should make two sets. One of the possible solutions is as follows: the first set contains the second and the seventh dumbbells, the second set contains the fifth and the sixth dumbbells.<br /><br />In the second sample the manager can make only one set. It consists of the third and the fourth dumbbells.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=549 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

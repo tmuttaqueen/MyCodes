@@ -1,0 +1,61 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=371 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 371. Subway </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>371. Subway</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />You need to create the plan of building subway in the city of S***. The subway must consist of some circle lines, each consisting of three or more stations, up to ten stations. Each circle line must be linked as a loop: first station is linked with second, second with third and so on. The circle lines themselves are linked as a chain: changing from one circle line to another is possible only at one station for each consecutive pair of circle lines in that chain. Other pairs of circle lines have no intersections. Any non-degenerate segment of subway is allowed to be contained only by one circle line.<br /><br />Also it is needed to add radial lines, which start on some stations of circle lines and go to the distant parts of city. Unfortunately, due to lack of funds, radial line is allowed to consist only of two stations, one of them connects the radial line to circle line, and the other station is the terminal station. Terminal station cannot lie on more than one line. Any <i>transfer station</i>, which connects any two lines, could not connect more than two lines. No two radial lines are allowed to have common stations.<br /><br />It is required to build exactly <i>N</i> stations and <i>M</i> segments between stations. Your task is to find the plan.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>First line contains two integers <i>N</i> and <i>M</i> (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/5baf4495508e37e1fe41a6f3bd175805.png'/>).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>First line must contain the number of circle lines <i>K</i>. <i>K</i> lines follow, each describing one circle line. Circle line is described by the number of stations on it, then the station numbers themselves in traversing order. The next line contains <i>R</i> &mdash; the number of radial lines. <i>R</i> last lines contain pairs describing radial lines. All stations are numbered from 1 to <i>N</i>. Your plan must consist of exactly <i>N</i> stations and <i>M</i> connecting segments. If there is no solution, output "<pre style='display:inline;font-size:120%;'>No solution</pre>" without quotes.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+12 14
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 
+3 1 2 3 
+3 4 5 6 
+4 3 7 4 8 
+4 
+1 9 
+2 10 
+11 5 
+12 6
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+No solution 
+</pre>
+ </td>
+ </tr>
+</table><br>
+ <b>Picture describing the first sample</b><br> <image src = "http://acm.sgu.ru/problems/0/p371.png"><br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=371 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

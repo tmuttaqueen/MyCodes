@@ -1,0 +1,62 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=351 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 351. A Mission for a Scout </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>351. A Mission for a Scout</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />The scout Sidorov is facing a delicate situation: he has to get from <i>A</i> to <i>B</i>. The embarrassment of the situation apparently lies in the news that the scout received lately. It appears that a bomb has been detonated at the neighborhood recently, and the explosion caused a circle crater. Fortunately, Sidorov has an antigravitator to fly over the craters, but the fuel in the tank is hardly enough for the distance <i>D</i>. Sidorov wrote out all the necessary data he had and sent it to you by secret post. He is looking forward to hearing from you, for nobody else can calculate the length of the shortest route from <i>A</i> to <i>B</i>, taking into consideration the craters and the fuel left. He also would like to get the route itself. Clearly, the route will consist only of segments and arcs of the circle formed by the crater.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line describes four numbers <i>X</i><sub><i>A</i></sub>, <i>Y</i><sub><i>A</i></sub>, <i>X</i><sub><i>B</i></sub>, <i>Y</i><sub><i>B</i></sub>&nbsp;&mdash; coordinates of <i>A</i> and <i>B</i> accordingly. The second line describes three numbers <i>X</i><sub><i>C</i></sub>, <i>Y</i><sub><i>C</i></sub>, <i>R</i><sub><i>C</i></sub>&nbsp;&mdash; coordinates of the center and the radius of the crater. The third line describes <i>D</i>&nbsp;&mdash; the distance the antigravitator can fly over the crater. All coordinates in the input file are integers from 0 to 10\,000. <i>R</i><sub><i>C</i></sub> and <i>D</i> are integer numbers from 1 to 10\,000. <i>A</i> doesn't coincide with <i>B</i> and both points are outside the crater.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Write the number of the parts <i>T</i> of the desired route to the first line of the output file. After that write the description of route parts one per line. For each part of the route print character "S" (for segment) or "A" (for arc) followed by the coordinates of their endpoints. Coordinates should be written with 8 digits after decimal point. <i>T</i> should not exceed 100. The first point in the route should be point <i>A</i>, the last point&nbsp;&mdash; <i>B</i>, and the second endpoint of each part should coincide with the first endpoint of the next part in the route. <br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 1 101 1
+50 1 40
+80
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+S 1.000000000 1.000000000 101.000000000 1.000000000
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 1 101 1
+50 1 40
+1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4
+S 1.00000000 1.00000000 17.34693878 24.10362726
+S 17.34693878 24.10362726 17.93468841 24.91267013
+A 17.93468841 24.91267013 81.37254902 25.81457572
+S 81.37254902 25.81457572 101.00000000 1.00000000 
+</pre>
+ </td>
+ </tr>
+</table><br>
+ </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=351 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

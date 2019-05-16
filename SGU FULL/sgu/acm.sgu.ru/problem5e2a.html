@@ -1,0 +1,90 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=198 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>198. Get Out!
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>Captain Faraway on his famous circular ship <em>Kolobok</em> is lost among the islands of the archipelago that he has just discovered. Now he wonders whether he can get out of there. Help him!
+<br>
+<br>All islands in the archipelago can be composed of pieces that have circular form. You are given the map of archipelago and the position of captain. Find out whether captain can get out of there, i.e. can get as far from the point he is in the beginning as he likes.
+<br>
+</div><div align = left><br><b>Input</b></div><div align = left>
+<br>The first line contains N &mdash; the number of circular island parts (1 &le; N &le; 300). N lines follow, each containing x<sub>i</sub>, y<sub>i</sub>, r<sub>i</sub> &mdash; coordinates of center and radius of the i-th circle. All coordinates and radii are real. Objects may overlap with each other in arbitrary way. All objects are considered solid.
+<br>
+<br>The last line of the input file contains three real numbers &mdash; coordinates of the center of <em>Kolobok</em> and its radius. 
+<br>
+<br>You may consider <em>Kolobok</em> to be the perfect circle and that it is in the free area in the beginning. <em>Kolobok</em> can move along any trajectory and is so strong that he can even touch islands, but no nonzero part of island must intersect <em>Kolobok</em> during his motion. You may assume that making calculations with the precision of 10<sup>-6</sup> is satisfactory.
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>
+<br>Output YES if <em> Kolobok</em> can leave archipelago and NO if it cannot. 
+<br>
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>
+<br>Test #1
+<br>
+<br>7
+<br>2 2 1.1
+<br>-2 2 1.1
+<br>2 -2 1.0
+<br>-2 -2 1.0
+<br>2 -5 1.0
+<br>0 -8 1.0
+<br>-2 -6 1.0
+<br>0 0 1
+<br>
+<br>Test #2
+<br>
+<br>5
+<br>2 2 1.1
+<br>-2 2 1.1
+<br>2 -2 1.0
+<br>-2 -2 1.0
+<br>0 -3 0.01
+<br>0 0 1
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>
+<br>Test #1
+<br>
+<br>YES
+<br>
+<br>Test #2
+<br>
+<br>NO
+<br>
+<br>
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=198'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=198'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Andrew Stankevich
+</td></tr><tr><td>Resource:</td><td>Petrozavodsk Winter Trainings 2003
+</td></tr><tr><td>Date:</td><td>2003-02-06
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:40:28</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=198 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+</html> 

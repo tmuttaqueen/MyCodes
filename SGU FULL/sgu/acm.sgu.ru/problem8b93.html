@@ -1,0 +1,98 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=418 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>418. Deducing Grammar
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 262144
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>A typical top-down parser is a very simple application. We will consider parsers written in Pascal that obey the following structure:
+<br><pre>
+<br>Program Parser;<br />Procedure Skip; Forward;<br />Function Peek:Char; Forward;<br />Procedure Error; Forward;
+<br>&lt;parsing routines forward-declarations&gt;<br />&lt;parsing routines&gt;
+<br>Var<br />  St:String;<br />  Pos:Integer;<br />Procedure Error;<br />Begin<br />  WriteLn('NO');<br />  Halt;<br />End;<br />Procedure Skip;<br />Begin<br />  Inc(Pos);<br />  If Pos&gt;Length(St) Then Error;<br />End;<br />Function Peek:Char;<br />Begin<br />  Peek:=St[Pos];<br />End;<br />Begin<br />  ReadLn(St);<br />  St:=St+'#';<br />  Pos:=1;<br />  Parse;<br />  If Pos=Length(St) Then WriteLn('YES') Else WriteLn('NO');<br />End.</pre>
+<br>The part labeled <code>&lt;parsing routines forward-declarations&gt;</code> contains a definition for each of the parsing functions, followed by <code>Forward;</code>. The part labeled <code>&lt;parsing routines&gt;</code> contains a definition followed by a body for each of the parsing routines.
+<br>
+<br>A definition of a parsing routine is:
+<br><pre>
+<br>Procedure &lt;name&gt;;</pre>
+<br>The name is a case-insensitive sequence of English letters. Names of different routines should be different. A routine name cannot coincide with a keyword, nor can it coincide with the names of parser's internal functions (<code>Skip</code>, <code>Peek</code> or <code>Error</code>). A body of a parsing routine is:
+<br><pre>
+<br>Begin<br />  &lt;segment&gt;<br />  &lt;segment&gt;<br />  ...<br />  &lt;segment&gt;<br />End;</pre>
+<br>There must be at least one segment. Each segment is either an unconditional segment, or a conditional segment.
+<br>
+<br>An unconditional segment is a routine call: <code>&lt;name&gt;;</code>, where <code>&lt;name&gt;</code> is a name of some parsing routine.
+<br>
+<br>A conditional segment has the following structure:
+<br><pre>
+<br>If Peek=&lt;character&gt; Then Begin<br />  Skip;<br />  &lt;segment&gt;<br />  &lt;segment&gt;<br />  ...<br />  &lt;segment&gt;<br />End Else If Peek=&lt;character&gt; Then Begin<br />  Skip;<br />  &lt;segment&gt;<br />  &lt;segment&gt;<br />  ...<br />  &lt;segment&gt;<br />End Else If Peek=&lt;character&gt; Then Begin<br />...<br />End Else If Peek=&lt;character&gt; Then Begin<br />End;</pre>
+<br>Where each <code>&lt;segment&gt;</code> is again either unconditional or conditional. The simplest form of a conditional segment has only one <code>If</code> and no <code>Else</code>. Note that we always skip a character after guessing it right, and that's the only case where we invoke <code>Skip;</code>. Each <code>&lt;character&gt;</code> is a non-apostrophe character with ASCII code between 33 and 126 wrapped in apostrophes, like <code>'a'</code>. It is not necessary to have at least one <code>&lt;segment&gt;</code> after <code>Skip;</code> in the <code>If</code> body. The last <code>End;</code> can also be written as <code>End Else Error;</code>, meaning that all other peek outcomes are unacceptable.
+<br>
+<br>The case of the letters in the identifiers and keywords can be arbitrary, and whitespace may be inserted and/or omitted everywhere except it must be present between two words and it must not be present inside a word or string literal (something wrapped in apostrophes). One of the parsing routines must be named <code>Parse</code>.
+<br>
+<br>Such a top-down parser is usually based on some formal grammar. Your task is to find which grammar the given parser is based on. To do so, you should apply the following rules (note that the resulting grammar may not necessarily define the same language as the language accepted by the parser &mdash; you shouldn't care about it, just blindly apply the rules):
+<br><ul>
+<br><li>The set of nonterminal symbols of the grammar is the same as the set of parsing routine names in the parser.</li>
+<br><li>The set of terminal symbols of the grammar is the set of characters with ASCII codes between 33 and 126, except apostrophe.</li>
+<br><li>For each (even seemingly impossible, like duplicate <code>Peek=...</code> conditions) way of evaluating all <code>If</code>'s in the body of some routine that do not result in a call to <code>Error;</code>, there should be one production rule concatenating the corresponding nonterminals and terminals (see example for further clarification).</li>
+<br><li>The starting symbol should be <code>Parse</code>.</li>
+<br></ul>Your program should input the top-down parser code in Pascal, and output the grammar in the Backus-Naur form. See example for more information on how to output the grammar. Two adjacent string literals should be concatenated, i.e., you should write <code>'AB'</code> instead of <code>'A''B'</code>. Your output should contain exactly <i>n</i> lines, where <i>n</i> is the number of parsing routines in the input.
+<br>
+<br>The nonterminals must be written in lowercase. The production rules inside a line must be sorted lexicographically, and the lines must be sorted lexicographically, too.
+<br>
+</div><div align = left><br><b>Input</b></div><div align = left>The input file contains a top-down parser in Pascal. The size of the input file does not exceed 10000 bytes, and each word is at most 20 characters long.
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>Output the Backus-Naur form of the underlying grammar. The only whitespace in output should be line breaks after each line (including the last line), as the output will be checked for exact equality with the reference answer. The output is guaranteed not to exceed 10000 bytes.
+<br>
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left><pre>
+<br>Program Parser;<br />Procedure Skip; Forward;<br />Function Peek:Char; Forward;<br />Procedure Error; Forward;
+<br>Procedure Parse; Forward;<br />Procedure Addend; Forward;<br />Procedure Term; Forward;<br />Procedure Number; Forward;
+<br>Procedure Term;<br />Begin<br />  If Peek='0' Then Begin<br />    Skip;<br />    Number;<br />  End Else If Peek='1' Then Begin<br />    Skip;<br />    Number;<br />  End Else If Peek='(' Then Begin<br />    Skip;<br />    Parse;<br />    If Peek=')' Then Begin<br />      Skip;<br />    End Else Error;<br />  End Else If Peek='P' Then Begin<br />    Skip;<br />    If Peek='I' Then Begin<br />      Skip;<br />    End Else If Peek='E' Then Begin<br />      Skip;<br />    End Else Error;        <br />  End Else Error;<br />End;
+<br>Procedure Number;<br />Begin<br />  If Peek='0' Then Begin<br />    Skip;<br />    Number;<br />  End Else If Peek='1' Then Begin<br />    Skip;<br />    Number;<br />  End;<br />End;
+<br>Procedure Addend;<br />Begin<br />  Term;<br />  If Peek='*' Then Begin<br />    Skip;<br />    Addend;<br />  End Else If Peek='/' Then Begin<br />    Skip;<br />    Addend;<br />  End;<br />End;
+<br>Procedure Parse;<br />Begin<br />  Addend;<br />  If Peek='+' Then Begin<br />    Skip;<br />    Parse;<br />  End Else If Peek='-' Then Begin<br />    Skip;<br />    Parse;<br />  End;<br />End;
+<br>Var<br />  St:String;<br />  Pos:Integer;
+<br>Procedure Error;<br />Begin<br />  WriteLn('NO');<br />  Halt;<br />End;
+<br>Procedure Skip;<br />Begin<br />  Inc(Pos);<br />  If Pos&gt;Length(St) Then Error;<br />End;
+<br>Function Peek:Char;<br />Begin<br />  Peek:=St[Pos];<br />End;<br />Begin<br />  ReadLn(St);<br />  St:=St+'#';<br />  Pos:=1;<br />  Parse;<br />  If Pos=Length(St) Then WriteLn('YES') Else WriteLn('NO');<br />End.</pre>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left><pre>
+<br>&lt;addend&gt;::=&lt;term&gt;|&lt;term&gt;'*'&lt;addend&gt;|&lt;term&gt;'/'&lt;addend&gt;<br />&lt;number&gt;::=|'0'&lt;number&gt;|'1'&lt;number&gt;<br />&lt;parse&gt;::=&lt;addend&gt;|&lt;addend&gt;'+'&lt;parse&gt;|&lt;addend&gt;'-'&lt;parse&gt;<br />&lt;term&gt;::='('&lt;parse&gt;')'|'0'&lt;number&gt;|'1'&lt;number&gt;|'PE'|'PI'</pre>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br><b>Note</b></div><div align = left>Note that this parser and this grammar correspond to arithmetic expressions involving binary numbers and two constants <code>'PE'</code> and <code>'PI'</code>.
+<br>
+</div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=418'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=418'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Petr Mitrichev
+<br>
+</td></tr><tr><td>Resource:</td><td>Petr Mitrichev Contest 3
+<br>
+</td></tr><tr><td>Date:</td><td>September 01, 2007
+<br>
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:49:52</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=418 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html> 

@@ -1,0 +1,61 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=381 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 381. Bidirected Graph </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>381. Bidirected Graph</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />The notion of bidirected graphs is used to formulate and solve wide range of combinatorial optimization problems: matchings, <i>b</i>-matchings, <i>T</i>-joins, <i>T</i>-paths packing and so on. Bidirected graph is a generalization of directed graph, where every arc has two orientations&nbsp;&mdash; one for every end.<br /><br />More formally, bidirected graph is a tuple (<i>V</i>, <i>E</i>, <i>ends</i>, &omega;). <i>V</i> is a set of nodes, <i>E</i> is a set of edges, <i>ends</i> is a mapping from <i>E</i>: <i>ends</i>(<i>e</i>) = {<i>u</i>, <i>v</i>}, where <i>u</i>, <i>v</i> &isin; <i>V</i>, <i>u</i> &ne; <i>v</i>. For every <i>e</i> &isin; <i>E</i> and <i>v</i> &isin; <i>ends</i>(<i>e</i>) we define &omega;(<i>e</i>, <i>v</i>) &isin; {-1, +1}. It is called the direction of the edge <i>e</i> in the node <i>v</i>.<br /><br />An <i>s</i>-<i>t</i> walk in a bidirected graph <i>G</i> is an alternating sequence<br /><br /><i>P</i> = (<i>s</i> = <i>v</i><sub>0</sub>, <i>e</i><sub>1</sub>, <i>v</i><sub>1</sub>,..., <i>e</i><sub><i>k</i></sub>, <i>v</i><sub><i>k</i></sub> = <i>t</i>),<br /><br />where <i>v</i><sub><i>i</i></sub> &isin; <i>V</i>, <i>e</i><sub><i>i</i></sub> &isin; <i>E</i>, <i>ends</i>(<i>e</i><sub><i>i</i></sub>) = {<i>v</i><sub><i>i</i> - 1</sub>, <i>v</i><sub><i>i</i></sub>} and &omega;(<i>e</i><sub><i>i</i> + 1</sub>, <i>v</i><sub><i>i</i></sub>) &omega;(<i>e</i><sub><i>i</i></sub>, <i>v</i><sub><i>i</i></sub>) = -1.<br /><br />A directed graph without loops can be considered as bidirected, if we replace each arc <i>a</i> = (<i>u</i>, <i>v</i>) with an edge <i>e</i><sub><i>a</i></sub>, and put <i>ends</i>(<i>e</i><sub><i>a</i></sub>) = {<i>u</i>, <i>v</i>}, &omega;(<i>e</i><sub><i>a</i></sub>, <i>u</i>) = -1, &omega;(<i>e</i><sub><i>a</i></sub>, <i>v</i>) = +1.<br /><br />An elementary transformation on node <i>v</i> is defined as follows: if for <i>e</i> &isin; <i>E</i>, &omega;(<i>e</i>, <i>v</i>) is defined, then negate it. It's clear that elementary transformations don't change the set of walks in <i>G</i>.<br /><br />We want to determine if it is possible to convert bidirected graph to "directed" graph (i.e. to graph that can be obtained from some directed graph by means of the consideration described above) using several elementary transformations. If it is, we also want to know how to do it using the minimal number of elementary transformations.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains two integer numbers <i>n</i> and <i>m</i>&nbsp;&mdash; the number of vertices and the number of edges in the graph (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/32ee321dac62af9abe4281056171d58d.png'/>, <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/3b8582e2caeadb2df78cee8c4b500897.png'/>). Next <i>m</i> lines describe the edges of the graph. Each line consists of four numbers <i>a</i><sub><i>i</i></sub>, <i>b</i><sub><i>i</i></sub>, <i>d</i><sub><i>i</i>,1</sub>, <i>d</i><sub><i>i</i>,2</sub>, where <i>a</i><sub><i>i</i></sub> and <i>b</i><sub><i>i</i></sub> are the ends of the egde <i>e</i> and <i>d</i><sub><i>i</i>,1</sub>=&omega;(<i>e</i>,<i>a</i><sub><i>i</i></sub>), <i>d</i><sub><i>i</i>,2</sub>=&omega;(<i>e</i>,<i>b</i><sub><i>i</i></sub>); 1 &le; <i>a</i><sub><i>i</i></sub>, <i>b</i><sub><i>i</i></sub> &le; <i>n</i>, <i>d</i><sub><i>i</i>,<i>j</i></sub> &isin; {-1, 1}.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>If it is impossible to perform required transformation, output should contain exactly one string "<pre style='display:inline;font-size:120%;'>NO</pre>" (quotes for clarity only). Otherwise, the first line should contain string "<pre style='display:inline;font-size:120%;'>YES</pre>", the second line should contain the number of elementary transformations in your solution, and the following lines should describe those transformations. Each transformation should be described by exactly one number&nbsp;&mdash; the index of the vertex of this transformation. If there are several answers with the minimal number of transformations, output any of them.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 3
+1 3 -1 -1
+2 3 -1 -1
+3 4 1 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+YES
+1
+3
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 3
+1 2 1 1
+2 3 1 1
+1 3 1 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+NO
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=381 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

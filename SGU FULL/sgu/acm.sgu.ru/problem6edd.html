@@ -1,0 +1,63 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=532 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 532. Building Foundation </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>532. Building Foundation</h4></div><div align=center>Time limit per test: 3
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ A new office building is to appear in Berland soon. Its construction has just been started, and the first problem builders are facing is to lay the foundation.<br /><br />The ground at construction site area has already been hardened along <i>n</i> segments. Each segment is given by integer coordinates of its endpoints in the site area coordinate system. Every segment has a positive length and is parallel to either <i>Ox</i> axis or <i>Oy</i> axis. It's important to note that the ground hardening was done in such a way that only perpendicular segments could possibly have common points. <br /><br />The decision has been made for the foundation to have a rectangular form. The rectangle must have the following properties: <ul> <li>it should have a positive area, <li>its sides should be parallel to one of the coordinate axes, <li>its sides should be situated on the hardened ground, i.e. each point of its perimeter should belong to at least one segment out of the <i>n</i> hardened ones. </ul><br /><br />You are to help estimating the difficulty of choosing such a rectangle. Write a program that finds the number of rectangles that can possibly be used as a foundation.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line contains integer <i>n</i> (1 &le; <i>n</i> &le; 600) &mdash; the number of hardened segments. Each of the following <i>n</i> lines contains four space-separated integers <i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>y</i><sub>2</sub> (-10<sup>9</sup> &le; <i>x</i><sub>1</sub>,<i>y</i><sub>1</sub>,<i>x</i><sub>2</sub>,<i>y</i><sub>2</sub> &le; 10<sup>9</sup>) &mdash; coordinates of the segments' endpoints. Each segment has positive length and is parallel to either <i>Ox</i> axis or <i>Oy</i> axis. No two horizontal segments have a common point. No two vertical segments have a common point.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print a single integer &mdash; the number of rectangles that can possibly be used as a foundation.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+0 0 1 0
+0 0 0 1
+1 1 1 -1
+1 1 0 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>8
+1 0 4 0
+2 1 2 0
+0 0 0 3
+2 2 2 3
+3 3 3 -1
+0 3 4 3
+4 1 -1 1
+3 2 -1 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>6
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=532 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

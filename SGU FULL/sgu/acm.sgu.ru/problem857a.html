@@ -1,0 +1,34 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=431 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 431. Wildcards </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>431. Wildcards</h4></div><div align=center>Time limit per test: 5 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />You are given a list of files in a directory and need to match a specific subset of these files. You've decided to do that with a single string containing wildcards.<br /><br />More precisely, each file name is a string consisting of lowercase English letters ('a' through 'z'). You want to craft a string consisting of lowercase English letters, asterisks ('*'), and question marks ('?'). An asterisk matches any sequence of letters (including empty). A question mark matches exactly one letter. See examples for further clarification.<br /><br />Given a list of file names that you want to match and the list of file names that you don't want to match, output a string (which may include wildcards) that will achieve that.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains two integers <i>n</i> and <i>m</i> (1 &le; <i>n</i>, <i>m</i> &le; 10)&nbsp;&mdash; the number of file names to match and the number of file names not to match, respectively. The next <i>n</i> lines contain file names to match, one per line, each no more than 11 characters long, without any whitespace expect newlines. The next <i>m</i> lines contain file names not to match in the same format. All file names in the input file are different.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output one string that will do the required matches. The length of that string must not exceed 100. If there're several possible solutions, output any. If there's no solution, output "OOPS" (without quotes) instead.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 2
+list
+tablexx
+dataone
+datatwo
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+*l???
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=431 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

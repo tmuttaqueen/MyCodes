@@ -1,0 +1,140 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=450 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 450. Ramen Shop </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>450. Ramen Shop</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Ron is a master of a ramen shop.<br /><br />Recently, he has noticed some customers wait for a long time. This has been caused by lack of seats during lunch time. Customers loses their satisfaction if they wait for a long time, and some of them will even give up waiting and go away. For this reason, he has decided to increase seats in his shop. To determine how many seats are appropriate, he has asked you, an excellent programmer, to write a simulator of customer behavior.<br /><br />Customers come to his shop in groups, each of which is associated with the following four parameters: <ul> <li><i>T</i><sub><i>i</i></sub>: when the group comes to the shop <li><i>P</i><sub><i>i</i></sub>: number of customers <li><i>W</i><sub><i>i</i></sub>: how long the group can wait for their seats <li><i>E</i><sub><i>i</i></sub>: how long the group takes for eating </ul><br /><br />The <i>i</i>-th group comes to the shop with <i>P</i><sub><i>i</i></sub> customers together at the time <i>T</i><sub><i>i</i></sub>. If <i>P</i><sub><i>i</i></sub> successive seats are available at that time, the group takes their seats immediately. Otherwise, they wait for such seats being available. When the group fails to take their seats within the time <i>W</i><sub><i>i</i></sub> (inclusive) from their coming and strictly before the closing time, they give up waiting and go away. In addition, if there are other groups waiting, the new group cannot take their seats until the earlier groups are taking seats or going away.<br /><br />The shop has <i>N</i> counters numbered uniquely from 1 to <i>N</i>. The <i>i</i>-th counter has <i>C</i><sub><i>i</i></sub> seats. A group cannot spread over multiple counters. The group prefers "seats with a greater distance to the nearest group." Precisely, the group takes their seats according to the criteria listed below. For each block of seats of appropriate size within each counter, values <i>S</i><sub><i>L</i></sub> and <i>S</i><sub><i>R</i></sub> are calculated. Here, <i>S</i><sub><i>L</i></sub> denotes the number of successive empty seats on the left side of the group after their seating, and <i>S</i><sub><i>R</i></sub> the number on the right side. <i>S</i><sub><i>L</i></sub> and <i>S</i><sub><i>R</i></sub> are considered to be infinity if there are no other customers on the left side and on the right side respectively. Note that these numbers don't take into account people in other counters. <li>Prefers seats maximizing <i>min</i> { <i>S</i><sub><i>L</i></sub>, <i>S</i><sub><i>R</i></sub> }. <li>If there are multiple alternatives meeting the first criterion, prefers seats maximizing <i>max</i> { <i>S</i><sub><i>L</i></sub>, <i>S</i><sub><i>R</i></sub> }. <li>If there are still multiple alternatives, prefers the counter of the smallest number. <li>If there are still multiple alternatives, prefers the leftmost seats. <br /><br />When multiple groups are leaving the shop at the same time and some other group is waiting for available seats, seat assignment for the waiting group should be made after all the finished groups leave the shop. If a customer starts eating, he is allowed to finish even after the shop closes.<br /><br />Your task is to calculate the average satisfaction over customers. The satisfaction of a customer in the <i>i</i>-th group is given as follows: <ul> <li>If the group goes away without eating, -1. <li>Otherwise, (<i>W</i><sub><i>i</i></sub> - <i>t</i><sub><i>i</i></sub>) / <i>W</i><sub><i>i</i></sub> where <i>t</i><sub><i>i</i></sub> is the actual waiting time for the <i>i</i>-th group (the value ranges between 0 to 1 inclusive). </ul><br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input has the following format:<br /><br /><i>N</i> <i>M</i> <i>T</i><br /><br /><i>C</i><sub>1</sub> <i>C</i><sub>2</sub>... <i>C</i><sub><i>N</i></sub><br /><br /><i>T</i><sub>1</sub> <i>P</i><sub>1</sub> <i>W</i><sub>1</sub> <i>E</i><sub>1</sub><br /><br /><i>T</i><sub>2</sub> <i>P</i><sub>2</sub> <i>W</i><sub>2</sub> <i>E</i><sub>2</sub><br /><br />...<br /><br /><i>T</i><sub><i>M</i></sub> <i>P</i><sub><i>M</i></sub> <i>W</i><sub><i>M</i></sub> <i>E</i><sub><i>M</i></sub><br /><br /><i>N</i> indicates the number of counters, <i>M</i> indicates the number of groups and <i>T</i> indicates the closing time. The shop always opens at the time 0. All input values are integers.<br /><br />You can assume that 1 &le; <i>N</i> &le; 100, 1 &le; <i>M</i> &le; 10000, 1 &le; <i>T</i> &le; 10<sup>9</sup>, 1 &le; <i>C</i><sub><i>i</i></sub> &le; 100, 0 &le; <i>T</i><sub>1</sub> < <i>T</i><sub>2</sub> <... < <i>T</i><sub><i>M</i></sub> < <i>T</i>, 1 &le; <i>P</i><sub><i>i</i></sub> &le; <i>max</i>{<i>C</i><sub><i>i</i></sub>}, 1 &le; <i>W</i><sub><i>i</i></sub> &le; 10<sup>9</sup> and 1 &le; <i>E</i><sub><i>i</i></sub> &le; 10<sup>9</sup>.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output the average satisfaction over all customers in a line. The output value may be printed with an arbitrary number of fractional digits, but may not contain an absolute error greater than 10<sup>-9</sup>.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 4 100
+7
+10 1 50 50
+15 2 50 50
+25 1 50 50
+35 3 50 50
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0.7428571428571429
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 2 100
+5
+30 3 20 50
+40 4 40 50
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0.4285714285714285
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 2 100
+5
+49 3 20 50
+60 4 50 30
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0.5542857142857143
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 2 100
+5
+50 3 20 50
+60 4 50 30
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+-0.1428571428571428
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 3 100
+4 2
+10 4 20 20
+30 2 20 20
+40 4 20 20
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0.8000000000000000
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=450 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

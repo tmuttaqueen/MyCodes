@@ -1,0 +1,107 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=314 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 314. Shortest Paths </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>314. Shortest Paths</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />You are given a graph with one vertex marked as source <i>s</i> and one as destination <i>t</i>. Each edge of the graph has a positive length. Find the shortest path from <i>s</i> to <i>t</i>. Then find the second-shortest path (the shortest one of all the paths from <i>s</i> to <i>t</i> except the one you've just found). Then the third-shortest, and so on. Output the lengths of first <i>k</i> such paths.<br /><br />Note that these paths may not be simple, i.e. they may contain some vertex or edge several times (see the 2nd example).<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains <i>n</i>, the number of vertices of the graph, <i>m</i>, the number of edges of the graph, and <i>k</i>, the number of paths sought (2 &le; <i>n</i> &le; 10000, 2 &le; <i>m</i> &le; 50000, 2 &le; <i>k</i> &le; 10000).<br /><br />The second line of the input file contains <i>s</i> and <i>t</i> (integers between 1 and <i>n</i>, inclusive, <i>s</i> != <i>t</i>).<br /><br />The next <i>m</i> lines contain the descriptions of the edges, each description consisting of three integer numbers: <i>a</i> <i>b</i> <i>c</i>, denoting the edge from <i>a</i> to <i>b</i> with length <i>c</i> (1 &le; <i>a</i>,<i>b</i> &le; <i>n</i>, <i>a</i> != <i>b</i>, 1 &le; <i>c</i> &le; 1000). There may be more than one edge for the same <i>a</i> and <i>b</i>.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output <i>k</i> integer numbers in non-decreasing order&nbsp;&mdash; the lengths of the paths. In case there are less than <i>k</i> different paths from <i>s</i> to <i>t</i>, output <pre style='display:inline;font-size:120%;'>NO</pre> instead of the lengths of all non-existent paths.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 5 5
+1 4
+1 2 1
+2 3 1
+3 4 1
+1 3 1
+2 4 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+2
+3
+NO
+NO
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 4 5
+1 4
+1 2 10
+2 3 10
+3 4 10
+3 2 10
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+30
+50
+70
+90
+110
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 2 10
+1 2
+1 2 5
+2 1 7
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5
+17
+29
+41
+53
+65
+77
+89
+101
+113
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=314 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

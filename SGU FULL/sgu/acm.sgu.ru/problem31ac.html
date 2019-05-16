@@ -1,0 +1,88 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=443 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 443. Everlasting...? </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>443. Everlasting...?</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Everlasting Sa-Ga, a new, hot and very popular role-playing game, is out on October 19, 2008. 
+Fans have been looking forward to a new title of Everlasting Sa-Ga.
+
+Little Jimmy is in trouble. 
+He is a seven-year-old boy, and he obtained the Everlasting Sa-Ga and is attempting to reach the end of the game before his friends. 
+However, he is facing difficulty solving the riddle of the first maze in this game &mdash; Everlasting Sa-Ga is notorious in extremely hard riddles like Neverending Fantasy and Forever Quest. 
+
+The riddle is as follows. 
+There are two doors on the last floor of the maze: the door to the treasure repository and the gate to the hell. 
+If he wrongly opens the door to the hell, the game is over and his save data will be deleted. 
+Therefore, he should never open the wrong door.
+
+So now, how can he find the door to the next stage? 
+There is a positive integer given for each door &mdash; it is a great hint to this riddle. 
+The door to the treasure repository has the integer that gives the larger <i>key number</i>. 
+The key number of a positive integer <i>n</i> is the largest prime factor minus the total sum of any other prime factors, where the prime factors are the prime numbers that divide into <i>n</i> without leaving a remainder. 
+Note that each prime factor should be counted only once.
+
+As an example, suppose there are doors with integers 30 and 20 respectively. 
+Since 30 has three prime factors 2, 3 and 5, its key number is 5 - (2 + 3) = 0. 
+Similarly, since 20 has two prime factors 2 and 5, its key number 20 is 5 - 2 = 3. 
+Jimmy therefore should open the door with 20.
+
+Your job is to write a program to help Jimmy by solving this riddle.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input consists of a line that contains two integers <i>a</i> and <i>b</i> separated by a space (2 &le; <i>a</i>, <i>b</i> &le; 10<sup>6</sup>). 
+It is guaranteed that key numbers of these integers are always different.
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print in a line '<pre style='display:inline;font-size:120%;'>a</pre>' (without quotes) if the door with the integer <i>a</i> is connected to the treasure repository; print '<pre style='display:inline;font-size:120%;'>b</pre>' otherwise.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+10 15
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+a
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+30 20
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+b
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=443 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

@@ -1,0 +1,50 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=523 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 523. Elevator </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>523. Elevator</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ The Berland State Building is the highest building in the capital of Berland. Curious Polikarp was studying the principle of operation of an elevator in the Berland State Building for a quite a while. Recently he has finally understood the algorithm behind its operation, in case a person enters the elevator on the floor <i>f</i> and presses the floor buttons <i>e</i><sub>1</sub>, <i>e</i><sub>2</sub>,..., <i>e</i><sub><i>n</i></sub> one by one. The buttons are pressed sequentially but very quickly while the elevator is still located on the floor <i>f</i>. All the pressed buttons are distinct and differ from the floor <i>f</i>. No other button pressings are considered in this problem.<br /><br />After the buttons <i>e</i><sub>1</sub>, <i>e</i><sub>2</sub>,..., <i>e</i><sub><i>n</i></sub> have been pressed, all of them become highlighted and the elevator starts moving according the following rules: <ul><br /><br /><li>The elevator starts moving towards the floor, the button of which is highlighted and pressed first among all highlighted buttons. Say, it's floor/button <i>a</i>.<br /><br /><li>If on its way to <i>a</i> the elevator passes the floor <i>b</i>, the button of which is highlighted, it stops there, the light goes out for the button <i>b</i> unhighlighting it, and the floor <i>b</i> is considered visited. Then the elevator continues moving towards the floor <i>a</i>. It is possible that there will be more than one floor such as <i>b</i> on the way to floor <i>a</i>&nbsp;&mdash; all these floors will be passed one by one according to the described algorithm.<br /><br /><li>Having reached the floor <i>a</i>, the elevator stops there, the light goes out for the button <i>a</i> unhighlighting it, and the floor <i>a</i> is considered visited. Then the elevator starts to move towards the floor, the button of which has been pressed the earliest among the currently highlighted buttons. That floor becomes a new value of <i>a</i>. The elevator continues moving according to the rules described in the previous paragraph. If it's impossible to find a new value for <i>a</i> because there are no highlighted floor buttons, it means that all floors have been visited and the elevator stops. </ul><br /><br />Now, when the principle of the elevator's operation is clear, Polikarp wants to experiment with the elevator's movements without the elevator itself. He wants to write a program that simulates elevator's operation. Unfortunately, he didn't attend any programming lessons and it's a challenge for him. Can you please help Polikarp and write a program which will simulate movements of the elevator?<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of input contains a pair of integers <i>n</i>, <i>f</i> (1 &le; <i>n</i>, <i>f</i> &le; 100), where <i>n</i> &mdash; amount of pressings made, <i>f</i> &mdash; index of the current floor where all these pressings were made. The second line contains distinct integers <i>e</i><sub>1</sub>, <i>e</i><sub>2</sub>,..., <i>e</i><sub><i>n</i></sub> (1 &le; <i>e</i><sub><i>i</i></sub> &le; 100, <i>e</i><sub><i>i</i></sub> &ne;q <i>f</i>) &mdash; buttons indices in the order they were pressed.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output all the floors where the elevator stops, in a chronological order of the stops.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4 5
+10 9 2 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>9 10 2 1 </pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4 3
+2 4 1 5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2 4 1 5 </pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=523 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

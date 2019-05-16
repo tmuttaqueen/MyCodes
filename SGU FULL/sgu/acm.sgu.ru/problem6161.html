@@ -1,0 +1,211 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=445 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 445. Dig or Climb </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>445. Dig or Climb</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144 kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Benjamin Forest VIII is a king of a country. 
+One of his best friends Nod lives in a village far from his castle. 
+Nod gets seriously sick and is on the verge of death. 
+Benjamin orders his subordinate Red to bring good medicine for him as soon as possible. 
+However, there is no road from the castle to the village. 
+Therefore, Red needs to climb over mountains and across canyons to reach the village. 
+He has decided to get to the village on the shortest path on a map, that is, he will move on the straight line between the castle and the village. 
+Then his way can be considered as polyline with <i>n</i> points (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>)... (<i>x</i><sub><i>n</i></sub>, <i>y</i><sub><i>n</i></sub>) as illustlated in the following figure.
+<br/>
+<img style="height:15em;" src="http://acm.sgu.ru/problems/0/p445_01.png"/>
+<br/>
+Here, <i>x</i><sub><i>i</i></sub> and <i>y</i><sub><i>i</i></sub> are coordinates of point <i>i</i>.
+The castle is located on the point (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>), and the village is located on the point (<i>x</i><sub><i>n</i></sub>, <i>y</i><sub><i>n</i></sub>).
+
+Red can walk with speed <i>v</i><sub><i>w</i></sub>. 
+Also, since he has a skill to cut a tunnel through a mountain horizontally,
+he can move strictly inside the mountain with speed <i>v</i><sub><i>c</i></sub>.
+
+Your job is to write a program to find the minimum time to get to the village.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input is given in the following format:
+
+<i>n</i>
+<i>v</i><sub><i>w</i></sub> <i>v</i><sub><i>c</i></sub>
+<i>x</i><sub>1</sub> <i>y</i><sub>1</sub>
+...
+<i>x</i><sub><i>n</i></sub> <i>y</i><sub><i>n</i></sub>
+
+
+You may assume all the following:
+1 &le; <i>n</i> &le; 1000, 1 &le; <i>v</i><sub><i>w</i></sub>, <i>v</i><sub><i>c</i></sub> &le; 10,
+-10000 &le; <i>x</i><sub><i>i</i></sub>, <i>y</i><sub><i>i</i></sub> &le; 10000, and <i>x</i><sub><i>i</i></sub> < <i>x</i><sub><i>j</i></sub> for all <i>i</i> < <i>j</i>.
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>You should print the minimum time required to get to the village in a line.
+Each minimum time should be given as a decimal with an arbitrary number of fractional digits and with an absolute error of at most 10<sup>-6</sup>.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+2 1
+0 0
+50 50
+100 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+70.710678
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+1 1
+0 0
+50 50
+100 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+100.000000
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+1 2
+0 0
+50 50
+100 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+50.000000
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+2 1
+0 0
+100 100
+150 50
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+106.066017
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+6
+1 2
+0 0
+50 50
+100 0
+150 0
+200 50
+250 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+150.000000
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+1 2
+0 0
+100 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+100.000000
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=445 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

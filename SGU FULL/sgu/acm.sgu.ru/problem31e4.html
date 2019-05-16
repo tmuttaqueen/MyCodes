@@ -1,0 +1,68 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=515 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 515. Recover path </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>515. Recover path</h4></div><div align=center>Time limit per test: 1.5 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ Traveller Gregory is famous for his ability to always choose the shortest path for his journey. Ostap is a journalist who seeks for information about the recent Gregory's trip. He managed to get the evidence that during this trip Gregory visited a number of cities. However, there is no information about the order in which they were visited, and no information about the starting city and the ending city of Gregory's trip (the entire trip is (one of) the shortest path between these cities). Help Ostap to find any shortest path that contains all specified cities.<br /><br />Country in which Gregory traveled consists of <i>n</i> cities and <i>m</i> undirected roads between them. For each road Ostap knows the time it takes to travel it, and the "shortest" word above is with respect to those times.<br /><br />It is guaranteed that there exists some shortest path going through all specified cities.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>First line contains two integers <i>n</i>, <i>m</i> (1 &le; <i>n</i>, <i>m</i> &le; 10<sup>5</sup>). Each of the <i>m</i> following lines contains a description of a single road <i>a</i><sub><i>i</i></sub>, <i>b</i><sub><i>i</i></sub>, <i>t</i><sub><i>i</i></sub> (<i>a</i><sub><i>i</i></sub> &ne; <i>b</i><sub><i>i</i></sub>, 1 &le; <i>a</i><sub><i>i</i></sub>, <i>b</i><sub><i>i</i></sub> &le; <i>n</i>, 1 &le; <i>t</i><sub><i>i</i></sub> &le; 10<sup>4</sup>) means Gregory can go between <i>a</i><sub><i>i</i></sub> and <i>b</i><sub><i>i</i></sub> by road and that will take <i>t</i><sub><i>i</i></sub> seconds. The next line contains <i>k</i>&nbsp;&mdash; the number of cities that Ostap knows Gregory has visited. The last line contains a list of these cities. All cities in that list are distinct.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>On the first line output the number of roads in the sought shortest path. On the second line output the list of road numbers (numbered in the order of appearing in the input) in the order of that shortest path. If there are many solutions, output any.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>6 6
+1 2 2
+2 6 2
+1 3 1
+3 4 1
+4 5 1
+5 6 1
+3
+5 1 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3
+3 4 5
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>6 6
+1 2 2
+2 6 2
+1 3 1
+3 4 1
+4 5 1
+5 6 1
+2
+1 6
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2
+1 2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=515 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

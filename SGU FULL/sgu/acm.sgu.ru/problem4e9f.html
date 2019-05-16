@@ -1,0 +1,59 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=534 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 534. Computer Network </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>534. Computer Network</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ Computer network of Berland's best physical and mathematical school has a "tree" topology. That is, the network has no cycles; it connects <i>n</i> computers by <i>n</i>-1 cables. Each cable connects exactly two different computers.<br /><br />The school has really old equipment and the network is slow. The network administrator defined for each cable a value <i>t</i><sub><i>i</i></sub>, which represents the average time to transmit a packet from computer <i>a</i><sub><i>i</i></sub> to computer <i>b</i><sub><i>i</i></sub> (or vice versa), where <i>a</i><sub><i>i</i></sub>, <i>b</i><sub><i>i</i></sub> are computers connected by the <i>i</i>-th cable. <br /><br />For two computers <i>a</i> and <i>b</i> the average time to transmit a packet from one computer to another is the sum of all <i>t</i><sub><i>i</i></sub>'s for the cables on the path from <i>a</i> to <i>b</i>. Of course, an important characteristic of the network is the maximum possible average time of transmitting a packet between two computers. This characteristic is called <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/07617f9d8fe48b4a7b3f523d6730eef0.png'/>. <br /><br />In light of national innovations and modernizations it was decided to improve the school computer network and reduce the value of <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/07617f9d8fe48b4a7b3f523d6730eef0.png'/>.<br /><br />It was decided to replace some cables with new ones. New cables have such a high speed of data transmission that any packet passes through the cable in negligibly little time. In practice, the time of a packet transmission for new cables equals 0. For each cable its price <i>p</i><sub><i>i</i></sub> was determined &mdash; the cost of replacing the <i>i</i>-th cable by the new one. Of course, after replacing the <i>i</i>-th cable, the new one will still connect computers <i>a</i><sub><i>i</i></sub> and <i>b</i><sub><i>i</i></sub>. <br /><br />Help the network administrator to find such set of cables, that after they are replaced, the value of <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/07617f9d8fe48b4a7b3f523d6730eef0.png'/> becomes less and the total cost of replacing these cables is minimal. Note that in this problem you do not have to minimize <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/07617f9d8fe48b4a7b3f523d6730eef0.png'/>, but you should make it less than its initial value.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line contains a single integer <i>n</i> (2 &le; <i>n</i> &le; 10<sup>5</sup>), <i>n</i> is the number of computers in the network. Then <i>n</i>-1 lines contain descriptions of all cables in the form of four integers <i>a</i><sub><i>i</i></sub>, <i>b</i><sub><i>i</i></sub>, <i>t</i><sub><i>i</i></sub>, <i>p</i><sub><i>i</i></sub> (1 &le; <i>a</i><sub><i>i</i></sub>,<i>b</i><sub><i>i</i></sub> &le; <i>n</i>; 1 &le; <i>t</i><sub><i>i</i></sub>,<i>p</i><sub><i>i</i></sub> &le; 10<sup>4</sup>), where <i>a</i><sub><i>i</i></sub>,<i>b</i><sub><i>i</i></sub> are numbers of computers connected by the <i>i</i>-th cable, <i>t</i><sub><i>i</i></sub> is the average transmission time of a packet through the cable and <i>p</i><sub><i>i</i></sub> is the cost of replacing the <i>i</i>-th cable with a new one. <br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>In the first line print the required minimum possible cost of replacements. In the second line print the number of cables in the required set in arbitrary order. In the third line print the numbers of these cables. Consider the cables numbered from 1 in the order they appear in the input. If there are multiple solutions, print any of them.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+1 2 3 3
+1 3 8 33
+1 4 3 7
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>10
+2
+1 3 </pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+1 2 3 5
+2 3 5 2
+3 4 5 4
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2
+1
+2 </pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=534 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

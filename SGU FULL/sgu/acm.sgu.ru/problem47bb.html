@@ -1,0 +1,36 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=311 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 311. Ice-cream Tycoon </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>311. Ice-cream Tycoon</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />You've recently started an ice-cream business in a local school. During a day you have many suppliers delivering the ice-cream for you, and many students buying it from you. You are not allowed to set the prices, as you are told the price for each piece of ice-cream by the suppliers.<br /><br />The day is described with a sequence of queries. Each query can be either <pre style='display:inline;font-size:120%;'>ARRIVE <i>n</i> <i>c</i></pre>, meaning that a supplier has delivered <i>n</i> pieces of ice-cream priced <i>c</i> each to you, or <pre style='display:inline;font-size:120%;'>BUY <i>n</i> <i>t</i></pre>, meaning that a student wants to buy <i>n</i> pieces of ice-cream, having a total of <i>t</i> money. The latter is processed as follows: in case <i>n</i> cheapest pieces of ice-cream you have cost no more than <i>t</i> (together), you sell those <i>n</i> cheapest pieces to the student; in case they cost more, she gets nothing. You start the day with no ice-cream.<br /><br />For each student, output <pre style='display:inline;font-size:120%;'>HAPPY</pre> if she gets her ice-cream, and <pre style='display:inline;font-size:120%;'>UNHAPPY</pre>if she doesn't.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input file contains between 1 and 10<sup>5</sup> queries (inclusive), each on a separate line. The queries are formatted as described above, either <pre style='display:inline;font-size:120%;'>ARRIVE <i>n</i> <i>c</i></pre> or <pre style='display:inline;font-size:120%;'>BUY <i>n</i> <i>t</i></pre>, 1 &le; <i>n</i>, <i>c</i> &le; 10<sup>6</sup>, 1 &le; <i>t</i> &le; 10<sup>12</sup>.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>For each <pre style='display:inline;font-size:120%;'>BUY</pre>-query output one line, containing either the word <pre style='display:inline;font-size:120%;'>HAPPY</pre> or the word <pre style='display:inline;font-size:120%;'>UNHAPPY</pre> (answers should be in the same order as the corresponding queries).<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+ARRIVE 1 1
+ARRIVE 10 200
+BUY 5 900
+BUY 5 900
+BUY 5 1000
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+HAPPY
+UNHAPPY
+HAPPY
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=311 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

@@ -1,0 +1,39 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=537 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 537. Divisibility </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>537. Divisibility</h4></div><div align=center>Time limit per test: 3
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ Inspired by Stephen Graham, the King of Berland started to study algorithms on strings. He was working days and nights, having a feeling that the full potential in this area is still to be unlocked. And he was right!<br /><br />One day, all the sudden, he made a huge breakthrough by discovering the fact that strings can be magically transformed into integer numbers. It was so simple! You just have to map different letters to different digits and be careful enough not to introduce any leading zeroes.<br /><br />Here is what he wrote in his textbook about the string 'lalala':<ul> <li>it can be transformed to an 282828 by mapping 'l' to 2, and 'a' to 8 <li>it can also be transformed to 909090 by mapping 'l' to 9, and 'a' to 0 <li>a couple of examples of invalid transformations are 050505 (the resulting number has a leading zero), 333333 (different letters are mapped to the same digit), 123456 (no mapping to the original letters at all) </ul><br /><br />But then things started to become more interesting. Obviously, it was known from very beginning that a single string can potentially be mapped to a variety of different integer numbers. But the King couldn't even imagine that all numbers produced by the same string pattern might have common properties!<br /><br />For example, every single number that can be produced from string 'lalala' is always divisible by 259, irrespective of the letter-to-digit mapping you choose. Fascinating!<br /><br />So the King ended up with the following problem. For any given string, he wanted to come up with an algorithm to calculate the set of its divisors. A number is called a divisor of the given string if all positive integers, that could possibly be produced from the given string, are divisible by it.<br /><br />As usual, the King desperately wants you to help him, so stop thinking and start acting!<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>Input consists of multiple test cases. The first line of input contains an integer number <i>n</i> (1 &le; <i>n</i> &le; 100) &mdash; the number of test cases.<br /><br />Each of the next <i>n</i> lines contains a string pattern to be processed. Each pattern consists of lowercase Latin letters. Its length will always be between 1 and 14 characters, and the number of different characters in the pattern will never exceed 10 to ensure correct mapping to digits 0-9.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>For every test case print a line with the corresponding test case number and the calculated list of divisors. Output positive divisors in an increasing order, separating them with a single space. Format your output according to the example given in the sample test case.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>5
+cat
+bbb
+ololo
+lala
+icpcicpc
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>Case 1: 1
+Case 2: 1 3 37 111
+Case 3: 1
+Case 4: 1 101
+Case 5: 1 73 137 10001
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=537 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

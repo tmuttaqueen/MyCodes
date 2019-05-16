@@ -1,0 +1,35 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=324 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 324. The Text Formatting </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>324. The Text Formatting</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />The Library of Berland has an ancient document with text composed of words, spaces and <pre style="display: inline">"-"</pre>&nbsp; characters. A word is a sequence of Latin letters. The chief librarian asked you to format the text from the document by adding and removing spaces. There are special rules for using the <pre style="display: inline">"-"</pre>&nbsp; character in the ancient documents which you need to obey. <br /><br />The <pre style="display: inline">"-"</pre>&nbsp; character can be used as: <ul> <li>Hyphen, in this case a word should be started and finished to the right and to the left from it. For example, <pre style="display: inline">"co-coach"</pre>&nbsp;. <li>A part of the short dash, in this case two characters <pre style="display: inline">"-"</pre>&nbsp; should be used with a space to the right and to the left. For example, <pre style="display: inline">" -- "</pre>&nbsp;. <li>A part of the long dash, in this case three characters <pre style="display: inline">"-"</pre>&nbsp; should be used with a space to the right and to the left. For example, <pre style="display: inline">" -</pre><pre style="display: inline">-- "</pre>&nbsp;. </ul><br /><br />If there is no <pre style="display: inline">"-"</pre>&nbsp; character between words, the words should be delimited by a single space. <br /><br />The resulting text should not have any other space characters.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains <i>N</i> (1 &le; <i>N</i> &le; 100)&nbsp;&mdash; the number of lines with the text of the document to be formatted. Each of the following <i>N</i> lines contains the quoted text of the document to be formatted. The length of the text of each document is not less than 1 and not more than 100 characters.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>For each document from the input write a separate line with the formatted text enclosed in quotes to the output. If it is impossible to correctly format the text, write the only word <pre style="display: inline">"error"</pre>&nbsp; without quotes. If there are several solutions, choose any of them.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+"This is sample -mample "
+"No solution-"
+"This is - - --possible test- -"
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+"This is sample-mample"
+error
+"This is -- -- possible test -- "
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=324 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

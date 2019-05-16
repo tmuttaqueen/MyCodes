@@ -1,0 +1,52 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=360 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 360. B++ Interpreter </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>360. B++ Interpreter</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />B++ programming language was developed in Berland for the purpose of controlling a robot, moving in the radioactively polluted area. The area is a rectangle of size NxM meters. The mission of the robot is to visit several unit squares, marked with asterisk "*" on the map, to measure radiation level. <br /><br />Robot is controlled by three commands: L -- turn left (90 degrees counterclockwise), R - turn right (90 degrees clockwise) and C - move forward one meter. B++ program consists of description of several functions. Function description has the following format: <br /><br />[function name]([argument list]){[operator list]} <br /><br />[function name] consists of one small Latin letter. All functions have different names. Each function can have from 0 to 2 arguments. Argument name is one capital Latin letter (and cannot be L or R or C). If there are two arguments, they are separated by comma. Operator can be: <br /><br />1) symbol L, R or C, meaning the correspondent robot command; <br /><br />2) call of function in the format [function name]([argument list]). Any function described in the program can be called. Function cannot call itself. [argument list] of the invoked function corresponds to the list of its arguments in the function definition. L, R, C, and arguments of calling function may be used as arguments. Brackets must be written even if the function has no arguments (i. e. 0 arguments). <br /><br />3) [argument]. In this case the command L or R or C, executed, depending on the value of the argument. <br /><br />Entry point of the program is the function name m with no arguments. Execution of the program starts from execution of the entry point. Execution of function is performed by consecutive execution of its operators. Each function contains at least one operator. If some command asks robot to leave the field, the robot ignores such command and proceeds to the next command. <br /><br />Given a program and territory map, determine which of marked with "*" cells will be visited by the robot. <br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains integer numbers N and M (1 &le; <i>N</i>, <i>M</i> &le; 50) - dimensions of the map. Next N lines contain M characters each, that is description of the map. Character "&#126;" corresponds to the regular cell, "*" - marked cell, "R" - initial position of the robot. Initially robot is turned towards upper border of the map. The rest of the file contains program on B++ language. You may assume that program is correct, that its execution doesn't lead to infinite recursion and that robot will execute not more that 1000 commands. Moreover, program always contains function m with no arguments. Program may contain white-spaces that should be ignored. Input file size doesn't exceed 10000 bytes. <br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>On the first line of the output print K - amount of cells marked with "*" visited by the robot. Print in the next K lines numbers Xi, Yi separated by a space - coordinates of that cells. First coordinate is the row number of the map (1 &le; <i>Xi</i> &le; <i>N</i>), second is the column number (1 &le; <i>Yi</i> &le; <i>M</i>). If one cell is visited several times, only first visit counts. Print cells in the order robot visit them. <br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 4 
+&#126;*R* 
+&#126;&#126;*&#126; 
+*&#126;&#126;&#126;
+m() 
+&#123; 
+ LL a(L, C) C a(R, C) b(L) 
+&#125; 
+a(X, Y)&#123;XYXYXYXY&#125; 
+b 
+(
+A 
+) 
+&#123; 
+ c(L) 
+&#125; 
+
+c(X) &#123;L X L X&#125; 
+
+d(X,Y) &#123;e()&#125; 
+e()&#123;R&#125;
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 
+1 4 
+2 3
+</pre>
+ </td>
+ </tr>
+</table><br>
+ <b>Notes to the example</b><br> Robot will execute following sequence of commands: LLLCLCLCLCCRCRCRCRCLLLL. </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=360 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

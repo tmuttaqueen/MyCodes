@@ -1,0 +1,92 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=378 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 378. Save the Fisher </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>378. Save the Fisher</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Peter has a boat. He loves to use it for fishing on the Berland Lake. But today an accident happen with him. A huge fish ate the hook, and when Peter tried to take the fish out of the lake, he suddenly discovered that the fish was stronger. Unfortunately Peter was unable to stay on the board and he fell down into the water. But he did not want to lose such a catch. So the fish took him somewhere...<br /><br />The Peter is now somewhere inside the lake and lost his boat and his rod. Luckily, Peter knows each bermeter of this lake (bermeter is the length measurement unit in Berland). You will help Peter to create the plan to save himself.<br /><br />The lake is a rectangle of <i>N</i> <i>x</i> <i>M</i> bermeters. Let us consider an <i>N</i> <i>x</i> <i>M</i> grid of 1 <i>x</i> 1 squares within this rectangle. Peter can move within the lake according to the following:<br /><br /><ul> <li>When Peter is in the center of some cell, his real velocity is the sum of the vectors of the velocity of the flow and Peter's movement vector. He moves with this velocity until he reaches the center of some other cell, where his new velocity will be calculated independently of the previous velocity. The velocity could not be changed in any place other than the center of some cell. <li>For each cell you know the flow velocity, it can be one of the following five vectors: 1: (0, -1), 2: (0, 1), 3: (1, 0), 4: (-1, 0), 0: (0, 0). All velocities are in bermeters per minute. Peter's movement vector also is chosen among these five vectors, and he can change it any time when he is in the center of some cell. E.&nbsp;g.&nbsp;if the flow velocity is (0, -1) and the Peter's movement vector is (1, 0) then the resulting velocity will be (1, -1), i.&nbsp;e.&nbsp;Peter will move diagonally. Note that Peter may stay in the center of any cell during any period of time (may be non-integer amount of minutes) by selecting movement vector opposite to the flow speed. If Peter moves with the same vector as the flow, he will reach the center of the next cell in half a minute. <li>The boat moves according to the same laws as Peter, but the boat's movement speed is always zero. <li>Peter is saved when he is in the same point as the boat (it is not neccessary to reach the center of any cell) or if he reaches the shore of the lake. The boat can also reach the shore, if it happens, the boat stops there. </ul><br /><br /><image src = "http://acm.sgu.ru/problems/0/p378.jpg"><br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains two integers <i>N</i> and <i>M</i> (1 &le; <i>N</i>, <i>M</i>&le; 500) separated by one space. Each of the next <i>N</i> lines contains <i>M</i> digits each &mdash; the description of the lake. The digit is the number of the flow velocity vector in the corresponding cell, according to the statement. The last two lines contain two integers each, the first corresponds to initial coordinates of Peter, the second is for the boat.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output the minimal time in minutes required for Peter to save himself, rounded up to two digits after decimal point. If Peter is not able to save himself, output "<pre style='display:inline;font-size:120%;'>SOS</pre>".<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 6
+222222
+444444
+444444
+111111
+5 3
+6 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2.00
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 2
+00
+32
+11
+1 2
+2 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0.67
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 5
+32240
+33442
+31140
+2 2
+5 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+SOS
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=378 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

@@ -1,0 +1,54 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=432 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 432. XYZX 2009 </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>432. XYZX 2009</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />The annual XYZX programming competition is well known for its unusual problem statements. The Technical Coordinator of the competition, also known as Snusmumrik, intentionally leaves some freedom in the problem statements, so that the participants have to guess the missing conditions from the sample tests, from the problem preface or even epigraph, or just invent something themselves. This peculiarity revealed itself in the latest XYZX-2009 competition as well.<br /><br />Misha is competing in a round of that competition &mdash; Quarterfinal of Eniseysk, and he has bumped into that obstacle again: he needs to understand why does his perfectly correct program fail on the sample tests. The statements are in English, and he knows that there is only one false sentence in the whole problem statement. Moreover, he knows a set of rules that enables him to restore the original statement that the author had in mind. It is very simple: the word "not" can be inserted after any of the words "can", "may", "must", "should" in the text; also the word "no" can be inserted after any of the phrases "is", "are". Words "not" and "no" must be inserted exactly as written: "Not", "nO" and other variants are not permitted. The other words mentioned, however, are case insensitive, so you can insert "not" after "Can", and you can insert "no" after "ARE". If there is any article ("a" or "the") after "is" or "are" where you're inserting "no", you must also remove that article.<br /><br />Misha wants to get the list of all the possible reasons that his program doesn't work on the sample tests. A reason here is a sentence where a negation can be applied. Remember that no two negations can be applied simultaneously, neither in one sentence nor in different sentences.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input file contains the text of the problem statement containing latin letters, single spaces and dots. Every sentence has a dot at the end (which is not considered the part of the last word). Words are separated with a single space. There is no space before any dot. There is exactly one space after each dot unless that dot follows the last sentence; in that case, the dot is followed by a newline, and then the input file ends. When inserting a word "not" or "no" after some word, you must first insert a single space, then the corresponding word immediately. The size of the input file doesn't exceed 1024 bytes.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>The output file must first contain an integer <i>k</i> on a line by itself&nbsp;&mdash; the number of ways the problem statement can be understood differently. Then <i>k</i> lines must follow. Each line should contain one sentence from the initial text with exactly one negation applied. You must list all the possibilities (the lines are wrapped in the sample output just for better visibility; you must output one sentence per line). All the variants of negation must go in the natural order: all the negations that can be inserted in the first sentence, then all the negations that can be inserted in the second sentence, etc. Inside one sentence, first goes the negation that is applied after the first word (if applicable), then the one that is applied after the second word, etc.<br /><br />You must not change the case of the letters in the words that you copy from the initial sentences. Your words must still be separated with single spaces, and the same rules apply to the dots at the ends of the sentences, as they do for the input sentences.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+There is a field with label K on the field. There is a field
+with label G on the field. You must intersect the rectangle
+with each of the given rectangles separately. Two different
+particles can annihilate each other in case of collision.
+There must be a blank line after each test case output. Two
+different ways to insert a symbol into the expression are
+considered the same if the resulting expressions viewed as
+strings are equal. Misha can find out whether this problem
+statement can be understood correctly at all.
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+9
+There is no field with label K on the field.
+There is no field with label G on the field.
+You must not intersect the rectangle with each of the given
+rectangles separately.
+Two different particles can not annihilate each other in
+case of collision.
+There must not be a blank line after each test case output.
+Two different ways to insert a symbol into the expression
+are no considered the same if the resulting expressions
+viewed as strings are equal. Two different ways to insert
+a symbol into the expression are considered the same if
+the resulting expressions viewed as strings are no equal.
+Misha can not find out whether this problem statement
+can be understood correctly at all.
+Misha can find out whether this problem statement
+can not be understood correctly at all.
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=432 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

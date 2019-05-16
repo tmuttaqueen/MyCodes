@@ -1,0 +1,62 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=173 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:17:46 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="templates.css" type="text/css">
+  <link rel="stylesheet" href="js/ui.datepicker.html" type="text/css">
+  <script type="text/javascript" language="javascript" src="js/jquery.html"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.example.html"></script>
+  <script type="text/javascript" language="javascript" src="js/ui.datepicker-2.html"></script>
+
+  <link rel="stylesheet" href="templates.css" type="text/css">
+  <link rel="stylesheet" href="js/ui.datepicker.html" type="text/css">
+  <script type="text/javascript" language="javascript" src="js/jquery.html"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.example.html"></script>
+  <script type="text/javascript" language="javascript" src="js/ui.datepicker-2.html"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>173. Coins
+</h4></div><div align=center>time limit per test: 1.5 sec.<br>memory limit per test: 4096
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>There is a row consist of N coins. Each coin lies heads up or tails up. There is also binary vector A with (K-1) dimensions.
+<br>We accomplish M operations with our coins row: we select some consecutive K coins, and apply to selected coins transformation X for Di times (i=1..M, where i is a number of operation)
+<br>The transformation X for given row C with length K means:
+<br>1.	We shift the row C in one position to the left in a cyclic way.
+<br>2.	Then we scan the row C from the first (leftmost) coin to (K-1)-th coin: if coin Ci lies tails up, and Ai=1, then we turn over coin Ck
+<br>Obviously, that for constant coins row with length K transformation X is fully determined by vector A. But vector A haven't given to you. You have results of transformation L rows with length K (row of coins before transformation, and row after transformation). It is guarantied that there is exactly one vector A satisfied all L conditions.
+<br>Your task is to reconstruct initial row by given row after all operations being accomplished.
+</div><div align = left><br><b>Input</b></div><div align = left>There is four integer numbers in the first line of input: N, M, K, L (2&lt;=N&lt;=50, 1&lt;=M&lt;=10, 1&lt;=L&lt;=200, 2&lt;=K&lt;=N). 
+<br>Second line contains description of accomplished operations, M pairs of positive integer numbers Si and Di. Si is a starting point of selected coins subrow, Di is a number of iterations of transformation (Si &lt;= N-K+1; Di &lt;= 10^6).
+<br>There are the following L conditions determining transformation X, L blocks by two lines each: first line of each block contains a row before transformation, and the second line contains row after transformation. Each line consists of K symbols, 1 denotes tails, 0 denotes heads.
+<br>The last line contains N symbols - row of coins after all operations accomplished. i-th symbol is 1 if i-th coin lies tails up, and 0 otherwise.
+</div><div align = left><br><b>Output</b></div><div align = left>Write N symbols in single line of output: i-th symbol must be 1 if i-th coin of initial row laid tails up, and 0 otherwise.
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>4 2 3 2
+<br>2 1 1 1
+<br>010
+<br>101
+<br>101
+<br>011
+<br>1010
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>0110
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'submit8287.html?problem=173'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'forumdc65.html?contest=0&amp;problem=173'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Dmitry Orlov
+</td></tr><tr><td>Resource:</td><td>Saratov ST team Spring Contest #1
+</td></tr><tr><td>Date:</td><td>18.05.2003
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:38:44</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=173 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:17:47 GMT -->
+</html> 

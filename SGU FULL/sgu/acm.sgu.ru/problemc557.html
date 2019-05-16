@@ -1,0 +1,153 @@
+                               <HTML>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=145 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:12:39 GMT -->
+<HEAD><TITLE>
+145. Strange People
+</TITLE><META http-equiv=Content-Type content="text/html; charset=windows-1251"><META HTTP-EQUIV="Expires" content="Дата"><META HTTP-EQUIV="Cache-Control" content="no-cache"><META HTTP-EQUIV="pragma" content="no-cache"><META NAME="keywords" CONTENT="ACM, programming contest, programming, contest, informatics, ioi, saratov, ICPC, программирование, информатика, алгоритм, саратов, контест"><META NAME="description" CONTENT="That site consists of some amount of programming problems. Online Contester system check your solution right now. You can participate in programming contests. Train your programming skills."><link rel="stylesheet" href="style.html" type="text/css"><STYLE type=text/css>TD{font-size:9pt;}</STYLE></HEAD>
+<BODY>
+<table width=95%><tr><td>
+<H3><B><P ALIGN="CENTER">
+145. Strange People
+</P></H3></B>
+<P ALIGN="CENTER">
+time limit per test: 0.5 sec. <BR> memory limit per test: 4096
+ KB
+</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">
+Once upon a time in one kingdom lives strange people.
+In this kingdom to travel from city to city there was
+a taxes. 
+But people don't want to travel cheaper from one place
+to another. They want to travel from place to place by
+K-th simple expensive path betwen this cites.
+Your task is to find how much money they must prepare
+to go from one given city to another (also given) if
+they travel using K'th simple expensive path between
+these two cites. And you must print that path. (if
+there exist many solutions output any of them)
+It is guarantee that K'th expensive path between this
+cites exist. If there is road between city X and Y
+than there is road between Y and X.
+Between two cites exists no more than 1 road.<br><br>
+
+
+&nbsp;&nbsp;  4 &lt;= N - number of cites &lt;= 100<br>
+&nbsp;&nbsp;  M - number od roads<br>
+&nbsp;&nbsp;  1 &lt;= taxes bewtween two cites &lt;= 10000<br>
+&nbsp;&nbsp;  1 &lt;= K - the K'th expensive path to find &lt;= 500<br>
+
+</P>
+<P ALIGN="JUSTIFY"></P>
+<B><P ALIGN="JUSTIFY">Input</P></B>
+<P ALIGN="JUSTIFY">
+<br>
+&nbsp;&nbsp;  N M K <br>
+&nbsp;&nbsp;  x y mon | <br>
+&nbsp;&nbsp;  x y mon |  
+&nbsp;&nbsp;  ...     |  M lines <br>
+&nbsp;&nbsp;  x y mon |<br>
+&nbsp;&nbsp;  xs xe<br>
+
+  where xs is start city and xe is end city
+  x and y is pairs of integer that are numbers of two
+cites and mon is tax between this cites 
+
+</P>
+<P ALIGN="JUSTIFY"></P>
+<B><P ALIGN="JUSTIFY">Output</P></B>
+<P ALIGN="JUSTIFY">
+
+  Z dc<br>
+  x1 x2 x3 x4 .. xn<br>
+
+  where Z is the cost of the K'th expensive path and
+x1 x2 ... xn is the path
+  dc is number of cites in (x1 x2 x3 ... xn)
+
+</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">Sample Input</P>
+<FONT FACE="Courier New">
+<PRE>
+
+  5 10 3
+  1 2 6
+  1 3 13
+  1 4 18
+  1 5 35
+  2 3 14
+  2 4 34
+  2 5 17
+  3 4 22
+  3 5 15
+  4 5 34
+  1 5
+
+</PRE>
+<P ALIGN="JUSTIFY"></P>
+</FONT>
+
+
+<P ALIGN="JUSTIFY">Sample Output</P>
+<FONT FACE="Courier New">
+<PRE>
+
+  35 2 
+  1 5
+
+</PRE>
+</FONT>
+
+<P ALIGN="JUSTIFY">
+
+  Some explanations to Sample Test case: <br>
+
+  This are all paths beteen 1 and 5 and their costs<br>
+
+     1 2 5  -> 23<br>
+     1 3 5  -> 28<br>
+     1 2 3 5  -> 35<br>
+     1 5  -> 35<br>
+     1 3 2 5  -> 44<br>
+     1 4 5  -> 52<br>
+     1 4 3 5  -> 55<br>
+     1 3 4 5  -> 69<br>
+     1 4 2 5  -> 69<br>
+     1 4 3 2 5  -> 71<br>
+     1 2 4 5  -> 74<br>
+     1 2 3 4 5  -> 76<br>
+     1 2 4 3 5  -> 77<br>
+     1 4 2 3 5  -> 81<br>
+     1 3 4 2 5  -> 86<br>
+     1 3 2 4 5  -> 95<br><br>
+
+if there exist q or more paths with equal cost than if
+first of them is K'th expensive path then some of
+others q - 1 cites is (K + 1)'th expensive path and so
+on.. 
+
+Example in Sample test paths 1 2 3 5 and 1 5 have
+equal cost so 
+
+3'th expensive path is 35 and 3'th expensive path may
+be 1 5 or 1 2 3 5 
+and 
+4'th expesnive path is 35 and 4'th expensive path may
+be 15 or 1 2 3 5 
+
+</P>
+
+</td></tr>
+<tr><td>
+<hr>
+<table align=left>
+<tr><td>Author</td><td>: Nikolay Marinov</td></tr>
+<tr><td>Resource</td><td>: -</td></tr>
+<tr><td>Date</td><td>: Winter 2002</td></tr>
+</td></tr>
+</table>
+
+</BODY>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=145 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:12:39 GMT -->
+</HTML>

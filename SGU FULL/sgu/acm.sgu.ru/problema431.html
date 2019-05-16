@@ -1,0 +1,51 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=513 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 513. Maximal Clique </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>513. Maximal Clique</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ This is the moment you've been waiting for all your life: you've invented a way to quickly solve the Maximal Clique problem: given an undirected graph find the size of the maximal subset of its vertices that form a clique (are pairwise connected). This problem is NP-hard, meaning you've got a proof that P=NP!<br /><br />Unfortunately, the scientific community is not so eager to listen to you. Your papers on the subject are being rejected because of "solving an obviously unsolvable problem". Your phone number is already on the ignore list of all Computer Science professors you know. The world seems to hate you.<br /><br />So you've decided to create a solver for the Maximal Clique problem and put it online, so that everyone can check for himself that you're right. You've already implemented the solver and almost launched the website, but then you've realized that this is not a very good idea: if you make the solver available, everyone will be able to solve every problem from NP by reducing it to the Maximal Clique problem. What if people will just silently use it instead of bringing you fame and respect?<br /><br />Luckily, the only proof of NP-hardness of the Maximal Clique problem you know works by reducing the 3-SAT problem to it in a very specific way. So you've decided to check if the input graph given to your solver could be obtained from this reduction, and if yes, refuse to solve the problem. That way, nobody will be able to get quick solutions for all problems from NP, but everyone will still be able to verify your solver by feeding other graphs to it.<br /><br />3-SAT problem statement is: given a formula of form <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/d414611631dad0d7bc0b54c47bbb1fd7.png'/>, where each term <i>t</i><sub><i>j</i></sub><sup><i>i</i></sup> is either some boolean variable or its negation (more formally, either <i>x</i><sub><i>k</i></sub> or <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/9f5aefbd0e077a18931d04d89ead0986.png'/>), check whether there exists some assignment of true/false values to each variable so that the formula evaluates to true. All three terms in one clause must represent different variables.<br /><br />The reduction works in the following manner. From the above formula, we create a graph with 3n vertices, one for each variable of each clause. Two vertices corresponding to terms <i>t</i><sub><i>j</i></sub><sup><i>i</i></sup> and <i>t</i><sub><i>s</i></sub><sup><i>r</i></sup> are connected when <i>i</i> &ne; <i>r</i> (so the terms belong to different clauses) and those terms are non-contradictory (they are either equal or represent different variables).<br /><br />The following picture shows the resulting graph for the formula <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/dc44ca94cf109c30bdb2f89d67beac7e.png'/>:<br /><br /><div style="text-align: center; margin-bottom: 1em;"><img src="http://acm.sgu.ru/problems/0/p513_01.png"/></div>Now a clique of size <i>n</i> corresponds to a valid true/false assignment that satisfies at least one term in each clause. The edges highlighted on the above picture form a clique of size 3 and show that setting <i>x</i><sub>1</sub> to false and <i>x</i><sub>2</sub> to true satisfies all clauses, irrespective of the values of <i>x</i><sub>3</sub> and <i>x</i><sub>4</sub>.<br /><br />Given a graph, you need to check if it could be created by the above reduction. The vertices are permuted arbitrarily.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains two integers <i>v</i> and <i>e</i>, 1 &le; <i>v</i> &le; 100, denoting the number of vertices and edges in the graph. The next <i>e</i> lines contain two integers each, denoting the numbers of vertices connected by an edge. Each pair of vertices are connected at most once, no edge connects a vertex to itself.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output "YES" when the given graph could be obtained by the given reduction, or "NO" otherwise.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>9 22
+1 3
+1 6
+7 1
+8 9
+9 1
+2 3
+2 4
+2 5
+2 6
+2 8
+3 4
+3 5
+3 7
+4 8
+4 9
+5 6
+5 7
+5 8
+5 9
+6 7
+6 9
+7 8
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>YES
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=513 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

@@ -1,0 +1,71 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=266 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>266. Berlion
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>Far far away in the galaxy there is a planet called Berlion. The legend says that the Precursors left rich heritage on the planet. There are a lot of galactic races competing to claim the heritage. By the will of mighty Precursors each civilization has only one chance to land on the planet and explore small area of the surface. Powerful guards left by Precursors keep competitors from violation of the will. No race can compete the guards in a combat.
+<br>Recently race of bertonoids has built two super-scanners to scan the surface for artifacts. Bertonoids set up scanners in two locations of the space, where the guards hopefully won't detect them. You can assume that the planet has the form of a sphere and the scanners are points.
+<br>You, as intern in Forecast Department, have to find the area of the surface the scanners can explore. The scanners can explore only the directly visible part of the surface (you can assume that there are no any other objects in the sector with Berlion and scanners). 
+<br>So your task is to find the area of that part of the planet surface, from which at least one of the scanners is visible.
+<br>
+</div><div align = left><br><b>Input</b></div><div align = left>The first line of the input file contains the integer number R -- the radius of the planet (1 &lt;= R &lt;= 10). The second line contains the coordinates of the first scanner relatively to the center of the planet -- 3 numbers -- the distances along the x, y and z axes of an ortogonal normalized coordinate system. The third line contains the coordinates of the second scanner in the same format. All coordinates are integers and do not exceed 100 by the absolute value. Both scanners are located at the distance not less than 10<sup>-2</sup> above the planet surface.
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>Output the visible area of the planet surface. The answer should be rounded to 3 decimal digits.
+<br>
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>Test #1
+<br>
+<br>1
+<br>0 0 100
+<br>0 100 0
+<br>
+<br>Test #2
+<br>
+<br>1
+<br>0 0 100
+<br>0 0 -100
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>Test #1
+<br>
+<br>9.362
+<br>
+<br>Test #2
+<br>
+<br>12.441
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=266'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=266'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Ilya V. Elterman
+</td></tr><tr><td>Resource:</td><td>ACM ICPC 2004-2005, NEERC, Southern Subregional Contest
+</td></tr><tr><td>Date:</td><td>Saratov, October 7, 2004
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:44:39</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=266 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html> 

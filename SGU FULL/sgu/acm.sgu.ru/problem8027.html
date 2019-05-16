@@ -1,0 +1,39 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=352 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 352. Beerland Attacks </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>352. Beerland Attacks</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />In this task Berland again needs your help. Berland consists of <i>N</i> cities. Some pairs of the cities are connected by bidirectional roads. Each road is characterized by its length. The cities are numbered from 1 to <i>N</i>, the capital has number 1. From time to time the President of Beerland takes a tour around the country visiting all the cities. The tour is a sequence of trips. The goal of each trip is to visit one of the cities and return to the capital. During the trip the President chooses one of the shortest ways from the capital to the desired city. <br /><br />Long time ago, when Dijkstra algorithm seemed to be difficult, the royal security service created a secret set of roads <i>T</i>. Security officers created the <i>T</i> set in such a manner that it is possible to get by the shortest way from the capital to any city using only roads from the set <i>T</i>. Moreover, there is only one way from the capital to each city along the roads from the <i>T</i> set. The smartest citizens called this set "tree of the shortest paths". <br /><br />The President uses only roads from the <i>T</i> set during his trips. With years passing the set lost much of its secrecy. Moreover, recently Beerland extremists have come into possesion of the secret set.<br /><br />Now the royal security service has the new task. For each city except the capital it is required to find out <i>v</i><sub><i>i</i></sub> (2&le; <i>i</i>&le; <i>N</i>), where <i>v</i><sub><i>i</i></sub> is the length of the shortest path to the <i>i</i>-th city if the last road on the way to this city is attacked and the President can't use it any more. <br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains two integer numbers <i>N</i> and <i>M</i> (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/0049618f25343bedf78f07178a5f1797.png'/>; <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/0b995f969eec1c26420d243f22fcbf79.png'/>), where <i>N</i> is a number of the cities in the country and <i>m</i> is a number of the roads. The following <i>M</i> lines contain the description of the roads, one per line. Each road description is given as the four integer numbers <i>a</i><sub><i>j</i></sub>, <i>b</i><sub><i>j</i></sub>, <i>l</i><sub><i>j</i></sub>, <i>t</i><sub><i>j</i></sub>, where <i>a</i><sub><i>j</i></sub>, <i>b</i><sub><i>j</i></sub> are numbers of the cities connected by the road (1 &le; <i>a</i><sub><i>j</i></sub>,<i>b</i><sub><i>j</i></sub> &le; <i>n</i>; <i>a</i><sub><i>j</i></sub> <> <i>b</i><sub><i>j</i></sub>), <i>l</i><sub><i>j</i></sub>&nbsp;&mdash; length of the road (1 &le; <i>l</i><sub><i>j</i></sub> &le; 10<sup>5</sup>), <i>t</i><sub><i>j</i></sub> is equal to 1 if the road belongs to the shortest paths tree <i>T</i> and to 0 otherwise.<br /><br />The given set <i>T</i> satisfies the requirements listed in the problem statement. There can be more than one road between a pair of cities. All roads are bidirectional.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Write to the output <i>N</i>-1 numbers separated by spaces. <i>i</i>-th number should be equal to the length of the shortest way from the capital to the city <i>i</i>+1 or -1 if the way doesn't exist.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5 9
+3 1 3 1
+1 4 2 1
+2 1 6 0
+2 3 4 0
+5 2 3 0
+3 2 2 1
+5 3 1 1
+3 5 2 0
+4 5 4 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+6 7 8 5
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=352 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

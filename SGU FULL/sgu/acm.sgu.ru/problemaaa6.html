@@ -1,0 +1,129 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=497 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 497. Abelian Groups </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>497. Abelian Groups</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Andrew has just made a breakthrough in group theory: he realized that
+he can classify all finite Abelian groups (not much of a breakthrough, indeed).
+
+Given <i>n</i>, how many Abelian groups with <i>n</i> elements exist up to isomorphism?
+
+To help you solve this problem we provide some definitions and theorems
+from basic algebra (most are cited from Wikipedia).
+
+An abelian group is a set, <i>A</i>, together with an operation '&middot;' that
+combines any two elements <i>a</i> and <i>b</i> to form another element 
+denoted <i>a</i> &middot; <i>b</i>. The symbol '&middot;' is a general placeholder for a
+concretely given operation. To qualify as an abelian group, the set
+and operation, (<i>A</i>, &middot;), must satisfy five requirements known as the
+abelian group axioms:
+<ul>
+<li><i>Closure</i>: for all <i>a</i>, <i>b</i> in <i>A</i>, the result of the operation <i>a</i> &middot; <i>b</i> is also in <i>A</i>.
+<li><i>Associativity</i>: for all <i>a</i>, <i>b</i> and <i>c</i> in <i>A</i>, the equation (<i>a</i> &middot; <i>b</i>) &middot; <i>c</i> = <i>a</i> &middot; (<i>b</i> &middot; <i>c</i>) holds.
+<li><i>Identity element</i>: there exists an element <i>e</i> in <i>A</i>, such that for all elements <i>a</i> in <i>A</i>, the equation <i>e</i> &middot; <i>a</i> = <i>a</i> &middot; <i>e</i> = <i>a</i> holds.
+<li><i>Inverse element</i>: for each <i>a</i> in <i>A</i>, there exists an element <i>b</i> in <i>A</i> such that <i>a</i> &middot; <i>b</i> = <i>b</i> &middot; <i>a</i> = <i>e</i>, where <i>e</i> is the identity element.
+<li><i>Commutativity</i>: for all <i>a</i>, <i>b</i> in <i>A</i>, <i>a</i> &middot; <i>b</i> = <i>b</i> &middot; <i>a</i>.
+</ul>
+
+An example of an abelian group is a <i>cyclic group</i> of order <i>n</i>:
+the set is integers between 0 and <i>n</i>-1, and the operation is sum modulo
+<i>n</i>.
+
+Given two abelian groups <i>G</i> and <i>H</i>, their <i>direct sum</i> is a group where
+each element is a pair (<i>g</i>, <i>h</i>) with <i>g</i> from <i>G</i> and <i>h</i> from <i>H</i>, and
+operations are performed on each element of the pair independently.
+
+Two groups <i>G</i> and <i>H</i> are <i>isomorphic</i> when there exists a one-to-one mapping
+<i>f</i> from elements of <i>G</i> to elements of <i>H</i> such that <i>f</i>(<i>a</i>) &middot; <i>f</i>(<i>b</i>) = <i>f</i>(<i>a</i> &middot; <i>b</i>) for all <i>a</i> and <i>b</i>.
+
+The <i>fundamental theorem of finite abelian groups</i> states that
+every finite abelian group is isomorphic to a direct sum of several
+cyclic groups.
+
+The <i>Chinese remainder theorem</i> states that when <i>m</i> and <i>n</i> are coprime,
+a cyclic group of order <i>mn</i> is isomorphic to the direct sum of the cyclic
+group of order <i>m</i> and the cyclic group of order <i>n</i>.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>First and only line of the input file contains an integer 
+<i>n</i>, 1 &le; <i>n</i> &le; 10<sup>12</sup>.
+
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>In the only line of the output file write the number of abelian groups
+with <i>n</i> elements.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+12
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=497 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

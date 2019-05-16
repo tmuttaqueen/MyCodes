@@ -1,0 +1,43 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=400 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 400. The last hour of the contest </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>400. The last hour of the contest</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />It's your lucky day - your team took part in the world finals programming contest. The competition has just finished and all competitors are looking forward to the results. Of course your team is not an exception.<br /><br />According to the rules of the competition, duration of the contest is 5 hours and team standings are frozen during the last hour of the contest&nbsp;&mdash; from 241<sup><i>st</i></sup> to 300<sup><i>th</i></sup> minute. Due to this reason the actual results are unknown to the participants and are only announced at the awards ceremony. It is a long-term tradition though, to get a balloon at the world finals for every problem solved. This information can sometimes be of use during the competition. <br /><br />While waiting for the awards ceremony, your team decided to evaluate chances to win and determine the place which it can take in the final standings. Here is the information that you have:<br /><br /><ul><br /><br /> <li>Standings table at the end of the 240<sup><i>th</i></sup> minute<br /><br /> <li>Total amount of balloons given to all teams within the last hour<br /><br /> <li>Exact rules of the competition<br /><br /></ul><br /><br />To solve this problem you should mind the following contest rules:<br /><br /><ul><br /><br /> <li>The competition lasts for 300 minutes, minutes are numbered from 1 to the 300.<br /><br /> <li>Position of a team is defined by the amount of the problems solved and penalty time.<br /><br /> <li>The more problems are solved the higher place a team gets. If two or more teams have the same amount of problems solved, the sorting is done by the penalty time in ascending order (less penalty time &mdash; higher place). If two or more teams have the same amount of problems solved and the same penalty time, they share the same place. Rank of a team equals the number of teams performing better + 1. If there are no other teams performing better, the team takes the 1<sup><i>st</i></sup> place.<br /><br /> <li>Total penalty time is the sum of the penalty times consumed for each problem solved. The time consumed for a solved problem is the number of a minute (i. e. an integer between 1 and 300) when the correct submission was made plus 20 penalty minutes for every previously rejected run for that problem. There is no penalty time for a problem that is not solved.<br /><br /> <li>When solution for a particular problem is accepted, a team is not allowed to submit solutions of the same problem anymore.<br /><br /></ul><br /><br />Frozen standings are given to you in a text form and look as follows:<br /><br /><ul><br /><br /> <li>The first line consists of "<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/2a7c1344dfa00099390c09ad57eea785.png'/>", "<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/45ce56de2e713b6b7b21006cf7f7eb66.png'/>", "<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/ec1ca5fee264811d870c67d9a0fb791a.png'/>", and "<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/d7be6fbd455896633a54e6604c3c6501.png'/>" tokens followed by a list of problems identifiers. Every problem identifier is a capital Latin letter 'A'-'Z'. All problem identifiers are different.<br /><br /> <li>The second and the subsequent lines contain team standings itself. These lines are given to you. in non-descending order of team rank<br /><br /> <li>Every line contains a place of a team, a name of a team, the amount of problems solved and the result for every problem.<br /><br /> <li>Every result on a problem is<br /><br /> <ul><br /><br /> <li>character "<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/b743cd56456acf7260c22678a20381ca.png'/>", if the team didn't submit the problem; <li>"<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/9cee435faf3d96c7c6d8da7e749ba44b.png'/>", if the problem was not accepted and the team made <i>x</i> unsuccessful submits;<br /><br /> <li>"<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/d5278074a6318f2c503b256c6d6a0b4f.png'/>", if the problem was accepted and the team made <i>x</i> unsuccessful submits before the accepted run; <i>x</i> is always omitted if it equals to 0.<br /><br /> </ul><br /><br /></ul><br /><br />You are given the frozen standings, and your task is to calculate the minimum and the maximum place your team can get after the contest is over.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>Input file contains one or more set of input data. <br /><br />First lines of each set contain the standings table at the end of the 240<sup><i>th</i></sup> minute in the format described above. In each line the tokens are split with at least one whitespace character. The next line contains the amount of balloons given to all teams within the last hour of the contest (from 241<sup><i>st</i></sup> to 300<sup><i>th</i></sup> minutes). The last line of the set is the name of your team. All team names consist of Latin letters 'A'-'Z', 'a'-'z', numbers and whitespaces. Each team name contains no more than 100 characters, doesn't start/end with a whitespace, and contains not less then 1 non-whitespace character. All team names are unique within a single set of input data. The number of teams is between 1 and 100. The number of problems is between 1 and 26. The total number of rejected attempts in frozen standings table is not more than 1000, but the total number of rejected attempts in final standings is unlimited. The number of balloons is non-negative.<br /><br />You may assume that the size of the input file is not more than 100 KB.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>For every input data set, please print two integer numbers in the line &mdash;&nbsp;the minimum and the maximum place your team can get after the contest is over.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+Rank Team = Penalty X Y
+1 Tarasov SU 3 2 33 + +
+2 IMHO 1 1 20 + -1
+3 Mozgow SU x 33 1 30. +
+3 MiTV 1 30 + -3
+5 Opel SU 0 0..
+2
+MiTV
+Rank Team = Penalty A
+1 aa 0 0 -1
+1 ba 0 0 -8
+2
+ba
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 4
+1 2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=400 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

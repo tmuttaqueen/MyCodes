@@ -1,0 +1,103 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=447 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 447. Optimal Rest </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>447. Optimal Rest</h4></div><div align=center>Time limit per test: 2 second(s)<br />Memory limit: 262144 kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Music Macro Language (MML) is a language for textual representation of musical scores.
+Although there are various dialects of MML, all of them provide a set of commands to describe scores, such as commands for notes, rests, octaves, volumes, and so forth.
+
+In this problem, we focus on rests, i.e. intervals of silence.
+Each rest command consists of a command specifier '<pre style='display:inline;font-size:120%;'>R</pre>' followed by a duration specifier.
+Each duration specifier is basically one of the following numbers: '<pre style='display:inline;font-size:120%;'>1</pre>', '<pre style='display:inline;font-size:120%;'>2</pre>', '<pre style='display:inline;font-size:120%;'>4</pre>', '<pre style='display:inline;font-size:120%;'>8</pre>', '<pre style='display:inline;font-size:120%;'>16</pre>', '<pre style='display:inline;font-size:120%;'>32</pre>', and '<pre style='display:inline;font-size:120%;'>64</pre>', where '<pre style='display:inline;font-size:120%;'>1</pre>' denotes a whole (1), '<pre style='display:inline;font-size:120%;'>2</pre>' a half (1/2), '<pre style='display:inline;font-size:120%;'>4</pre>' a quarter (1/4), '<pre style='display:inline;font-size:120%;'>8</pre>' an eighth (1/8), and so on.
+This number is called the <i>base duration</i>, and optionally followed by one or more dots.
+The first dot adds the duration by the half of the base duration.
+For example, '<pre style='display:inline;font-size:120%;'>4.</pre>' denotes the duration of '<pre style='display:inline;font-size:120%;'>4</pre>' (a quarter) plus '<pre style='display:inline;font-size:120%;'>8</pre>' (an eighth, i.e. the half of a quarter), or simply 1.5 times as long as '<pre style='display:inline;font-size:120%;'>4</pre>'.
+In other words, '<pre style='display:inline;font-size:120%;'>R4.</pre>' is equivalent to '<pre style='display:inline;font-size:120%;'>R4R8</pre>'.
+In case with two or more dots, each extra dot extends the duration by the half of the previous one.
+Thus '<pre style='display:inline;font-size:120%;'>4..</pre>' denotes the duration of '<pre style='display:inline;font-size:120%;'>4</pre>' plus '<pre style='display:inline;font-size:120%;'>8</pre>' plus '<pre style='display:inline;font-size:120%;'>16</pre>', '<pre style='display:inline;font-size:120%;'>4...</pre>' denotes the duration of '<pre style='display:inline;font-size:120%;'>4</pre>' plus '<pre style='display:inline;font-size:120%;'>8</pre>' plus '<pre style='display:inline;font-size:120%;'>16</pre>' plus '<pre style='display:inline;font-size:120%;'>32</pre>', and so on.
+The duration extended by dots cannot be shorter than '<pre style='display:inline;font-size:120%;'>64</pre>'.
+For exapmle, neither '<pre style='display:inline;font-size:120%;'>64.</pre>' nor '<pre style='display:inline;font-size:120%;'>16...</pre>' will be accepted since both of the last dots indicate the half of '<pre style='display:inline;font-size:120%;'>64</pre>' (i.e. the duration of 1/128).
+
+In this problem, you are required to write a program that finds the shortest expressions equivalent to given sequences of rest commands.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input consists of a line containing a non-empty sequence of valid rest commands.
+You may assume that the sequence does not contain more than 100000 characters.
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>Your program should output the shortest expression in one line.
+If there are multiple expressions of the shortest length, output the lexicographically smallest one.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+R2R2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+R1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+R1R2R4R8R16R32R64
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+R1......
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+R1R4R16
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+R16R1R4
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=447 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

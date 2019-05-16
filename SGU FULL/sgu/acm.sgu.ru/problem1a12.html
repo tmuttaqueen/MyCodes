@@ -1,0 +1,55 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=458 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 458. The Monochrome Picture </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>458. The Monochrome Picture</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />An artist Kalevich is very ambitious and he has many different achievements over the years of his work. Kalevich became extremely famous when he first produced the largest digital picture in the world, setting a new world record in digital painting. It was a great victory with a very unusual image&nbsp;&mdash; a billion pixels in width, and... only one pixel in height. The win changed the entire Kalevich's life, so starting from that memorable moment all his digital masterpieces have the height of 1 pixel.<br /><br />Recently Kalevich was invited to an exhibition in order to demonstrate the best picture he has ever painted. The picture is <i>n</i> pixels in width, 1 pixel in height, and it is called "The Monochrome Snake". As you have already guessed, the painting is indeed monochrome, so the <i>i</i>-th pixel is characterized by a single integer <i>c</i><sub><i>i</i></sub> from 0 to 10<sup>6</sup> that is a grayscale representation of its color.<br /><br />Many visitors at the exhibition have never seen any pictures with colors different from the standard 24-bit RGB, so they look at Kalevich's masterpiece with a great suspicion. Kalevich realized that the visitors do not like monochrome pictures at all, and what is even worse, if the colors of two adjacent pixels in a monochrome picture differ exactly by one, the visitors get angry and go away. Kalevich feels really nervous about this, so he wants to improve his painting in order to please the exigent visitors and keep them at the exhibition. At the same time he wants to preserve the idea of the picture &mdash; the snake should be still recognizable, so the only change he wants to make is to delete some pixels here and there. When he deletes a pixel, the width of the painting decreases by 1 of course. Kalevich will be satisfied with the result if |r<sub><i>i</i></sub>-<i>r</i><sub><i>i</i>+1</sub>| &ne;q 1 for all <i>i</i>=1... <i>m</i>-1, where <i>r</i> is the final masterpiece and <i>m</i> is its length.<br /><br />Your task is to help Kalevich and write a program that will help him to delete the minimum number of pixels from the picture, so that the resulting masterpiece does not have any two adjacent pixels with the colors that differ exactly by one.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of input contains a single integer <i>n</i> (1 &le; <i>n</i> &le; 10<sup>5</sup>). The second line of input contains <i>n</i> integers separated by spaces&nbsp;&mdash; pixel colors <i>c</i><sub>1</sub>, <i>c</i><sub>2</sub>,..., <i>c</i><sub><i>n</i></sub> (0 &le; <i>c</i><sub><i>i</i></sub> &le; 10<sup>6</sup>).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>To the first line of output print the minimum number of pixel deletions <i>t</i> that are needed to satisfy Kalevich's requirements. To the second line print <i>m</i> integer numbers (<i>m</i> = <i>n</i>-<i>t</i>) &nbsp;&mdash; the masterpiece that is left after <i>t</i> pixel deletions. <br /><br />If there are many solutions, you may output any of them.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+6
+4 2 2 1 1 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+4 1 1 1 </pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5
+1 2 3 2 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+1 3 1 </pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=458 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

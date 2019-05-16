@@ -1,0 +1,55 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=306 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 306. Balance </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>306. Balance</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />You have <i>n</i> coins, exactly one of those being fake (weighing different from all others). You have a balance which allows you to compare two groups of coins. Determine the fake coin in such a way that the number of weighings in the worst case is minimum possible.<br /><br />Adhere to the output format shown below. Note that you must not describe impossible cases (i.e., in the example output there is no &quot;<pre style='display:inline;font-size:120%;'>case =</pre&quot;> for &quot;<pre style='display:inline;font-size:120%;'>weigh 1+2 vs 3+4</pre&quot;> because the pans will never be equal there). For every weighing the numbers of coins on both pans should be equal, and no coin should be simultaneously put on both pans.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input file contains the only integer <i>n</i> (3 &le; <i>n</i> &le; 100).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output the required script.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+need 2 weighings
+weigh 1 vs 2
+case <:
+&nbsp;&nbsp;weigh 1+2 vs 3+4
+&nbsp;&nbsp;case <:
+&nbsp;&nbsp;&nbsp;&nbsp;fake 1
+&nbsp;&nbsp;case >:
+&nbsp;&nbsp;&nbsp;&nbsp;fake 2
+&nbsp;&nbsp;end
+case =:
+&nbsp;&nbsp;weigh 1 vs 3
+&nbsp;&nbsp;case =:
+&nbsp;&nbsp;&nbsp;&nbsp;fake 4
+&nbsp;&nbsp;case <:
+&nbsp;&nbsp;&nbsp;&nbsp;fake 3
+&nbsp;&nbsp;case >:
+&nbsp;&nbsp;&nbsp;&nbsp;fake 3
+&nbsp;&nbsp;end
+case >:
+&nbsp;&nbsp;weigh 1+2 vs 4+3
+&nbsp;&nbsp;case >:
+&nbsp;&nbsp;&nbsp;&nbsp;fake 1
+&nbsp;&nbsp;case <:
+&nbsp;&nbsp;&nbsp;&nbsp;fake 2
+&nbsp;&nbsp;end
+end 
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=306 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

@@ -1,0 +1,84 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=540 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 540. Traffic Lights </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>540. Traffic Lights</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ The main street of Berland's capital is a segment with length <i>s</i>. The main street has traffic lights installed along it. The traffic lights have been functioning since time immemorial, cyclically changing colors from red to green and vice versa. Each traffic light can be described by four numbers <i>x</i><sub><i>i</i></sub>, <i>r</i><sub><i>i</i></sub>, <i>g</i><sub><i>i</i></sub>, <i>d</i><sub><i>i</i></sub>, which stand for: <ul> <li><i>x</i><sub><i>i</i></sub> &mdash; the distance from the beginning of the street to the traffic light (1 &le; <i>x</i><sub><i>i</i></sub> &le; <i>s</i>-1), <li><i>r</i><sub><i>i</i></sub> &mdash; the duration of the red light illumination (10 &le; <i>r</i><sub><i>i</i></sub> &le; 20), <li><i>g</i><sub><i>i</i></sub> &mdash; the duration of the green light illumination (10 &le; <i>g</i><sub><i>i</i></sub> &le; 20), <li><i>d</i><sub><i>i</i></sub> &mdash; the minimum non-negative moment of time when the traffic light changes the light from green to red (0 &le; <i>d</i><sub><i>i</i></sub> < <i>r</i><sub><i>i</i></sub>+<i>g</i><sub><i>i</i></sub>). </ul><br /><br />Each traffic light retains its light cycle from the ancient past.<br /><br />The King of Berland asked the transport minister to customize the traffic lights according to a "green wave" principle. That means that if you start driving from the beginning of the street at the recommended speed, you can drive through the entire street without stopping, that is, you pass each traffic light when it has the green light on. <br /><br />Now it is time to show the "green wave" to the King, but the work is not even started yet. You may assume that the King starts driving at the moment of time 0 from the beginning of the street. So the minister decided to choose some speed <i>v</i><sub>0</sub> and tell the king that the "green wave" works specifically for this speed. Moreover, they can switch any number of traffic lights to the "always green" mode. The minister' aim is to ensure that if the King drives through the street at the recommended speed <i>v</i><sub>0</sub> he encounters no red traffic light. Driving exactly at the moment when the colors are changed is not considered driving through the red light.<br /><br />Any transport's maximum speed is limited in Berland: it should not exceed <i>v</i><sub><i>max</i></sub>. On the other hand, the King will be angry if the recommended speed is less than <i>v</i><sub><i>min</i></sub>. Thus, the minister should choose such value of <i>v</i><sub>0</sub>, which satisfies the inequation <i>v</i><sub><i>min</i></sub> &le; <i>v</i><sub>0</sub> &le; <i>v</i><sub><i>max</i></sub>.<br /><br />Help the minister to find such <i>v</i><sub>0</sub> value, that the number of traffic lights to switch to the "always green" mode is minimum. If <i>v</i><sub>0</sub> is not uniquely defined, choose the maximum possible value of <i>v</i><sub>0</sub>.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input data contains four integers <i>n</i>, <i>s</i>, <i>v</i><sub><i>min</i></sub> and <i>v</i><sub><i>max</i></sub> (1 &le; <i>n</i> < 20000, 1 &le; <i>s</i> &le; 20000, 10 &le; <i>v</i><sub><i>min</i></sub> &le; <i>v</i><sub><i>max</i></sub> &le; 50), where <i>n</i> is the number of traffic lights on the street, <i>s</i> is the length of the street in meters, <i>v</i><sub><i>min</i></sub> and <i>v</i><sub><i>max</i></sub> are speed limits in meters per second.<br /><br />Then <i>n</i> lines contain descriptions of the traffic lights, one per line. Each description consists of four integer numbers <i>x</i><sub><i>i</i></sub>, <i>r</i><sub><i>i</i></sub>, <i>g</i><sub><i>i</i></sub>, <i>d</i><sub><i>i</i></sub> (1 &le; <i>x</i><sub><i>i</i></sub> &le; <i>s</i>-1, 10 &le; <i>r</i><sub><i>i</i></sub>,<i>g</i><sub><i>i</i></sub> &le; 20, 0 &le; <i>d</i><sub><i>i</i></sub> < <i>r</i><sub><i>i</i></sub>+<i>g</i><sub><i>i</i></sub>), where <i>x</i><sub><i>i</i></sub>, <i>r</i><sub><i>i</i></sub>, <i>g</i><sub><i>i</i></sub>, <i>d</i><sub><i>i</i></sub> are explained above. Values <i>r</i><sub><i>i</i></sub>, <i>g</i><sub><i>i</i></sub>, <i>d</i><sub><i>i</i></sub> are given in seconds and <i>x</i><sub><i>i</i></sub> &mdash; in meters. No two traffic lights are located at one point.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>On the first line, print the sought value <i>v</i><sub>0</sub> containing no less than 10 digits after the decimal point. On the second line, print the number of traffic lights that need to be switched to the "always green" mode for the found <i>v</i><sub>0</sub>. The third line should contain the numbers of those traffic lights. It doesn't matter you print empty third line or print only two lines in case of no traffic lights to switch. The traffic lights are numbered starting from 1 in the order in which they appear in the input data. Print the numbers of the traffic lights in any order.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3 1000 10 30
+500 10 10 10
+501 10 10 0
+600 10 10 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>16.7000000000
+0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2 1000 10 30
+500 10 10 10
+600 10 20 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>25.0000000000
+0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4 1000 10 30
+800 10 15 20
+500 20 10 15
+501 20 10 5
+600 10 20 15
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>20.0400000000
+1
+2 </pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=540 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

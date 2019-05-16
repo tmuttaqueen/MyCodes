@@ -1,0 +1,29 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=459 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 459. Choreographer Problem </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>459. Choreographer Problem</h4></div><div align=center>Time limit per test: 1.5 second(s)<br />Memory limit: 65536 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />As you probably know, choreography is the art of making dances. But it is not a so well-known fact that it is also the science of making dances.<br /><br />There are <i>n</i> dancers numbered from 1 to <i>n</i> in the dance troupe, and all of them are working hard to create a new original dance. Before the dance starts each dancer puts on his special hand-made costume, and he has to wear this costume for the duration of the entire dance.<br /><br />It is known that the costume of <i>i</i>-th dancer is similar to the costumes of (<i>i</i>-1)-th and (<i>i</i>+1)-th dancers (therefore the dancers are similar too), but at the same time, <i>i</i>-th dancer is not similar to any other dancer. Therefore, (<i>i</i>-1)-th and (<i>i</i>+1)-th dancers are not similar. If <i>n</i> > 1, then the first dancer has the only similar dancer, the last dancer has the only similar dancer, and all other dancers have exactly two similar dancers.<br /><br />The dance starts and ends with an empty stage. The stage should not be empty during the dance. Each minute one of the following changes happens on the stage: <ul> <li>one dancer (who is currently not on the stage) appears; <li>one dancer (who is currently on the stage) leaves the stage; <li>one dancer takes the place of another dancer similar to him/her (basically the dancers switch over &mdash; one dancer leaves the stage, while a similar dancer appears on the stage) </ul> <br /><br />At every moment of time the stage must not have more than <i>k</i> dancers, because spectators may lose attention if there are too many dancers on the stage. <br /><br />Now choreographer is thinking about arranging the dance in such a way that each set of the dancers containing no more than <i>k</i> dancers appears on the stage exactly once. Your job is to write a program to help the choreographer.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line contains two positive integer numbers <i>n</i>,<i>k</i> (1 &le; <i>n</i> &le; 20; 1 &le; <i>k</i> &le; <i>n</i>).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print the only line describing the dance. The substring <pre style='display:inline;font-size:120%;'>+</pre><i>i</i> means that the <i>i</i>-th dancer appears on the stage, the substring <pre style='display:inline;font-size:120%;'>-</pre><i>i</i> means that the <i>i</i>-th dancer leaves the stage. The substring <pre style='display:inline;font-size:120%;'>++</pre><i>i</i> means that the <i>i</i>-th dancer leaves while the similar (<i>i</i>+1)-th dancer appears, and <pre style='display:inline;font-size:120%;'>--</pre><i>i</i> means that the <i>i</i>-th dancer leaves while the similar (<i>i</i>-1)-th dancer appears. The output will be processed from the left to the right.<br /><br />If there are many solutions, you may output any of them. If there is no solution, print 0 to the only line of output.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
++1++1-2</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=459 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

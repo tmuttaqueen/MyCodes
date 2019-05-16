@@ -1,0 +1,86 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=394 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 394. Berhatton </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>394. Berhatton</h4></div><div align=center>Time limit per test: 3 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Berhatton is one of the most picturesque districts of Berland. All streets in Berhatton are parallel to the coordinate axes. All streets are really long, so you can consider them infinite. Any point with integer coordinates is an intersection of two streets. So the whole plane is divided by streets into one-unit squares. All squares are occupied by the sky-scrappers. Due to this fact, the distance between point (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) and point (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>) is equal to |x<sub>1</sub> - <i>x</i><sub>2</sub>| + |y<sub>1</sub> - <i>y</i><sub>2</sub>|. BerPizza company has been working in Berhatton for a while and has <i>N</i> pizza huts. In each pizza hut they can make any kind of pizza from the menu and deliver it to the customer. Unfortunately, the company doesn't have enough funds to buy cars or even bikes for pizza delivery, so pizza boys have to deliver pizza on foot. Pizza boys from different huts run with the different speed. Everybody knows the famous motto of BerPizza "Deliver pizza in 10 minutes", so pizza boys have to move fast. <br /><br />Nowadays BerPizza company has a hard time, because hamburgers become more and more popular. BerPizza has even decided to close some of their huts because of financial problems. BerPizza president has made a rush decision that the pizza hut <i>A</i> can be closed if pizza boys from at least <i>K</i> other pizza huts can reach it in 10 minutes. Your task is to find numbers of pizza huts, which can be closed.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains two integer numbers <i>N</i> and <i>K</i> (2 &le; <i>N</i> &le; 10<sup>5</sup>, 1 &le; <i>K</i> &le; <i>N</i> - 1). The following <i>N</i> lines contain coordinates of pizza huts <i>x</i>, <i>y</i>, and number <i>w</i> &mdash;&nbsp;the amount of unit segments pizza boy can cover in 10 minutes (0 &le; <i>x</i> &le; 10<sup>9</sup>, 0 &le; <i>y</i> &le; 10<sup>9</sup>, 1 &le; <i>w</i> &le; 10<sup>9</sup>).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print the number of pizza huts <i>T</i> which can be closed to the first line of the output file. The next line should contain <i>T</i> numbers &mdash; the numbers of pizza huts that need to be closed. Pizza hut numbers should be printed in increasing order. Pizza huts are numbered from 1 to <i>N</i> in the order they are given in the input file.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 1
+0 0 1
+1 0 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+1 2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 2
+0 0 1
+1 0 1
+10 3 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 2
+0 0 100
+13 17 5
+10 10 10
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=394 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

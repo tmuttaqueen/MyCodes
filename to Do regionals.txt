@@ -1,0 +1,3 @@
+1.
+2018 ACM Amman Collegiate Programming Contest
+editorial: http://codeforces.com/blog/entry/59819

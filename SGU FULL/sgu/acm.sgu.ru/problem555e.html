@@ -1,0 +1,47 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=406 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 406. Goggle </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>406. Goggle</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Everybody knows search engine Goggle. But only advanced users know that it is possible to search number sequences. You can enter a set of numbers and the search engine will find all sequences which contain it. Goggle developers decided to improve the engine. New feature will help you if you know numbers which shouldn't be in the result. These numbers must be entered with the opposite sign. For example, if somebody enters &quot;5 -3 6&quot;, the engine will find all the sequences which contain 5 and 6, but do not contain 3. <br /><br />Help Goggle developers to implement the feature.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input will contain two integer numbers <i>n</i> and <i>m</i> (1 &le; <i>n</i> &le; 10, 1 &le; <i>m</i> &le; 10), where <i>n</i> is the number of sequences in Goggle database and <i>m</i> is the number of queries. Following <i>n</i> lines describe sequences in the Goggle database. The first integer <i>k</i> in each line is the length of the sequence (1 &le; <i>k</i> &le; 10). Next <i>k</i> numbers are the sequence elements. All of them are integers between 1 and 100, inclusive. Following <i>m</i> lines describe queries. The first integer <i>l</i> of each line is the numbers in query (1 &le; <i>l</i> &le; 10). Next <i>l</i> numbers <i>b</i><sub><i>i</i></sub> are the sequence elements (1 &le; |b<sub><i>i</i></sub>| &le; 100, <i>b</i><sub><i>i</i></sub> &ne; 0). These numbers have different absolute values.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>For each query print <i>t</i>&nbsp;&mdash; the number of found sequences on a separate line. Each of the next <i>t</i> lines should contain found sequence. The relative order of sequences should be preserved (in compliance with the input). The order of numbers in sequences should not change (in compliance with the input). Write sequences in format as they were given in the input.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 5
+6 1 2 3 1 2 3
+4 3 2 4 5
+2 4 2
+3 1 2 3
+2 3 2
+3 2 -1 3
+2 4 -2
+2 4 5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+6 1 2 3 1 2 3
+2
+6 1 2 3 1 2 3
+4 3 2 4 5
+1
+4 3 2 4 5
+0
+1
+4 3 2 4 5
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=406 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

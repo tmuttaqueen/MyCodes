@@ -1,0 +1,42 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=336 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 336. Elections </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>336. Elections</h4></div><div align=center>Time limit per test: 2 second(s)<br />Memory limit: 262144 kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />New parliament election in Berland is coming soon. Each of <i>N</i> political parties wants to be elected into the parliament. There is a law in Berland that allows only parties with more than a certain amount of votes be elected. Thus, some of the smaller parties are trying to use different technologies to collect necessary amount of votes.<br /><br />The first technology is completely legal. Two or more parties can go to the elections together, forming so-called <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/1d228991db3f81dec0508ddfccf705d2.png'/>.<br /><br />The second technology is not so legal. Some parties have specific information about their opponents. Those opponents don't want this information to become public.<br /><br />If several parties join into one election block, their information is joined together as well. Thus, they become more powerful. However, the opponents of each party of the block know something discreditable about the whole block. The party or block might have some 'black' information on itself.<br /><br />Let us now enumerate parties with the integers from 1 to <i>N</i>. Parties and blocks are allowed to join together into new blocks. Those blocks are numbered with the consecutive integers (<i>N</i>+1, <i>N</i>+2, etc.).<br /><br />You are to write a program that processes queries of two different kinds.<br /><br /><ul> <li>Query '<pre style='display:inline;font-size:120%;'>1 a b</pre>' means that you have to answer the question: is there any discreditable information that party or block <i>a</i> knows about party or block <i>b</i>? <li>Query '<pre style='display:inline;font-size:120%;'>2 a b</pre>' means that you need to join party or block <i>a</i> with party or block <i>b</i>. The new block will have all the information <i>a</i> has, and all the information <i>b</i> has. All the information that was known by some parties or blocks about <i>a</i> and <i>b</i> now concerns the newly created block. </ul><br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains integers <i>N</i> and <i>M</i> (1 &le; <i>N</i> &le; 10<sup>5</sup>; 1 &le; <i>M</i> &le; 2 &middot; 10<sup>5</sup>). Next <i>M</i> lines contain pairs of integers <i>a</i> and <i>b</i> denoting that party <i>a</i> knows something discreditable about party <i>b</i> (1 &le; <i>a</i>, <i>b</i> &le; <i>N</i>). The next line contains single integer number <i>Q</i> (1 &le; <i>Q</i> &le; 2 &middot; 10<sup>5</sup>). Each of the next <i>Q</i> lines contains a query. A query of the first kind looks like '<pre style='display:inline;font-size:120%;'>1 a b</pre>'. A query of the second kind looks like '<pre style='display:inline;font-size:120%;'>2 a b</pre>'. You should process queries in the order they are given. Each pair <i>a</i>, <i>b</i> references only existing parties or blocks. It is guaranteed that numbers <i>a</i> and <i>b</i> are different in any '<pre style='display:inline;font-size:120%;'>2 a b</pre>' query, but they can be equal in a '<pre style='display:inline;font-size:120%;'>1 a b</pre>' query. <br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Write on the separate lines of the output file answer <pre style='display:inline;font-size:120%;'>YES</pre> or <pre style='display:inline;font-size:120%;'>NO</pre> for each query of the first kind.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 6
+1 2
+1 3
+3 2
+4 4
+2 4
+1 2
+4
+1 3 4
+2 2 3
+1 5 4
+1 4 5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+NO
+YES
+NO
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=336 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

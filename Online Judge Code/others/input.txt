@@ -1,0 +1,12 @@
+acmicpcxxxacmzacmzacmzmca
+10
+a 2
+b 2
+c 2
+i 2
+x 2
+m 2
+z 2
+d 10
+p 10
+w 1

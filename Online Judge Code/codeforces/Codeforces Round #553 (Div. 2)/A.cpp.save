@@ -1,0 +1,64 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define intl long long
+#define pii pair<int,int>
+#define xx first
+#define yy second
+#define mp make_pair
+#define pb push_back
+
+const int MAXN = 300005;
+
+char ch[1000];
+
+int value( char c, int v )
+{
+    int  res = 1e9;
+    for( int j = 26 + v; j >= 0; j-- )
+    {
+        if( ch[j] == c )
+        {
+            res = min( res, 26+v - j );
+            break;
+        }
+    }
+    for( int j = 26 + v; j < 100; j++ )
+    {
+        if( ch[j] == c )
+        {
+            res = min( res, j - 26 - v );
+            break;
+        }
+    }
+    return res;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int n;
+    string s;
+    cin >> n;
+    cin >> s;
+    int ans = 1e9;
+    for( int i = 0; i < 5; i++ ) 
+        for( int j = 0; j < 26; j++ )
+            ch[i*26+j] = 'A' + j;
+        
+    for( int i = 3; i < n; i++ )
+    {
+        char a = s[i-3], b = s[i-2], c = s[i-1], d = s[i];
+        
+        ans += value( 'A', a - 'A' );
+        ans += value( 'C', b - 'A' );
+        ans += value( 'T', c - 'A' );
+        ans += value( 'G', d - 'A' );
+        
+    }
+
+    return 0;
+}
+

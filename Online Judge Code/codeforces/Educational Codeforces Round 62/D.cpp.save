@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define intl long long
+#define pii pair<int,int>
+#define xx first
+#define yy second
+#define mp make_pair
+#define pb push_back
+
+const int MAXN = 300005;
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int n;
+    cin >> n;
+    intl ans = 0;
+    for( int i = 3; i <= n; i++ )
+    {
+        ans += i*
+    }
+
+    return 0;
+}
+

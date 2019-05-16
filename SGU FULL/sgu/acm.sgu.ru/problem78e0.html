@@ -1,0 +1,60 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=480 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 480. Gena's Soul Cakes </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>480. Gena's Soul Cakes</h4></div><div align=center>Time limit per test: 2 second(s)<br />Memory limit: 65536 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />This story is about a boy, called Gena. He is quite a usual boy who goes to school, celebrates All Hallows Eve, also known as Halloween Day, and besides likes programming contests. <br><br /><br />One Halloween Day he went from house to house begging for "soul cakes". He happened to collect many "soul cakes" of various tastes that day, and his happiness seemed have no limits. But his elder brother Roma, who was lazy and rude boy, demanded to give him ten cakes. Gena didn't loose control over the situation and gave his brother ten cakes of the same taste in order not to show that he had many tastes, because Roma could demand more cakes. Since that time Gena was thinking about that situation. And after Gena had learnt on Geometry classes about three-dimentional space figures, he invented the following problem. <br><br /><br />Consider non-convex figure denoted as "corner" in three-dimentional space. It consists of four equal cubes. One of the cubes has a common face with each of the others. There is the only one point belonging to all four cubes, and this point coinsides one vertex of any cubes (see picture below). Every "corner" is charaterized by two values: color and an integer length of an edge of any cubes (denoted as "size"). "Size" is always equal to some power of two, so only index is given. The problem is to construct a big "corner" comprising given figures under the restiction of using as little number of different colors as possible given "size" of this big "corner". <img width = "300px" height="300px" src="http://acm.sgu.ru/problems/33/cube2.png"/><br> <br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of input contains two space separated integers: <i>c</i>&nbsp;&mdash; the number of colors, and <i>k</i>&nbsp;&mdash; the index of power of two which is equal to "size" of big "corner" (1 &le; <i>c</i>, <i>k</i> &le; 1000). Next <i>c</i> lines contain <i>k</i> integers <i>a</i><sub><i>ij</i></sub> each. <i>a</i><sub><i>ij</i></sub> equals the number of "corners" with color <i>i</i> and "size" 2<sup><i>j</i></sup>. (0 &le; <i>a</i><sub><i>ij</i></sub> &le; 1000 for 1 &le; <i>i</i> &le; <i>c</i>, 0 &le; <i>j</i> < <i>k</i>).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>The first line of output should contain integer <i>n</i> denoting the number of figure types used in constructing big "corner". Next <i>n</i> lines should contain <i>a</i><sub><i>i</i></sub>, <i>b</i><sub><i>i</i></sub>, <i>c</i><sub><i>i</i></sub> denoting color, "size" and number of "corner" of such type respectively. Please, separate these numbers by single spaces. If there are multiple solutions, output any of them. Every type of "corner" should appear in output no more than once. If it is impossible to construct big "corner" even using all figures, print "NO SOLUTION" to output.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 1
+8
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+1 0 8
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 2
+1 7
+7 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+1 1 7
+1 0 1
+2 0 7
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=480 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

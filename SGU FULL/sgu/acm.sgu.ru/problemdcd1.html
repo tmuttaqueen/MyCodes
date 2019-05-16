@@ -1,0 +1,94 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=412 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 412. Expedition </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>412. Expedition</h4></div><div align=center>Time limit per test: 1.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Summer comes! Peter waited for it a lot. This is not surprising &mdash; Peter goes to his first geological expedition. And do you
+know what is the main item at the expedition? Certainly, large tent. Peter noticed that when tent is put up, it
+has the shape of convex polygon with <i>N</i> vertices while observing from above. 
+But it is not enough to take only a tent. Peter will need other equipment. It was decided to place all the equipment at <i>M</i> shelves inside the tent.
+Each shelf is infinitely narrow, so it can be represented as a segment at the scheme of the tent.
+Shelves are made differently, so corresponding segments can touch or intersect each other.
+Also Peter puts a lamp to the center of the tent. At the scheme the lamp has (0,0) coordinates. Peter noticed, that shelves block the
+light, so part of tent's walls becomes shaded. Peter has remembered, that he'd left his boots near some wall.
+To decide, how difficult it would be to find them, Peter needs to know, what is the total length of walls' shaded parts?
+Could you help him to find the answer for this question?
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>There are two integers at the first line of input&nbsp;&mdash; <i>N</i> and <i>M</i> (3 &le; <i>N</i> &le; 100000, 0 &le; <i>M</i> &le; 100000)&nbsp;&mdash;
+number of vertices in polygon, which tent is represented by, and the number of shelves.
+Following <i>N</i> lines contain 2 integers each (<i>x</i><sub><i>i</i></sub>, <i>y</i><sub><i>i</i></sub>)&nbsp;&mdash; coordinates of <i>i</i>-th vertex of polygon.
+Vertices are given in counter-clockwise order. Following <i>M</i> lines contain 4 integers
+<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/d46ca563e136f07977986206f629fb6d.png'/>&nbsp;&mdash;coordinates of the segment, which represents <i>j</i>-th shelf. All coordinates in the input 
+do not exceed 10<sup>6</sup> by absolute value. It is guaranteed, that the point (0,0) and each segment lie strictly inside the polygon.
+None of segments contains the point (0, 0).
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output answer for the problem with at least 6 digits after decimal point.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 1
+0 2
+-2 -1
+3 -3
+-1 -1 1 -1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4.615855548972
+Explanatory picture:
+<image src = "http://acm.sgu.ru/problems/0/p412_1.bmp">
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 3
+-2 -2
+2 -2
+2 2
+-2 2
+-1 0 0 -1
+1 -1 1 1
+-1 1 1 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+12.000000
+Explanatory picture:
+<image src = "http://acm.sgu.ru/problems/0/p412_2.bmp">
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=412 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

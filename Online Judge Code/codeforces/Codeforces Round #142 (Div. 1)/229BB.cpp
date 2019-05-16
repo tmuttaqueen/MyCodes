@@ -1,0 +1,128 @@
+#include <bits/stdc++.h>
+
+//#include <ext/pb_ds/assoc_container.hpp>
+//#include <ext/pb_ds/tree_policy.hpp>
+
+using namespace std;
+//using namespace __gnu_pbds;
+
+const double pi = 3.141592653589793;
+
+#define xx          first
+#define yy          second
+#define mp          make_pair
+#define intl        long long
+#define filein      freopen("input.txt", "r", stdin)
+#define fileout     freopen("output.txt", "w", stdout)
+#define debug       cout << "YES" << endl
+#define what_is(x)  cout << #x << " is " << x << endl
+#define pb          push_back
+#define pii         pair<intl, intl>
+#define piii        pair< pair<int,int>, int >
+//find_by_order(int) and order_of_key(int)
+//typedef tree < intl , null_type ,less<intl>,rb_tree_tag,tree_order_statistics_node_update > ordered_set;
+const int M = 145678;
+
+vector<intl>edge[M], cost[M], forbid[M], nxt[M];
+
+intl dist[M], n;
+
+int getnxt( int u, int t )
+{
+    int l = 0, r = forbid[u].size()-1;
+    int ind = -1, f = 0;
+    while( l <= r )
+    {
+        int m = (l+r)/2;
+        if( forbid[u][m] == t )
+        {
+            ind = m;
+            break;
+        }
+        else if( forbid[u][m] > t )
+        {
+            r = m -1;
+        }
+        else
+            l = m + 1;
+    }
+    if( ind == -1 ) return t;
+    else return nxt[u][ind];
+}
+
+void dijktra( int s )
+{
+    priority_queue< pii >pq;
+    memset( dist, 125, sizeof dist );
+    dist[s] = 0;
+    pq.push( mp( -getnxt(s, 0),s ) );
+    while( !pq.empty() )
+    {
+        pii x = pq.top();
+        pq.pop();
+        intl u = x.yy;
+        //d = -x.xx;
+        intl d = getnxt(u, dist[u] );
+        for( int i = 0; i < edge[u].size(); i++ )
+        {
+            intl w = cost[u][i], v = edge[u][i];
+            intl dd = d + w;
+            if( dd < dist[v] )
+            {
+                dist[v] = dd;
+                pq.push(  mp( -getnxt(v, dd) , v ) );
+            }
+        }
+    }
+
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    //filein;
+    int m, a, b, w;
+    cin >> n >> m;
+    for( int i = 0; i < m; i++ )
+    {
+        cin >> a >> b >> w;
+        edge[a].pb(b);
+        cost[a].pb(w);
+        edge[b].pb(a);
+        cost[b].pb(w);
+    }
+    for( int i = 1; i <= n; i++ )
+    {
+        int k;
+        cin >> k;
+        for( int j = 0; j < k; j++ )
+        {
+            cin >> a;
+            forbid[i].pb(a);
+        }
+        nxt[i].resize(k);
+        for( int j = k-1; j >=0; j-- )
+        {
+            if( j == k-1 ) nxt[i][j] = forbid[i][j] + 1;
+            else if( forbid[i][j]+1 == forbid[i][j+1] ) nxt[i][j] = nxt[i][j+1];
+            else nxt[i][j] = forbid[i][j] + 1;
+        }
+    }
+
+    dijktra(1);
+    if( dist[n] == 9042521604759584125LL )
+    {
+        cout << -1 << endl;
+        return 0;
+    }
+    cout << dist[n] << endl;
+
+
+
+
+
+
+
+    return 0;
+}

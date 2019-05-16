@@ -1,0 +1,55 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=285 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 285. What? Where? When? </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>285. What? Where? When?</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />In<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/3d6cd4211321793779e93d3485695c45.png'/>country there was a championship of the game 'What? Where? When?'. The game has the following rules.<br /><br />There is a round table divided into 13 equal sectors. The table has an arrow which can point at a sector. The sectors are numbered from 1 to 13 in counter-clockwise order. At the beginning of the game, each sector contains one envelope. Each of the envelopes in sectors 1 through 12 contains one question. The envelope in sector 13 is empty. <br /><br />There are two teams, the club team and the TV viewers team. The viewers submit the questions, which the club team has to answer. These questions are put into the envelopes on the table. There are also questions submitted through Internet.<br /><br />The game consists of rounds. Each round the current envelope is chosen in the following way: the arrow is rotated at a random angle (therefore the probability of it pointing at a particular sector is 1/13). Then it is rotated in counter-clockwise order until it points at a sector having a envelope; this envelope is chosen as current. (If after the random rotation the arrow points at a sector having a envelope, it is not rotated the second time).<br /><br />After the current envelope is chosen, it is taken off the table. If this envelope contains a question, this question is read out. If the envelope was at sector 13, the question to be read out is chosen randomly from the questions submitted through Internet. If the club team answers the question, it receives a point, otherwise the point comes to the other team. The game ends when some team has 6 points.<br /><br />You are given the order of the envelopes and the probability that the club's team gives the correct answer to the question in each envelope and to the questions submitted through Internet. You have to determine the probability of each final score.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains single integer <i>N</i> (1&le; <i>N</i>&le; 1000), which is the number of the questions submitted through Internet. The next 12 numbers are the probabilities of the club team answering the question in sectors 1 through 12. The next <i>N</i> numbers are the probabilities of the club team answering the questions submitted through Internet. All the probabilities are between 0 and 1 and have at most three digits after the decimal point.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>The final score is represented by two numbers separated by a colon. The first number is the of the club team's points, the second is the viewers team's points. You have to output the 12 numbers with at least 3 digits after the decimal point, being the probabilities of the scores '6:0', '6:1', '6:2', '6:3', '6:4', '6:5', '5:6', '4:6', '3:6', '2:6', '1:6', '0:6' respectively.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+0.1
+0.1
+0.1
+0.1
+0.1
+0.1
+0.9
+0.9
+0.9
+0.9
+0.9
+0.9
+0.01
+0.9
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0.011
+0.035
+0.067
+0.099
+0.127
+0.150
+0.154
+0.132
+0.105
+0.072
+0.037
+0.012
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> Novosibirsk SU Contest #2, by Novosibirsk Team #1 </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=285 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

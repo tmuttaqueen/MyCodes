@@ -1,0 +1,71 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=273 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>273. Game Po
+</h4></div><div align=center>time limit per test: 1 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>In the eastern country Pon-pong there is a very popular game Po. Po is the game with stones of four different colors: blue, red, yellow and white. The game is played by four participants. Before the beginning all stones are randomly placed in a row in front of the participants, each player chooses one of the stone colors (all players should have different colors). After that the game process begins. Each of the players in a turn chooses two nearby stones and replaces them by the third one, but only if this change is permitted by the "List of Po Replacements". Replacement is possible if the stones in the row and in the "List of Po Replacements" are in the same order. The game is considered to be finished if it is impossible to perform any change on the stones row. If after the end of the game only one stone remains, the player who chose the color of the stone left is a winner. If there are multiple stones, then the game result is draw. The boy Sasha liked very much the game Po during his visit to Pon-pong. He noticed, that in some games the players with some color are doomed to loose before the beginning of the game (after the distribution of the colors between players, but before the first move). Sasha decided to choose only such color, that he will have some chance to win the game, i.e. there is some sequence of players' moves, that leads to Sasha's victory. 
+<br>
+</div><div align = left><br><b>Input</b></div><div align = left>Each stone color is defined by one symbol: "b" -- blue, "r" -- red, "y" -- yellow and "w" -- white. The first line of the input file contains integer numbers B, R, Y and W (1 &lt;= B,R,Y,W &lt;= 16). The following B lines contain the rules of replacement of stones to the blue stone (one rule per line). Each rule is a pair of symbols without spaces, denoting the two stones which can be replaced by the blue one. The following R lines describe the rules of replacement to the red stone, Y lines --- to the yellow stone and W lines -- to the white stone. The last line contains from 1 to 200 symbols denoting stone colors -- the row of the stones before the beginning of the game.
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>Output the single line without spaces containing the list of colors, for which there is a chance to win the game (in any order). If it is impossible to win the game with any color, output "Nobody".
+<br>
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>Test #1
+<br>2 1 1 1
+<br>br
+<br>bw
+<br>bw
+<br>wb
+<br>wy
+<br>brwy
+<br>
+<br>Test #2
+<br>1 1 1 1
+<br>br
+<br>bw
+<br>yr
+<br>by
+<br>bbbbbbbbbbb
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>Test #1
+<br>br
+<br>
+<br>Test #2
+<br>Nobody
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=273'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=273'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Sergey V. Mironov, Alexander S. Ivanov
+</td></tr><tr><td>Resource:</td><td>ACM ICPC 2004-2005, NEERC, Southern Subregional Contest
+</td></tr><tr><td>Date:</td><td>Saratov, October 7, 2004
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:45:00</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=273 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html> 

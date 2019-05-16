@@ -1,0 +1,43 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=538 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 538. Emoticons </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>538. Emoticons</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />A berland national nanochat Bertalk should always stay up-to-date. That's why emoticons highlighting was decided to be introduced. As making emoticons to be highlighted is not exactly the kind of task one performs everyday but this task had to be done as soon as possible, the following simple rule was decided to be introduced: a round opening or closing bracket <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/f400e7d060f6aafecd604564bec9e2c2.png'/> be considered part of an emoticon if: <ul> <li>this is an opening bracket and there exists the nearest bracket following to the right. The nearest round bracket to the right should be a closing bracket and there shouldn't be anything between the brackets but spaces and Latin letters, <li>or else it can be a closing bracket and there exists the nearest round bracket following to the left. The nearest round bracket to the left should be an opening bracket. Besides, there shouldn't be anything between the brackets but spaces and Latin letters. </ul><br /><br />If a bracket doesn't satisfy the conditions, it is considered a part of an emoticon. For example, let's consider the string "<pre style='display:inline;font-size:120%;'>Hi:) (it is me) I have bad news:-((</pre>". In the string only the brackets that outline "<pre style='display:inline;font-size:120%;'>it is me</pre>" aren't emoticons. Note that an opening bracket immediatelly followed by a closing bracket, i.e. "<pre style='display:inline;font-size:120%;'>()</pre>", are not parts of emoticons by definition.<br /><br />Your task is to print the number of brackets that are parts of emoticons in the given string.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input data consist of a single non-empty string. The length of the string does not exceed 10<sup>5</sup> characters. The string consists of lowercase and uppercase Latin letters, spaces, round brackets and punctuation marks: "<pre style='display:inline;font-size:120%;'>-</pre>", "<pre style='display:inline;font-size:120%;'>:</pre>", "<pre style='display:inline;font-size:120%;'>,</pre>", "<pre style='display:inline;font-size:120%;'>;</pre>". The string does not begin with and does not end with a space.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print a single number &mdash; the required number of brackets that are part of emoticons.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div><table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>Hi:) (it is me) I have bad news:-((</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3 </pre>
+ </td>
+ </tr>
+</table><br> <table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>((two plus two equals four)) </pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2 </pre>
+ </td>
+ </tr>
+</table><br><br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=538 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

@@ -1,0 +1,229 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define intl long long
+#define ld long double
+
+const ld eps = 1e-9;
+
+struct PT
+{
+    ld x,y;
+    PT() {}
+    PT(ld x,ld y) : x(x), y(y) {}
+    PT(const PT &p) : x(p.x), y(p.y) {}
+};
+PT operator +(PT a,PT b)
+{
+    return PT(a.x+b.x,a.y+b.y);
+}
+PT operator -(PT a,PT b)
+{
+    return PT(a.x-b.x,a.y-b.y);
+}
+PT operator *(PT a,ld b)
+{
+    return PT(a.x*b,a.y*b);
+}
+PT operator /(PT a,ld b)
+{
+    return PT(a.x/b,a.y/b);
+}
+ld operator *(PT a,PT b)  //dot
+{
+    return a.x*b.x+a.y*b.y;
+}
+ld operator ^(PT a,PT b)   //cross
+{
+    return a.x*b.y-a.y*b.x;
+}
+
+int dcmp(ld x)
+{
+    if (fabs(x)<eps)
+        return 0;
+    return x<0 ? -1 : 1;
+}
+
+vector<PT>ara;
+
+bool SegmentsIntersect(PT a, PT b, PT c, PT d)
+{
+    if (LinesCollinear(a, b, c, d))
+    {
+        if (dist2(a, c) < eps || dist2(a, d) < eps ||
+                dist2(b, c) < eps || dist2(b, d) < eps) return true;
+        if ((c-a)*(c-b) > 0 && (d-a)*(d-b) > 0 && (c-b)*(d-b) > 0)
+            return false;
+        return true;
+    }
+    if (((d-a)^(b-a))*((c-a)^(b-a)) > 0) return false;
+    if (((a-c)^(d-c))*((b-c)^(d-c)) > 0) return false;
+    return true;
+}
+
+bool SegmentsIntersectStrict(PT a, PT b, PT c, PT d)
+{
+    int x = dcmp( (b-a)^(c-a) ), y = dcmp( (b-a)^(d-a) );
+    if( x*y < 0 ) return true;
+    return false;
+}
+
+//intersection of line ab and cd
+PT ComputeLineIntersection(PT a, PT b, PT c, PT d)
+{
+    b=b-a;
+    d=c-d;
+    c=c-a;
+    assert((b*b) > EPS && (d*d) > EPS);
+    return (c^d)/(b^d);
+}
+
+bool colinear( PT a, PT b, PT c )
+{
+    ld v = (b-a)^(c-a);
+    return dcmp(v) == 0;
+}
+
+ld dist(PT a, PT b)
+{
+    return sqrt((a-b)*(a-b));
+}
+
+/// Point in simple polygon,1:on/inside;0:strictly out
+bool isPointOnPolygon(PT q,vector<PT> &p)
+{
+    int n = p.size(), fl = 0;
+    for(int i = 0 ; i < n ; i++)
+    {
+        if (fabs((q-p[i])^(p[i+1]-p[i])) < eps and (p[i]-q)*(p[i+1]-q) < eps )
+        {
+            return true;
+        }
+    }
+    for(int i = 0 ; i < n ; i++)
+    {
+        PT a = p[i], b = p[i+1] ;
+        if (fabs(a.x-b.x) < eps)
+            continue ;
+        if (a.x > b.x)
+            swap(a,b);
+        if (q.x < a.x-eps or q.x > b.x-eps)
+            continue ;
+        if (( (q-a)^(b-a) ) > 0.0)
+            fl ^= 1 ;
+    }
+    return fl;
+}
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+
+    cin >> n;
+    ara.resize(n);
+    for( int i = 0; i < n; i++ )
+    {
+        cin >> ara[i].x >> ara[i].y;
+    }
+    ld ans = 0;
+    for( int i = 0; i < n; i++ )
+    {
+        for( int j = i+1; j < n; j++ )
+        {
+            int f = 1;
+            for( int k = 0; k < n; k++ )
+            {
+                if( SegmentsIntersect( ara[i], ara[j], ara[k], ara[ (k+1)%n ] ) )
+                {
+                    f = 0;
+                    break;
+                }
+            }
+            if(f == 0) continue;
+
+            ld l = -mx, r = mx;
+
+            for( int k = 0; k < n; k++ )
+            {
+                if( SegmentsIntersectStrict( ara[i], ara[j], ara[k], ara[ (k+1)%n ] ) )
+                {
+                    ld t = ComputeLineIntersection( ara[i], ara[j], ara[k], ara[ (k+1)%n ] );
+                    if( t > 1.0 )
+                    {
+                        r = min(t, r);
+                    }
+                    if(  t < 0. 0)
+                    {
+                        l = max(l, t);
+                    }
+                }
+            }
+
+            vector<ld>vec;
+            vec.push_back(l);
+            vec.push_back(r);
+            ld dd = dist( ara[i], ara[j] );
+            for( int k = 0; k < n; k++ )
+            {
+                if( colinear( ara[i], ara[j], ara[k] ) )
+                {
+                    ld t = dist(ara[k], ara[i])/dd;
+                    if( dcmp((ara[k]-ara[i])*(ara[j]-ara[i])) < 0 )
+                    {
+                        t = -t;
+                    }
+                    vec.push_back(t);
+                }
+            }
+            sort( vec.begin(), vec.end() );
+
+            ld lo = 0, hi = 1;
+            int zero = 0;
+            for( int k = 0; k < vec.size(); k++ )
+            {
+                if( dcmp(vec[k]) == 0 )
+                {
+                    zero = k;
+                    break;
+                }
+            }
+
+            for( int k = zero; k >= 1; k-- )
+            {
+                PT p = ara[i] + (ara[j]-ara[i])*vec[k-1], q = ara[i] + (ara[j]-ara[i])*vec[k];
+                PT mid = (p+q)*0.5;
+                if( isPointOnPolygon(mid, ara) )
+                {
+                    lo = vec[k-1];
+                }
+                else
+                    break;
+            }
+
+            for( int k = zero+1; k < vec.size(); k++ )
+            {
+                PT p = ara[i] + (ara[j]-ara[i])*vec[k-1], q = ara[i] + (ara[j]-ara[i])*vec[k];
+                PT mid = (p+q)*0.5;
+                if( isPointOnPolygon(mid, ara) )
+                {
+                    hi = vec[k];
+                }
+                else
+                    break;
+            }
+
+            PT p = ara[i] + (ara[j]-ara[i])*lo, q = ara[i] + (ara[j]-ara[i])*hi;
+            ans = max(ans, dist(p,q) );
+
+        }
+
+    }
+
+    cout << fixed << setprecision(10) << ans << endl;
+
+    return 0;
+}

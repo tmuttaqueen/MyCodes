@@ -1,0 +1,14 @@
+.root {
+     -fx-background-image: url("background.jpg");
+}
+.label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    
+}
+.rounded-label {
+    -fx-background-color: cadetblue;
+    -fx-padding: 10px;
+    -fx-background-radius: 10px;
+}

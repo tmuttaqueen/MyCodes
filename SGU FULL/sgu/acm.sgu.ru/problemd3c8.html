@@ -1,0 +1,42 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=437 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 437. Hexodoku </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>437. Hexodoku</h4></div><div align=center>Time limit per test: 8 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Sudoku is an amazing game. Many people have fun solving it. They say that a legendary programmer had spent just 7 minutes on writing a program that solves standard sudoku. That's &uuml;ber cool, don't you think? And now he has solved another problem. Can you do the same?<br /><br />Consider a non-standard hexagonal Sudoku board:<br /><br /> <image src="http://acm.sgu.ru/problems/0/p437_01.png"> <br /><br />The cells are numbered from 1 to 31.<br /><br />According to the rules, numbers (from 1 to <i>K</i>) can be placed in the cells with the condition that all numbers in the same row (rows are located in three directions) must be different.<br /><br /> <image src="http://acm.sgu.ru/problems/0/p437_02.png"> <br /><br />Additionally, for each of the marked cells, the number in marked cell and all numbers in adjacent cells must also differ from each other.<br /><br /> <image src="http://acm.sgu.ru/problems/0/p437_03.png"> <br /><br />Some numbers may already be placed in the cells according to the rules. You are to find <i>N</i>-th solution in lexicographical order, if it exists.<br /><br />Let <i>A</i><sub><i>i</i></sub> be the number in the cell <i>i</i> in solution <i>A</i>, and <i>B</i><sub><i>i</i></sub> &mdash; the number in the cell <i>i</i> in solution <i>B</i>. Solution <i>A</i> is lexicographically smaller than solution <i>B</i>, if such <i>j</i> exists that for each <i>i</i> where <i>i</i> < <i>j</i>: <i>A</i><sub><i>i</i></sub> = <i>B</i><sub><i>i</i></sub> and <i>A</i><sub><i>j</i></sub> < <i>B</i><sub><i>j</i></sub>.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>First line of input contains two integers <i>K</i> and <i>N</i>.<br /><br /><ul> <li>7 &le; <i>K</i> &le; 31 <li><img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/c0d357f2ebeab6840301f445582ff021.png'/> </ul><br /><br />Second line contains 31 integer numbers: <i>A</i><sub><i>i</i></sub> (1 &le; <i>i</i> &le; 31) is the number standing in the cell <i>i</i>.<br /><br /><ul> <li>1 &le; <i>A</i><sub><i>i</i></sub> &le; <i>K</i>, or 0, if there is no number in this cell. </ul><br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>First line of output should contain an answer:<br /><br /><ul> <li>"Found" &mdash; if the solution has been found. <li>"No way" &mdash; if there is no <i>N</i>-th solution. </ul><br /><br />If the solution has been found, the second line of output should contain the <i>N</i>-th solution in the same format as in input.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div> <table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>8 1<br/>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>Found<br/>1 2 1 3 4 5 2 2 4 6 7 1 3 7 5 1 8 6 2 1 3 4 5 7 8 6 7 2 3 5 8 </pre>
+ </td>
+ </tr>
+</table><br> <table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>7 100000<br/>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 </pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>No way </pre>
+ </td>
+ </tr>
+</table><br> This is the first example above:<br /><br /> <image src="http://acm.sgu.ru/problems/0/p437_04.png"> <br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=437 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

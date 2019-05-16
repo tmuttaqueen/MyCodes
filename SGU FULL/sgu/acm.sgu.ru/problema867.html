@@ -1,0 +1,35 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=321 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 321. The Spy Network </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>321. The Spy Network</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />The network of spies consists of <i>N</i> intelligence officers. They are numbered with the code numbers from 1 to <i>N</i> so that nobody could discover them. The number 1 belongs to the radiowoman Kat. There is exactly <i>N</i> - 1 communication channels between the spies. It is known that a message from any spy to Kat can reach her. All channels are unidirectional.<br /><br />A channel can have one of two types: protected and almost protected. It is known that a message will not be intercepted almost surely by the hostile security service if at least half of the channels along the path to radiowoman Kat are protected. What is the minimum number of channels to be made protected from almost protected, so that any message from any spy will not be intercepted almost surely ? What are those channels?<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains the integer number <i>N</i> (1 &le; <i>N</i> &le; 200000). The following <i>N</i> - 1 lines contain the description of the communication channels. Each channel is described by a pair of the code numbers of spies (the direction of the channel is from the first spy to the second one) and the parameter <i>p</i><sub><i>i</i></sub>. If <i>p</i><sub><i>i</i></sub> = <pre style="display: inline">protected</pre>, the channel is protected and if <i>p</i><sub><i>i</i></sub> = <pre style="display: inline">almost protected</pre>, the channel is almost protected.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Write the number of channels to be converted to protected to the first line of the output. To the next line write numbers of channels to be made protected. If there are several solutions, choose any of them.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5
+5 1 almost protected
+3 1 almost protected
+2 3 protected
+4 3 almost protected
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+1 2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=321 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

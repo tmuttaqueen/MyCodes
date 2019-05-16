@@ -1,0 +1,66 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=506 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 506. Subsequences Of Substrings </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>506. Subsequences Of Substrings</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Andrew has just made a breakthrough in steganography: he realized that one
+can hide a message in a bigger text by making the message a subsequence
+of the text.
+
+We remind that a string <i>s</i> is called a <i>subsequence</i> of string <i>t</i>
+if one can remove some (possibly none) letters from <i>t</i> and obtain <i>s</i>.
+
+Andrew has prepared a text (represented by a string) with a hidden message
+(represented by another string which is a subsequence of the first string).
+But it turns out that he doesn't have enough space to write the text, so he
+wonders if he can remove some letters from the beginning and/or the end
+of his text in such a way that the hidden message still stays a subsequence of
+it.
+
+You should find out how many ways are there to remove some (possibly none)
+letters from the beginning of the given text and some (possibly none)
+letters from the end of the given text in such a way that the given message
+is a subsequence of the remaining string. Two ways are distinct if the number
+of letters removed from the beginning or from the end or both are distinct, even
+if the resulting string is the same.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains the text&nbsp;&mdash; a non-empty string
+of lowercase English letters, no more than <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/39ee9893f3eefe25a0d561f79c3a31a5.png'/> letters long.
+The second line of the input file contains the message&nbsp;&mdash; a non-empty string
+of lowercase English letters, no more than 100 letters long.
+
+It is guaranteed that the message is a subsequence of the given text.
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output one integer&nbsp;&mdash; the sought number of ways.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+abraaadabraa
+baa
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+23
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=506 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

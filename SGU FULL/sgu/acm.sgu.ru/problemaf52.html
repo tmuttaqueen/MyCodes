@@ -1,0 +1,62 @@
+                               <HTML>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=109 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:03:09 GMT -->
+<HEAD><TITLE>
+109. Magic of David Copperfield II
+</TITLE><META http-equiv=Content-Type content="text/html; charset=windows-1251"><META HTTP-EQUIV="Expires" content="Дата"><META HTTP-EQUIV="Cache-Control" content="no-cache"><META HTTP-EQUIV="pragma" content="no-cache"><META NAME="keywords" CONTENT="ACM, programming contest, programming, contest, informatics, ioi, saratov, ICPC, программирование, информатика, алгоритм, саратов, контест"><META NAME="description" CONTENT="That site consists of some amount of programming problems. Online Contester system check your solution right now. You can participate in programming contests. Train your programming skills."><link rel="stylesheet" href="style.html" type="text/css"><STYLE type=text/css>TD{font-size:9pt;}</STYLE></HEAD>
+<BODY>
+<table width=95%><tr><td>
+<H3><B><P ALIGN="CENTER">
+109. Magic of David Copperfield II
+</P></H3></B>
+<P ALIGN="CENTER">
+time limit per test: 0.5 sec. <BR> memory limit per test: 4096
+ KB
+</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">
+The well-known magician David Copperfield loves lo show the following trick: a square with N rows and N columns of different pictures appears on a TV screen, Let us number all the pictures in the following order:<br><br>
+<table border=1; align=center>
+<tr align=center><td width=80>1</td><td width=80>2</td><td width=80>...</td><td width=80>N</td></tr>
+<tr align=center><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+<tr align=center><td>N*(N-1)+1</td><td>N*(N-1)+2</td><td>...</td><td>N*N</td></tr>
+</table><br>
+Each member of the audience is asked to put a finger on the upper left picture (i.e., picture number one) and The Magic begins: the magician tells the audience to move the finger K<sub>1</sub> times through the pictures (each move is a shift of the finger to the adjacent picture up, down, left or right provided that there is a picture to move to), then with a slight movement of his hand he removes some of the pictures with an exclamation "You are not there!", and ... it is true - your finger is not pointing to any of the pictures removed. Then again, he tells the audience to make K<sub>2</sub> moves, and so on. At the end he removes all the pictures but one and smiling triumphantly declares, "I've caught you" (applause). <br><br>
+Just now, David is trying to repeat this trick. Unfortunately, he had-a hard day before, and you know how hard to conjure with a headache. You have to write a program that will help David to make his trick.
+</P>
+<P ALIGN="JUSTIFY"></P>
+<B><P ALIGN="JUSTIFY">Input</P></B>
+<P ALIGN="JUSTIFY">
+The input file contains a single integer number N (1&lt;N&lt;101).
+</P>
+<P ALIGN="JUSTIFY"></P>
+<B><P ALIGN="JUSTIFY">Output</P></B>
+<P ALIGN="JUSTIFY">
+Your program should write the following lines with numbers to the output file:<br>
+K<sub>1</sub> X<sub>1,1</sub> X<sub>1,2</sub> ... X<sub>1,m1</sub><br>
+K<sub>2</sub> X<sub>2,1</sub> X<sub>2,2</sub> ... X<sub>2,m2</sub><br>
+...<br>
+K<sub>e</sub> X<sub>e,1</sub> X<sub>e,2</sub> ... X<sub>e,me</sub><br>
+where K<sub>i</sub> is a number of moves the audience should make on the i-th turn (N&lt;=K<sub>i</sub>&lt;300). All Ki, should be different (i.e. K<sub>i</sub><>K<sub>j</sub> when i<>j). X<sub>i,1</sub> X<sub>i,2</sub> ... X<sub>i,mi</sub> are the numbers of the pictures David should remove after the audience will make K<sub>i</sub> moves (the number of the pictures removed is arbitrary, but each picture should be listed only once, and at least one picture should be removed on each turn).<br>
+A description of the every next turn should begin with a new line. All numbers on each line should be separated by one or more spaces. After e iterations, all pictures except one should be removed.
+</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">Sample Input</P>
+<FONT FACE="Courier New">
+<PRE>
+3
+</PRE>
+<P ALIGN="JUSTIFY"></P>
+</FONT>
+
+<P ALIGN="JUSTIFY">Sample Output</P>
+<FONT FACE="Courier New">
+<PRE>
+3 1 3 7 9
+5 2 4 6 8
+</PRE>
+</FONT>
+</td></tr></table>
+</BODY>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=109 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:03:09 GMT -->
+</HTML>

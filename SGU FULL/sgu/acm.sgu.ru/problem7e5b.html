@@ -1,0 +1,59 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=335 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 335. Thiefs And Cops </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>335. Thiefs And Cops</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />A cop is pursuing a thief in a rectangular <i>H</i>x<i>W</i> grid. Both thief and cop occupy one cell of the grid. Initially they are placed in it somehow, and then make moves in turn. At each move one must go from a cell to any of the cells adjacent to it side-by-side. Note that it's not allowed to stay in the same cell. It's also not allowed to move outside the grid.<br /><br />The cop catches the thief if they're in the same cell. The aim of the cop is to catch the thief as fast as possible, the aim of the thief is not to be caught, or at least to be free for as many moves as possible. They both see each other and the walls of the grid, so they always know the coordinates of themselves and of each other.<br /><br />If both players play optimally, will the cop catch the thief, and if he will, after which move it will happen? (moves are numbered starting from 1, for example, if the cop moves first, then move 1 is the cop's move, move 2 is the thief's move, move 3 is the cop's move, etc)<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of input contains two integers <i>H</i> and <i>W</i>, 1 &le; <i>H</i>, <i>W</i> &le; 5&#183;10<sup>8</sup>, denoting the number of rows and columns in the grid, respectively. The rows are numbered 1 through <i>H</i>, the columns are numbered 1 through <i>W</i>.<br /><br />The second line of input contains two integers <i>R</i><sub><i>c</i></sub> and <i>C</i><sub><i>c</i></sub>, 1 &le; <i>R</i><sub><i>c</i></sub> &le; <i>H</i>, 1 &le; <i>C</i><sub><i>c</i></sub> &le; <i>W</i>, denoting the row and column of the cell where the cop resides initially.<br /><br />The third line of input contains two integers <i>R</i><sub><i>t</i></sub> and <i>C</i><sub><i>t</i></sub>, 1 &le; <i>R</i><sub><i>t</i></sub> &le; <i>H</i>, 1 &le; <i>C</i><sub><i>t</i></sub> &le; <i>W</i>, denoting the row and column of the cell where the thief resides initially.<br /><br />Initial positions of the cop and the thief differ.<br /><br />The fourth line of input contains either the letter '<pre style='display:inline;font-size:120%;'>C</pre>' (capital English letter C)&nbsp;&mdash; if the cop moves first, or the letter '<pre style='display:inline;font-size:120%;'>T</pre>' (capital English letter T)&nbsp;&mdash; if the thief moves first (without quotes).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>If the cop can catch the thief with both of them playing optimally, output the number of the move after which it will happen. Otherwise, output 0 (zero).<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 2
+1 2
+2 1
+C
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 2
+1 2
+2 1
+T
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=335 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

@@ -1,0 +1,96 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=528 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 528. Bencoding </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>528. Bencoding</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ Bencoding is a modern technique which is used for representing data structures as sequences of characters. It it capable of encoding strings, integers, lists and dictionaries as specified below: <ul><br /><br /><li>every string <i>s</i> is encoded as "&lt;<i>k</i>&gt;:&lt;<i>s</i>&gt;", where "&lt;<i>s</i>&gt;" is the string itself and "&lt;<i>k</i>&gt;" is its length written with no leading zeros (with the exception of integer zero, which is always represented as "0"). Bencoding is capable of encoding empty strings, so <i>s</i> is allowed to be empty.<br /><br />For example, "<pre style='display:inline;font-size:120%;'>4:spam</pre>" represents the string "spam", "<pre style='display:inline;font-size:120%;'>0:</pre>" represents an empty string.<br /><br /><li>every integer <i>n</i> is encoded as "<i>i</i>&lt;<i>n</i>&gt;<i>e</i>", where "&lt;<i>n</i>&gt;" is the number itself written with no leading zeros (with the exception of integer zero, which is always represented as "0"). Bencoding is capable of encoding very large integers, so <i>n</i> doesn't necessarily fit into any of the standard integer data types provided by programming languages. Only non-negative integers can be encoded using bencoding. <br /><br />For example, "<pre style='display:inline;font-size:120%;'>i1024e</pre>" represents the number 1024.<br /><br /><li>every list <i>items</i> containing <i>n</i> elements <i>item</i><sub>0</sub>, <i>item</i><sub>1</sub>,..., <i>item</i><sub><i>n</i>-1</sub> is encoded as "<i>l</i>&lt;<i>item</i><sub>0</sub>&gt;&lt;<i>item</i><sub>1</sub>&gt; <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/065775997fdbcb83ddbe8936e67e4f2c.png'/>&lt;<i>item</i><sub><i>n</i>-1</sub>&gt;<i>e</i>". Each item of the list <i>item</i><sub><i>i</i></sub> is a supported data structure encoded using bencoding technique. Lists are allowed to be empty.<br /><br />For example, "<pre style='display:inline;font-size:120%;'>li101el4:spami1024eee</pre>" represents the list "[ 101, [ "spam", 1024 ] ]".<br /><br /><li>every dictionary <i>dict</i> consisting of <i>n</i> keys <i>key</i><sub>0</sub>, <i>key</i><sub>1</sub>,..., <i>key</i><sub><i>n</i>-1</sub> mapped into <i>n</i> values <i>value</i><sub>0</sub>, <i>value</i><sub>1</sub>,..., <i>value</i><sub><i>n</i>-1</sub> correspondingly is encoded as "<i>d</i>&lt;<i>key</i><sub>0</sub>&gt;&lt;<i>value</i><sub>0</sub>&gt;&lt;<i>key</i><sub>1</sub>&gt;&lt;<i>value</i><sub>1</sub>&gt; <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/065775997fdbcb83ddbe8936e67e4f2c.png'/>&lt;<i>key</i><sub><i>n</i>-1</sub>&gt;&lt;<i>value</i><sub><i>n</i>-1</sub>&gt;<i>e</i>". All keys and values are supported data structures encoded using bencoding technique. A dictionary may have duplicate keys and/or values. Dictionaries are allowed to be empty.<br /><br />For example, "<pre style='display:inline;font-size:120%;'>d1:a0:1:pl1:b2:cdee</pre>" represents the dictionary with string key "a" mapped into an empty string "", and key "p" mapped into the list "[ "b", "cd" ]". </ul><br /><br />A character sequence <i>c</i> is called a <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/5abe3866098e407ae210514f3a1f66e9.png'/> if the following two conditions are met: <ul> <li><i>c</i> is a correct bencoded representation of a single string, integer, list or dictionary; <li>the number of characters in <i>c</i> doesn't exceed a given number <i>m</i>. </ul><br /><br />For example, when <i>m</i>=3, the sequence <i>c</i>="<pre style='display:inline;font-size:120%;'>2:bc</pre>" is not considered a valid bencoded object even though it represents a correctly encoded string "bc".<br /><br />Given <i>m</i> and <i>c</i> you have to write a program which should determine whether <i>c</i> is a <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/5abe3866098e407ae210514f3a1f66e9.png'/>. If <i>c</i> is not a <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/5abe3866098e407ae210514f3a1f66e9.png'/>, it also has to find the longest prefix of <i>c</i> which could be a prefix of some <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/5abe3866098e407ae210514f3a1f66e9.png'/>. Formally, you should find a maximal position <i>j</i> within the given character sequence <i>c</i>, such that a prefix of <i>c</i> up to, but not including, character at position <i>j</i> could be a prefix of some <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/5abe3866098e407ae210514f3a1f66e9.png'/>. If the given character sequence <i>c</i> is not a <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/5abe3866098e407ae210514f3a1f66e9.png'/>, but the entire sequence <i>c</i> is a prefix of some <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/5abe3866098e407ae210514f3a1f66e9.png'/>, then <i>j</i> is considered equal to the length of <i>c</i>.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains one integer <i>m</i> (2 &le; <i>m</i> &le; 10<sup>9</sup>) &nbsp;&mdash; the maximum possible length of a valid bencoded object. The second line contains a character sequence which you are to process. The sequence will only contain characters with ASCII codes from 33 to 127, inclusive. Its length will be between 1 and 10<sup>6</sup> characters.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print a single line containing word "<pre style='display:inline;font-size:120%;'>ok</pre>" (without quotes) if the given input character sequence is a valid bencoded object. Otherwise, print message "<pre style='display:inline;font-size:120%;'>Error at position <i>j</i>!</pre>". The first character of the input sequence is considered to have position "<pre style='display:inline;font-size:120%;'>0</pre>".<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>14
+li10e11:abcdefghijke
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>Error at position 6!
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>10
+i-1e
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>Error at position 1!
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3
+i2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>Error at position 2!
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>18
+dli1eei1ei1eli1eee
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>ok
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>In the first sample test the given sequence is not a valid bencoded object. But its prefix "<pre style='display:inline;font-size:120%;'>li10e1</pre>" can be extended to a valid bencoded object while not exceeding 14 characters in length (for example, "<pre style='display:inline;font-size:120%;'>li10e1:xe</pre>"). It's not the case with longer prefixes of length 7 and more, so <i>j</i>=6 in this case.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=528 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

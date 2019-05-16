@@ -1,0 +1,78 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=505 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 505. Prefixes and suffixes </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>505. Prefixes and suffixes</h4></div><div align=center>Time limit per test: 1.5 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Andrew has just made a breakthrough in biology: he realized that
+most of genome's characteristics are determined by the absence
+or presence of certain prefixes and suffixes. So he needs to quickly
+test large arrays of genomes for that.
+
+More formally, we represent the genome as a string of lowercase English
+letters. We are given several genomes, and need to answer the following
+type of question: how many genomes from the given set have the given
+string <i>p</i> as prefix <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/7c63b7c052cfa605007dd5b438a55b2a.png'/> the given string <i>s</i> as suffix.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains an integer <i>n</i>&nbsp;&mdash; 
+the number of genomes.
+
+The next <i>n</i> lines contain a non-empty
+string of lowercase
+English letters each, representing the given genomes. The total length
+of all given genomes doesn't exceed <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/39ee9893f3eefe25a0d561f79c3a31a5.png'/>.
+
+The next line contains an integer <i>m</i>&nbsp;&mdash; the number of questions to answer.
+The next <i>m</i> lines contain two non-empty strings of lowercase English letters
+each, the
+first denoting the prefix and the second denoting the suffix. The prefix and
+suffix are separated with a single space. The total length of all given
+prefixes plus the total length of all given suffixes doesn't exceed <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/079b5ba534bf43e43c73395f66bee9f4.png'/>.
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output <i>m</i> integers one per line. <i>i</i>-th output line should contain the
+number of genomes that have <i>i</i>-th given prefix and <i>i</i>-th given suffix.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+aaaaa
+abacabaa
+avtobus
+6
+a a
+a aa
+aa a
+aaaaa aaaa
+abac caba
+abac a
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+2
+1
+1
+0
+1
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=505 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

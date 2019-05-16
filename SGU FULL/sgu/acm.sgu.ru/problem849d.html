@@ -1,0 +1,36 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=426 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 426. Double cyclic </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>426. Double cyclic</h4></div><div align=center>Time limit per test: 1.5 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Consider a sequence of numbers <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>,..., <i>a</i><sub><i>n</i></sub>. Its <i>cyclic shift</i> is any sequence obtained from it by taking some (possibly none) of its starting elements and moving them to the end in the same order. In other words, it is a sequence <i>a</i><sub><i>k</i></sub>, <i>a</i><sub><i>k</i>+1</sub>,..., <i>a</i><sub><i>n</i>-1</sub>, <i>a</i><sub><i>n</i></sub>, <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>,..., <i>a</i><sub><i>k</i>-2</sub>, <i>a</i><sub><i>k</i>-1</sub> for some <i>k</i>.<br /><br />The <i>smallest cyclic shift</i> of a given sequence is its cyclic shift that is smallest lexicographically. A sequence is <i>lexicographically smaller</i> than another sequence of the same length if and only if it has a smaller number in the first position they differ.<br /><br />Now, consider a sequence <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/8cda31ed38c6d59d14ebefa440099572.png'/> of integers <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>,..., <i>a</i><sub><i>n</i></sub> where <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/60cd0f191d74161a0afffe3bb569399d.png'/> 0 &le; <i>a</i><sub><i>i</i></sub> &le; <i>m</i>-1, where <i>m</i> is some fixed constant. We define <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/53fd30f188a93e4afa0b375ea5fcdeb1.png'/> to be the sequence <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/c948388d1b089cf0bf400c15c7ed65ab.png'/>.<br /><br />Given <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/8cda31ed38c6d59d14ebefa440099572.png'/>, <i>m</i> and an integer <i>k</i> between 1 and <i>n</i>, output <i>m</i> integer numbers: the <i>k</i>-th element of the smallest cyclic shift of <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/8cda31ed38c6d59d14ebefa440099572.png'/>, the <i>k</i>-th element of the smallest cyclic shift of <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/53fd30f188a93e4afa0b375ea5fcdeb1.png'/>,..., the <i>k</i>-th element of the smallest cyclic shift of <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/880d21809200438aba880fd0f8b8336a.png'/>.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains three integers <i>n</i>, <i>m</i> and <i>k</i> (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/870979e2b45c7247fe6374dd0668a14b.png'/>, 1 &le; <i>k</i> &le; <i>n</i>). The second line of the input line contains <i>n</i> integers <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>,..., <i>a</i><sub><i>n</i></sub> (0 &le; <i>a</i><sub><i>i</i></sub> &le; <i>m</i>-1).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output <i>m</i> integer numbers one per line &mdash; <i>k</i>-th elements of the smallest cyclic shifts of the sequences explained above.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5 6 3
+1 2 1 2 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+2
+3
+5
+5
+0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=426 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

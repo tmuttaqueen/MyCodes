@@ -1,0 +1,56 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=519 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 519. 3D City Model </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>519. 3D City Model</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ A city is built on the top of a rectangular <i>n</i> x <i>m</i> grid where all the grid cells are equal squares. Each of the <i>n</i> &middot; <i>m</i> grid cells can serve as a foundation of a single building in the city. A building is represented as a number of 1 x 1 x 1 cubes stacked on the top of each other. The cube that lays in the foundation of a building entirely occupies a single cell on the grid. It is clear that adjacent buildings can share a wall or a part of it. Typical cities can be seen on the image below.<br /><br /><div style="text-align: center; margin-bottom: 1em;"><img src="http://acm.sgu.ru/problems/0/p519_01.png"/></div>The King of Berland has a 3D model of the capital city in his office. This model was made on a special 3D-printer out of plastic. It represents a layout of the capital city, but the scale is smaller, so it's very convenient for the King to examine the model without having to visit the city itself. The King is bored though because the model is colorless, so he wants to paint the model. To calculate the exact amount of required paint he should know the total area of the model's surface.<br /><br />You have to help the King and write a program that will calculate the required surface area of the given model. While calculating the surface area you should count not only the side surfaces, but also the areas of the top and bottom facets.<br /><br />The model is given to you as <i>n</i> x <i>m</i> matrix of digits. A digit in the <i>j</i>-th position of the <i>i</i>-th row stands for the height of the building with its foundation in cell (<i>i</i>, <i>j</i>) of the model. If the corresponding digit is equal to "<pre style='display:inline;font-size:120%;'>0</pre>", it means there is no building built on the top of this cell.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of input contains a pair of integers <i>n</i>, <i>m</i> (1 &le; <i>n</i>,<i>m</i> &le; 100), where <i>n</i> &mdash; amount of rows in the given grid, <i>m</i> &mdash; amount of columns. The following <i>n</i> lines contain the description of the model. These <i>n</i> lines contain <i>m</i> digits each representing heights of the buildings. It's guaranteed that the given matrix contains at least one non-zero digit.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output the only positive integer &mdash; surface area of the model.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3 3
+111
+212
+111
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>38
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3 4
+1000
+0010
+0000
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>12
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>The first sample test corresponds to the leftmost picture from the problem statement.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=519 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

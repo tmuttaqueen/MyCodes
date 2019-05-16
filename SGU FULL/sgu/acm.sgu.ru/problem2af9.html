@@ -1,0 +1,38 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=322 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 322. The Great Union </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>322. The Great Union</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />The governments of Berland and Beerland announced the possible consolidation coming soon! Sounds unbelievable, but seems that the heads of the governments were able to come to an agreement. The only open issue is the old sore spot with the road network. Both countries have <i>N</i> cities, the cities in each country are numbered from 1 to <i>N</i>. Some pairs of cities are connected by bidirectional roads. There is exactly one way to get from one city to any other in each country. There are no roads between Berland and Beerland.<br /><br />The decision was made to keep things clear for the drivers and to introduce a number of changes in the road networks. The essential requirement for the consolidation is the identity of the road networks in both countries. This mean that cities with numbers <i>a</i> and <i>b</i> are connected by a road in Berland if and only if the cities with the same numbers are connected by a road in Beerland.<br /><br />The Autoroad Construction Multicultural team (ACM-team) was created to achieve this goal. During one month the team can perform construction and repair work in one country. During this monthly repair one road is added to the road network of the country, resulting in a cycle in the road network, so one road in the cycle should be closed. So as the result of the month's work, there is still exactly one way to get from one city to any other in each country. <br /><br />What is the minimum number of months required to make the road networks of both countries identical? What is the plan of actions for the ACM-team in this case?<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains the integer number <i>N</i> (1 &le; <i>N</i> &le; 2000)&nbsp;&mdash; the number of cities in each country.<br /><br />Each of the following <i>N</i> - 1 lines contains the description of the road in Berland given by the numbers of cities it connects. The following <i>N</i> - 1 lines contain the similar description of the roads in Beerland.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Write the minimal amount of months <i>Q</i> ACM-team needs to finish the work to the first line of the output. In the following <i>Q</i> lines write the description of the work for each month. Work during each month is described by five numbers <i>p</i>, <i>a</i><sub>1</sub>, <i>b</i><sub>1</sub>, <i>a</i><sub>2</sub>, <i>b</i><sub>2</sub>, which means that the repairs should be held in Berland (if <i>p</i> = 1) or Beerland (if <i>p</i> = 2), the road <i>a</i><sub>1</sub>, <i>b</i><sub>1</sub> should be added, and the road <i>a</i><sub>2</sub>, <i>b</i><sub>2</sub> should be closed. If there are several solutions, choose any of them.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4
+1 2
+2 3
+3 4
+1 3
+3 4
+4 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+2 1 2 2 4
+1 1 3 2 3
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=322 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

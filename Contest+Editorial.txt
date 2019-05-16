@@ -1,0 +1,15 @@
+1. 
+2017 USP-ICMC
+http://codeforces.com/gym/101484
+editorial: http://codeforces.com/blog/entry/54156
+
+2.
+2017-2018 ACM-ICPC Nordic Collegiate Programming Contest (NCPC 2017)
+http://codeforces.com/gym/101572
+https://ncpc.idi.ntnu.no/ncpc2017/ncpc17slides.pdf
+
+3.
+Nordic Collegiate Programming Contest 2014
+https://open.kattis.com/problem-sources/Nordic%20Collegiate%20Programming%20Contest%202014
+https://ncpc.idi.ntnu.no/ncpc2014/ncpc2014slides.pdf
+

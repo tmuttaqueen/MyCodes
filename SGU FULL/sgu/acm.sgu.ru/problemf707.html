@@ -1,0 +1,42 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=552 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 552. Database optimization </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>552. Database optimization</h4></div><div align=center>Time limit per test: 6
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Alex worked at a big IT-company called Macrohard. Once, when he faced a large amount of data, he decided to leave this company and develop his own database which would be much better than all existing ones. When he was done with this he realized that the performance of some database queries might be improved. Alex uses AQL (Alex Query Language) which accidentally turned out to be exactly the same as the popular SQL. One of the most important problems he faced was the following.<br /><br />Consider <i>n</i> objects. The <i>i</i>-th object has <i>k</i><sub><i>i</i></sub> (1 &le; <i>k</i><sub><i>i</i></sub> &le; 4) properties in the form of <pre style='display:inline;font-size:120%;'>key=value</pre>. Any object can't have two or more properties with the same key. Alex needs to improve the performance of the following query:<br /><br /><center> <pre style='display:inline;font-size:120%;'>SELECT COUNT(*) FROM Objects WHERE <i>key</i><sub>1</sub>=<i>value</i><sub>1</sub> AND... &nbsp;AND&nbsp;<i>key</i><sub><i>l</i></sub>=<i>value</i><sub><i>l</i></sub></pre> <br/> (1 &le; <i>l</i> &le; 4, all keys are distinct) </center> This means that Alex's database has to find the number of objects which have properties <i>key</i><sub>1</sub>, <i>key</i><sub>2</sub>,..., <i>key</i><sub><i>l</i></sub> with the values <i>value</i><sub>1</sub>, <i>value</i><sub>2</sub>,..., <i>value</i><sub><i>l</i></sub> respectively. Even if an object has extra properties it should be counted.<br /><br />Your task is to help Alex to write an efficient program to process such queries.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains a single integer <i>n</i> (1 &le; <i>n</i> &le; 5 &middot; 10<sup>4</sup>) &mdash; the number of objects. Following <i>n</i> lines describe objects by their properties. Each line contains the integer <i>k</i><sub><i>i</i></sub> (1 &le; <i>k</i><sub><i>i</i></sub> &le; 4) followed by <i>k</i><sub><i>i</i></sub> tokens in the form of <i>key</i><sub><i>i</i>,<i>j</i></sub>=<i>value</i><sub><i>i</i>,<i>j</i></sub> separated by a single space. Both <i>key</i><sub><i>i</i>,<i>j</i></sub> and <i>value</i><sub><i>i</i>,<i>j</i></sub> consist of digits and lowercase Latin letters. The <i>key</i><sub><i>i</i>,<i>j</i></sub> are distinct for each object. It is possible that different objects have exactly the same set of properties.<br /><br />The next line of the input contains a single integer <i>m</i> (1 &le; <i>m</i> &le; 10<sup>5</sup>) &mdash; the number of queries. The following <i>m</i> lines describe the queries. Each line contains a single integer <i>l</i><sub><i>i</i></sub> (the number of properties that describe the <i>i</i>-th query) followed by <i>l</i><sub><i>i</i></sub> (1 &le; <i>l</i><sub><i>i</i></sub> &le; 4) tokens <i>key</i><sub><i>i</i>,<i>j</i></sub>=<i>value</i><sub><i>i</i>,<i>j</i></sub> separated by a single space, where <i>key</i><sub><i>i</i>,<i>j</i></sub> and <i>value</i><sub><i>i</i>,<i>j</i></sub> consist of digits and lowercase Latin letters. The <i>key</i><sub><i>i</i>,<i>j</i></sub> are distinct for each query.<br /><br />Lengths of <i>key</i><sub><i>i</i>,<i>j</i></sub> and <i>value</i><sub><i>i</i>,<i>j</i></sub> both for objects and queries are between 1 and 5 characters inclusive.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print <i>m</i> lines, the <i>i</i>-th line should contain the result of the <i>i</i>-th query. <br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+3 width=5 ht=3 len=10
+2 name=circ rad=5
+2 name=circ rad=5
+3 name=sqr width=5 ht=3
+4
+2 ht=3 width=5
+1 name=circ
+1 name=sqr
+2 width=5 ht=03
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2
+2
+1
+0
+
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=552 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

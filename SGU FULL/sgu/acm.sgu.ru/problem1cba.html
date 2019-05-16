@@ -1,0 +1,59 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=386 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 386. Happy Birthday, Jedi Knight! </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>386. Happy Birthday, Jedi Knight!</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Jedi Knight has sneaked into the new model of Death Star. He is searching for very important enemy documents.
+For each document he finds he will get a certain amount of money from the Jedi Council.
+
+A new model of Death Star has the form of an <i>n</i>-dimensional parallelepiped.
+Its edges are parallel to vectors <i>v</i><sub>1</sub>,..., <i>v</i><sub><i>n</i></sub> with integer coordinates
+and have the lengths equal to lengths of the corresponding vectors.
+There is one document located in every integer point inside
+or on the border of the Death Star.
+If for any <i>k</i> (0 &le; <i>k</i> &le; <i>n</i>) a document is inside some <i>k</i>-dimensional
+facet of the parallelepiped, but either <i>k</i> = 0 or it is not inside
+any (<i>k</i>-1)-dimensional facet, then its price is 2<sup><i>k</i></sup>.
+
+Your task is to calculate the total amount of money Jedi can earn if he gets all the documents on
+the Death Star. The answer can be enormous, but Jedi isn't afraid of this fact, so you should output it modulo prime number <i>p</i>.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains numbers <i>n</i> and <i>p</i> (2 &le; <i>n</i> &le; 50, <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/e0b951616b886f20df3f91f56507f159.png'/>).
+The next <i>n</i> lines contain description of vectors <i>v</i><sub><i>i</i></sub>.
+Each of these lines contains <i>n</i> integer numbers <i>a</i><sub><i>ij</i></sub> (0 &le; <i>a</i><sub><i>ij</i></sub> &le; <i>p</i>-1)&nbsp;&mdash; coordinates of the vector <i>v</i><sub><i>i</i></sub>.
+It is guaranteed that these vectors are linearly independent.
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output must contain one number&nbsp;&mdash; the answer modulo <i>p</i>.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 43
+1 0
+0 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=386 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

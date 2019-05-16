@@ -1,0 +1,60 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=260 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>260. Puzzle
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>Vasya likes to play quests very much. He likes to click here and there and he enjoys jokes which quests are full of. But there are also a lot of different puzzles in quests and Vasya has very hard time solving these puzzles. So once he encountered a puzzle he is unable to solve in spite of all efforts made. But fortunately Vasya is a great programmer and he was able to write a program that helped him to solve the puzzle and complete the quest.
+<br>The Vasya's puzzle is a matrix with each of its cells having either black or white color. The click on the cell changes its color and the color of neighboring cells to the opposite one. The goal is to make all the cells to be colored in the same color.
+<br>Your task will be a little bit more complicated. Suppose there are N cells numbered from 1 to N. Each cell has a predefined set of cells associated with it. When person clicks on a cell the color of the cells associated with it changes. You will be given a description of all cells groups and initial cells coloring. You should output the sequence of cells which should be clicked to obtain a single color for all the cells. If there are a number of different solutions, you can choose any one.
+</div><div align = left><br><b>Input</b></div><div align = left>The first line contains a single integer number N (1 &lt;= N &lt;= 200). The i+1-th line (1 &lt;= i &lt;= N) contains the description of the set of cells associated with i-th cell. Each description starts with the integer number k - number of cells in the set, k distinct integer numbers (numbers of cells) follow. The last line contains N zeroes and ones - initial cells coloring.
+</div><div align = left><br><b>Output</b></div><div align = left>If it is impossible to make all cells to be colored the same color, you should output a single number -1. Otherwise you should output integer number L - the number of clicks required to solve the puzzle and then L numbers - cells which are to be clicked.
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>9
+<br>3 1 2 4
+<br>4 1 2 3 5
+<br>3 2 3 6
+<br>4 1 4 5 7
+<br>5 2 4 5 6 8
+<br>4 3 5 6 9
+<br>3 4 7 8
+<br>4 5 7 8 9
+<br>3 6 8 9
+<br>1 0 1 0 1 0 1 0 1
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>9
+<br>1 2 3 4 5 6 7 8 9
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=260'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=260'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Igor A. Kulkin
+</td></tr><tr><td>Resource:</td><td>Saratov SU Contest: Golden Fall 2004
+</td></tr><tr><td>Date:</td><td>October 2, 2004
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:44:29</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=260 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html> 

@@ -1,0 +1,37 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=320 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 320. The Influence of the Mafia </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>320. The Influence of the Mafia</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />The problem with zones of influence was finally solved during the recent Berland mafia meeting. Berland was represented as a rectangle of <i>N</i> <i>x</i> <i>M</i> squares. All squares were divided between the mafia leaders. Each leader got a connected region of squares, i.e. it is possible to get from any square of the region to any other by making moves only across the squares of this region. Four types of moves are allowed: up, down, left and right.<br /><br />Each leader was assigned a number from 0 to 9, it is allowed for two different leaders to have the same number. The leaders decided to create a map of Berland where each square has the number of the leader who owes it. The secretary was able to assign leaders with numbers in such a way that no two bordering regions on the map have the same number. The valiant Berland police seized the map with the numbers. And now the chief of the police wants to know the degree of the mafia influence in Berland. <br /><br />He introduced following definitions:<br /><br /> <li>A leader is called big if he possesses <i>K</i> or more squares.<br /><br /><li>A square is called dangerous if it is controlled by a big leader or if there exists such big leader that it is impossible to get out of Berland (i.e. to get to a square on the border of the country) without visiting a square controlled by this leader. Allowed moves: up, down, left and right. <br /><br />The chief of the police wants to know the number of dangerous squares in the country. He decided to ask his valiant programmers to solve this important task.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains integer numbers <i>N</i>, <i>M</i> and <i>K</i> (1&le; <i>N</i>, <i>M</i>&le; 500; 1&le; <i>K</i>&le; 250000). The map created by the secretary follows. The map is written in the form of <i>N</i> lines with <i>M</i> numbers from 0 to 9 in each line. Numbers in a line are written one after another without spaces.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Write to the output the number of dangerous squares in the country.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+7 6 4
+200320
+011022
+018100
+018111
+201191
+020011
+002020
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+14
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>There are two big leaders in the country (both are marked with the number 1, one has 4 squares, another has 9 squares). There is one more dangerous square (marked with the number 9) besides the regions in possession of big leaders. Note that squares marked with the number 8 are not dangerous, as they do not satisfy the definition of a dangerous square.<br /><br /></div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=320 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

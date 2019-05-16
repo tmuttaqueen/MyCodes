@@ -1,0 +1,71 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=155 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:14:50 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="templates.css" type="text/css">
+  <link rel="stylesheet" href="js/ui.datepicker.html" type="text/css">
+  <script type="text/javascript" language="javascript" src="js/jquery.html"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.example.html"></script>
+  <script type="text/javascript" language="javascript" src="js/ui.datepicker-2.html"></script>
+
+  <link rel="stylesheet" href="templates.css" type="text/css">
+  <link rel="stylesheet" href="js/ui.datepicker.html" type="text/css">
+  <script type="text/javascript" language="javascript" src="js/jquery.html"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.example.html"></script>
+  <script type="text/javascript" language="javascript" src="js/ui.datepicker-2.html"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>155. Cartesian Tree
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard input<br>output: standard output</div><br><br><br><div align = left>Let us consider a special type of binary search trees, called cartesian trees. Recall that a binary searchtree is a rooted ordered binary tree, such that for its every node x the following condition is satisfied: each node in its left subtree has the key less than the key of x, and each node in its right subtree has the key greater than the key of x. 
+<br>That is, if we denote the left subtree of the node x by L(x), its right subtree by R(x) and its key by kx, for each node x we will have
+<br>&nbsp;&nbsp;* if y in L(x) then ky &lt; kx
+<br>&nbsp;&nbsp;* if z in R(x) then kz &gt; kx
+<br>The binary search tree is called cartesian if its every node x in addition to the main key kx also has an auxiliary key that we will denote by ax, and for these keys the heap condition is satisfied, that is
+<br>&nbsp;&nbsp;* if y is the parent of x then ay &lt; ax
+<br>Thus a cartesian tree is a binary rooted ordered tree, such that each of its nodes has a pair of two keys (k, a) and three conditions described are satisfied.
+<br>Given a set of pairs, construct a cartesian tree out of them, or detect that it is not possible.
+</div><div align = left><br><b>Input</b></div><div align = left>The first line of the input file contains an integer number N - the number of pairs you should build cartesian tree out of (1 &lt;= N &lt;= 50000). The following N lines contain two integer numbers each - given pairs (ki, ai). For each pair |ki|, |ai| &lt;= 30000. All main keys and all auxiliary keys are different, i.e. ki &lt;&gt; kj and ai &lt;&gt; aj for each i &lt;&gt; j.
+</div><div align = left><br><b>Output</b></div><div align = left>On the first line of the output file print YES if it is possible to build a cartesian tree out of given pairs or NO if it is not. If the answer is positive, output the tree itself in the following N lines. Let the nodes be numbered from 1 to N corresponding to pairs they contain as these pairs are given in the input file. For each node output three numbers - its parent, its left child and its right child. If the node has no parent or no corresponding child, output 0 instead.
+<br>If there are several possible trees, output any one.
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>7
+<br>5 4
+<br>2 2
+<br>3 9
+<br>0 5
+<br>1 3
+<br>6 6
+<br>4 11
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>YES
+<br>2 3 6
+<br>0 5 1
+<br>1 0 7
+<br>5 0 0
+<br>2 4 0
+<br>1 0 0
+<br>3 0 0
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br><b>Note</b></div><div align = left>
+<br>You can download pdf version of this task <a href=materials/p155-163.html>here</a>
+</div><div align = left><div align = right> <a href = 'submit9e5b.html?problem=155'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'forumcb96.html?contest=0&amp;problem=155'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Andrew Stankevich
+</td></tr><tr><td>Resource:</td><td>ACM ICPC 2002-2003 NEERC, Northern Subregion
+</td></tr><tr><td>Date:</td><td>November, 2002
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:38:01</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=155 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:14:52 GMT -->
+</html> 

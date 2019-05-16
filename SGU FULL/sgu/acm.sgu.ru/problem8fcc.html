@@ -1,0 +1,91 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=366 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 366. Computer Game </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>366. Computer Game</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />BerSoft company recently released new computer game, where you play against <i>N</i> opponents. During the game you need to tell to <i>K</i> opponents your opinion about them. You feel pleasure after that and get several score points after that. Each opponent described by two parameters <i>a</i><sub><i>i</i></sub> and <i>b</i><sub><i>i</i></sub>, where <i>a</i><sub><i>i</i></sub> is the amount of pleasure you get when you tell your opinion about this opponent; <i>b</i><sub><i>i</i></sub> amount of score points you get in that case. Let us denote <i>A</i> and <i>B</i> summary pleasure and score points that you get during the game. You have never played this game; therefore you don't know what is now what is more advantageous: get more pleasure or score points. You decided to make these values as close as possible. Your task is to select <i>K</i> opponents in a way that minimizes |<i>A</i> - <i>B</i>|. If there are several ways to do it, choose one that maximizes <i>A</i> + <i>B</i>. <br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains integer number <i>N</i>, <i>K</i> (1 &le; <i>N</i> &le; 60000; 1 &le; <i>K</i> &le; <i>min</i>(<i>N</i>, 20)). Next <i>N</i> lines contain two integer numbers each &mdash; <i>i</i>-th opponent parameters <i>a</i><sub><i>i</i></sub> and <i>b</i><sub><i>i</i></sub> (0 &le; <i>a</i><sub><i>i</i></sub> &le; 50; 0 &le; <i>b</i><sub><i>i</i></sub> &le; 50).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>On the first line of the output file print values <i>A</i> and <i>B</i>. Print numbers of <i>K</i> selected opponents on the second line. Print numbers in ascending order. If there are several solutions, output any of them. <br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 2 
+1 2 
+2 3 
+4 1 
+6 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+6 4 
+2 3
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5 3 
+13 11 
+3 17 
+15 20 
+6 13 
+17 9
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+36 33 
+1 4 5
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 1 
+1 1 
+3 3 
+2 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 3 
+2
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=366 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

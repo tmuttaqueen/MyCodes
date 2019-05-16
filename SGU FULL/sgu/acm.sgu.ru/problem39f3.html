@@ -1,0 +1,109 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=239 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>239. Minesweeper
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 4096
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>Not so long ago, an International Cell Playing Company (ICPC) decided to organize an Amusing Championship of Minesweeper (ACM). "Minesweeper" is a standard Windows game (you can find it now at Start-&gt;Programs-&gt;Games-&gt;Minesweeper or somewhere like this). The rules of "Minesweeper" are the following: you are to open all the cells of a game field, that don't contain mines, and to mark by flags all the cells, that contain mines. During the game, numbers which are written in the cells help you to solve this task. These numbers appear in the opened cells (it is denied to open a cell with a mine, in this case you will be exploded). A number written in a cell indicates how many mines are situated in 8 neighboring cells (fig.1).
+<br>
+<br><center>
+<br><img src = "http://acm.sgu.ru/images/pi-1-10.png">
+<br>fig. 1
+<br></center>
+<br>
+<br>Just for aesthetic reasons "0" is indicated in background color, so you don't see it. In the case of absence of any mines in the cells neighboring with some opened cell, all neighboring cells will be opened automatically (you can see it on the first figure, where only 1 cell was opened by player, and other cells were opened automatically).
+<br>Now we can immediately say where the mines are certainly situated (fig. 2).
+<br>
+<br><center>
+<br><img src = "http://acm.sgu.ru/images/pi-2-10.png">
+<br>fig. 2
+<br></center>
+<br>
+<br>Very often a following situation takes place. No cell of the first column is opened, while all the cells of second column are opened, and it is guaranteed that second and third columns don't contain mines at all (fig. 3).
+<br>
+<br><center>
+<br><img src = "http://acm.sgu.ru/images/pi-3-10.png">
+<br>fig. 3
+<br></center>
+<br>
+<br>In that case the numbers shown in the cells of the second column indicate exactly the number of mines situated in the neighboring cells of the first column. Such situations are very hard for players to solve, and that's why your friend who wants to train for ACM, asked you to write a program that gives him a possibility to check his solutions.
+<br>Imagine now, that we are playing Minesweeper on the field, containing N rows and 2 columns. It is guaranteed, that the second column is free of mines and completely opened. The first column is not opened yet, and may contain mines. You are to determine the location of all mines in the first column, when you know all the data of the second column. It is possible to do so if, for example, one of the cells of the second column contains number 3 (fig. 4).
+<br>
+<br><center>
+<br><img src = "http://acm.sgu.ru/images/pi-4-10.png">
+<br>fig. 4
+<br></center>
+<br>
+<br>So you can be sure, that all 3 neighboring cells of the first column contain mines. Therefore it is not difficult to find out, which cells are free of mines (fig. 5).
+<br>
+<br><center>
+<br><img src = "http://acm.sgu.ru/images/pi-5-10.png">
+<br>fig. 5
+<br></center>
+<br>
+<br>Now, using this information, we can say all about the first column (the remaining cells definitely contain mines). Sometimes it can be impossible to determine surely, where the mines are situated, and where not (fig. 6).
+<br>
+<br><center>
+<br><img src = "http://acm.sgu.ru/images/pi-6-10.png">
+<br>fig. 6
+<br></center>
+<br>
+<br>Sometimes the field may be mistaken at all, and there exists no mine distribution that produces such numbers in the second column (fig. 3, pay attention to the upper part of the column). It is not very amazing when you remember who has written this game.
+<br>Now you must write a program which, given the data of the second column, outputs how many distributions of the mines in the first column exist, that produce such data in the second column.
+</div><div align = left><br><b>Input</b></div><div align = left>The first line of input contains integer N - height of the field (1&lt;=N&lt;=1000). Then N lines follow, each containing an integer ai (0&lt;=ai&lt;=3) - the number, written on the I-th cell of the second column.
+</div><div align = left><br><b>Output</b></div><div align = left>You must output the only number - an answer to the problem.
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>Test #1
+<br>9
+<br>1 1 3 2 1 1 1 2 1
+<br>
+<br>Test #2
+<br>2
+<br>1 1
+<br>
+<br>Test #3
+<br>7
+<br>1 2 3 2 2 2 2 
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>Test #1
+<br>0
+<br>
+<br>Test #2
+<br>2
+<br>
+<br>Test #3
+<br>1
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=239'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=239'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Antony Popovich
+</td></tr><tr><td>Resource:</td><td>Leningrad Regional School Programming Olympiad
+</td></tr><tr><td>Date:</td><td>January 9, 2004
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:43:44</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=239 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html> 

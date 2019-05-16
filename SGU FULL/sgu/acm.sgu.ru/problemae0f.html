@@ -1,0 +1,33 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=494 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 494. Journal </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>494. Journal</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />There's an article of <i>N</i> words, with the <i>i</i>-th word consisting of <i>L</i><sub><i>i</i></sub> letters. The article has to be printed in a journal on a page <i>W</i> characters wide (for simplicity, let's assume that the page can contain as many lines as necessary and that all characters have the same width). The algorithm of laying out the text on the page of the journal is as follows. The words are placed in order: 1-st, 2-nd, &middot;s, <i>N</i>-th. The location for the <i>i</i>-th word is determined by the following rules: <li>The word is placed in a block of <i>L</i><sub><i>i</i></sub> consecutive unoccupied character positions in the same row. <li>The first character of the <i>i</i>-th word and the last character of the (<i>i</i>-1)-th word can't be in adjacent positions of the same row. (Obviously, this applies only for <i>i</i> > 1.) <li>The block for the <i>i</i>-th word must not stand earlier than the block for the (<i>i</i>-1)-th word. A block <i>A</i> is considered to stand earlier than a block <i>B</i> if <i>A</i> is in a higher row than <i>B</i> or if they are in the same row and <i>A</i> is located to the left from <i>B</i>. (This also applies only for <i>i</i> > 1.) <li>Out of all blocks satisfying to the previous conditions, the earliest one is chosen. The layout of a sample text on a page 20 characters wide is shown below:<br /><br /> <img width = "242px" height="278px" src="http://acm.sgu.ru/problems/0/p494_1.png"/><br> <br /><br />In addition to the article, an illustration has to be placed on the page. The illustration takes up a rectangular area <i>R</i> rows high and <i>C</i> columns wide. The illustration is placed on the page before the text is laid out and it may be placed anywhere on the page. After the illustration is placed, all character positions covered by it are considered occupied and then the text is laid out according to the algorithm described above.<br /><br />A row on the page is considered used if, after the illustration is placed and the text laid out, at least one character of the row is occupied. The total number of rows used may depend on the position of the illustration. For example, two possible final layouts of the illustration and the text are shown below, with one using 11 and the other 10 rows:<br /><br /> <img width = "645px" height="302px" src="http://acm.sgu.ru/problems/0/p494_2.png"/><br> <br /><br />Given the dimensions of the illustration and a description of the text, place the illustration in a way that minimizes the number of rows occupied by the final layout.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input file contains several test cases. The first line of the file contains <i>T</i> (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/6ffa607070520b0e0e0de4a11123cfb1.png'/>), the number of test cases. Descriptions of the <i>T</i> test cases follow.<br /><br />The description of each test case starts with the integers <i>N</i>, <i>W</i>, <i>R</i>, <i>C</i> (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/c8c3a2b3a6c394eabc4df26029d03c7f.png'/>, <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/51167a31ce53736fec885605fdf6e8b5.png'/>, 1 &le; <i>C</i> &le; <i>W</i>), followed by the description of the text of the article as <i>N</i> integers <i>L</i><sub>1</sub>, <i>L</i><sub>2</sub>, &middot;s, <i>L</i><sub><i>N</i></sub> (1 &le; <i>L</i><sub><i>i</i></sub> &le; <i>W</i>). The numbers may be separated by spaces and/or newlines.<br /><br />It may be assumed that the sum of values of <i>N</i> over all test cases in the file does not exceed <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/4cfad6599c98ff205af7f7520e39770b.png'/>.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>For each test case, output a single line containing the minimal number of rows needed to lay out the article.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1
+26 20 3 6
+10 7 2 1 4 6 4 4 3 5 3 3
+7 6 7 4 2 7 4 10 3 6 5 8 7 7
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+10
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=494 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

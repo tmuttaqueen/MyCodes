@@ -1,0 +1,93 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=535 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 535. Dirty Dishes </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>535. Dirty Dishes</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ They say there are three things that one cannot have enough of looking at: they are the fire burning, the water flowing and others working. Jack and Jill have been married for several years but Jack never gets tired of watching Jill cleaning the kitchen in her swift and neat way!<br /><br />As Jill is cleaning the kitchen, she piles up the dirty dishes by the sink. Each newly found dirty dish is put on the top of the pile and when Jill wants to wash the dishes, she takes a dish from the top of the pile.<br /><br />Jack has been watching his wife attentively and each time she added a new dirty <i>c</i>-colored dish to the pile, Jack made a note in his notebook that a <i>c</i>-colored dish had been added to the pile. Similarly, when Jill took a <i>c</i>-colored dish from the top of the pile, Jack noted that a <i>c</i>-colored dish had been taken from the pile. From time to time Jack would leave to get more popcorn and then he would probably miss some of Jill's actions. In this case he wrote an asterisk "<pre style='display:inline;font-size:120%;'>*</pre>" in his notebook.<br /><br />Next day, as Jack was scanning through the notes, he got interested: what is the least number of dirty dishes that could be on the kitchen before the cleaning? Note that Jill doesn't arrange the dishes in more than one pile. Jill only puts the dishes to the top of the pile and only takes them from the top of the pile. Before the cleaning and after it the pile is empty.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The only input line contains the notes from Jack's notebook. Using Latin alphabet, he wrote a lowercase letter if Jill added a dish of the corresponding color to the pile. Also, Jack wrote an uppercase letter if Jill took a dish of the corresponding color from the pile. For example, the string "<pre style='display:inline;font-size:120%;'>afFaAA</pre>" represents the following actions: <ul> <li>Jill adds an <i>a</i>-colored dish to the pile, <li>Jill adds an <i>f</i>-colored dish to the pile, <li>Jill takes an <i>f</i>-colored dish from the pile, <li>Jill adds an <i>a</i>-colored dish to the pile, <li>Jill takes an <i>a</i>-colored dish from the pile, <li>Jill takes an <i>a</i>-colored dish from the pile. </ul><br /><br />An "<pre style='display:inline;font-size:120%;'>*</pre>" represents the periods of time when Jack went to get more popcorn and could have missed one or more Jill's actions. It is guaranteed that Jack went to get more popcorn no more than five times. So the number of characters "<pre style='display:inline;font-size:120%;'>*</pre>" doesn't exceed 5.<br /><br />The given string consists of lowercase and uppercase Latin letters and asterisks "<pre style='display:inline;font-size:120%;'>*</pre>". It is not empty and contains no more than 2500 characters. The input contains at least one letter.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>On the first line of the input file print the single number &mdash; the least possible number of dirty dishes on the kitchen before the cleaning. Print <pre style='display:inline;font-size:120%;'>-1</pre> if Jack's notes surely have a mistake and there's no solution.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>ab*bB
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>afFaAA
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>**bbB*Da*
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>a**b
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>-1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>An example of a sequence of actions for the first sample is abBAbB.<br /><br />In the second sample Jack never left the room.<br /><br />In the third sample he left the room four times, two of them one after another. An example of Jill's action succession is like that: "<pre style='display:inline;font-size:120%;'>bbBdDaAB</pre>".<br /><br />The fourth sample illustrates no solution.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=535 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

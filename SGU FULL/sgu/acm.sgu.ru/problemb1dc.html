@@ -1,0 +1,32 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=318 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+<head><title> SSU Online Contester :: 318. Grants </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>318. Grants</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Berland City Central School has a lot of computers connected to the network. The network has a number of shared network resources and a number of users willing to access these resources. There are <i>N</i> resources numbered 1, 2,..., <i>N</i> and <i>M</i> users numbered 1, 2,..., <i>M</i>.<br /><br />Let the user <i>i</i> require an access to the finite set of the resources <i>S</i><sub><i>i</i></sub> = {<i>r</i><sub><i>i</i><sub>1</sub></sub>, <i>r</i><sub><i>i</i><sub>2</sub></sub>,... }. System administrator needs to grant each user each resource he or she wishes. The solution he chose is to use user groups.<br /><br />User group is an object that allows to link users and resources. Each user group is associated with an arbitrary number of users and resources. Let <i>U</i><sub><i>g</i></sub> = {<i>u</i><sub><i>j</i><sub>1</sub></sub>, <i>u</i><sub><i>j</i><sub>2</sub></sub>,... } be the finite set of users associated with the group <i>g</i>. Let <i>R</i><sub><i>g</i></sub> = {<i>r</i><sub><i>k</i><sub>1</sub></sub>, <i>r</i><sub><i>k</i><sub>2</sub></sub>,... } be the finite set of resources associated with the same group <i>g</i>.<br /><br />The system administrator should obey the following rules while creating the user groups: <ul> <li>No two different user groups can have common resources, i.e. each resource can belong to at most one user group. <li>A user has an access to a resource if this user belongs to the user group containing this resource. <li>Each user should have access to all resources he or she wishes, but to no any other resource. <li>A user can belong to any number of user groups. </ul><br /><br />Your task is to help the system administrator to create the user groups in such a way that the rules above are satisfied and the number of user groups is minimal.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains two integer numbers <i>N</i> and <i>M</i> (1 &le; <i>N</i>, <i>M</i>&le; 100). Each of the following <i>M</i> lines contains the description of <i>S</i><sub><i>i</i></sub>. Each description consists of the size of <i>S</i><sub><i>i</i></sub> (non-negative integer not exceeding <i>N</i>) followed by the items of <i>S</i><sub><i>i</i></sub> (different positive integers not exceeding <i>N</i>). Numbers in each line are separated by one or several spaces.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Write the minimal number of the user groups required to the output.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5 2
+2 1 3
+3 3 4 5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>You need at least three user groups to grant desired access privileges to each user. For example, first group may contain first user and first object. Second group may contain both users and third object. Third group may contain second user and fourth and fifth objects.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=318 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:41 GMT -->
+</html>

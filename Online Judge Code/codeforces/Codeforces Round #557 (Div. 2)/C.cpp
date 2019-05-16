@@ -1,0 +1,72 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define ld             long double
+#define intl           long long
+#define pii            pair<int,int>
+#define xx             first
+#define yy             second
+#define mp             make_pair
+#define pb             push_back
+#define SZ(x)          (int)(x).size()
+#define ALL(x)         begin(x), end(x)
+#define REP(i, n)      for (int i = 0; i < n; ++i)
+#define FOR(i, a, b)   for (int i = a; i <= b; ++i)
+#define RFOR(i, a, b)  for (int i = a; i >= b; --i)
+
+const int MAXN = 300005, inf = 1e9+5;
+const intl INF = 1e18+5;
+const ld eps = 1e-9;
+
+int f[MAXN], l[MAXN];
+int ara[MAXN];
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+
+    int n, k;
+    cin >> n >> k;
+
+    for( int i = 1; i <= k; i++ ) cin >> ara[i];
+
+    for( int i = 1; i <= k; i++ )
+    {
+        if( f[ara[i]] == 0 )
+        {
+            f[ ara[i] ] = i;
+        }
+    }
+
+    for( int i = k; i >= 1; i-- )
+    {
+        if( l[ara[i]]== 0 )
+            l[ ara[i] ] = i;
+    }
+    intl ans = 0;
+    FOR(i, 1, n)
+    {
+        FOR(j, -1, 1)
+        {
+            if( i+j >= 1 && i+j <= n )
+            {
+                if( f[i] == 0 )
+                {
+                    ans++;
+                }
+                else if( f[i] > l[i+j] )
+                {
+                    //cout << f[i] << " " << l[i+j] << endl;
+                    ans++;
+                }
+            }
+        }
+    }
+
+    cout << ans << endl;
+
+
+    return 0;
+}

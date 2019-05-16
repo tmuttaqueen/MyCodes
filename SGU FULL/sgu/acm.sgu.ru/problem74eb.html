@@ -1,0 +1,89 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=367 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 367. Contest </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>367. Contest</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />In compliance with the traditional rules of ACM International Collegiate Programming Contest teams are ranked according to the amount solved problems and penalty time. For the purpose of this problem we will define penalty time as a sum of minutes when all problems solved by the team were submitted (thus, let's think that all problems were accepted from the first attempt). For example, if some team solved three problems: on 10-th, 45-th and 123-rd minutes, the penalty time would be 10 + 45 + 123 = 178 minutes.<br /><br />On one of numerous trainings one famous team was solving old competition it had solved previously. For each problem participants estimated time <i>t</i><sub><i>i</i></sub> required to solve this problem. Moreover, they defined a set of constraints on problem solving. Each constraint is an ordered pair (<i>a</i>, <i>b</i>), denoting that the problem <i>a</i> must be solved before the problem <i>b</i> (i. e. if the problem <i>b</i> will be solved, than the problem <i>a</i> also must be solved, and must be solved earlier than the problem <i>b</i>). This is due to the fact that the problem <i>a</i> is a subtask of the problem <i>b</i>. Obviously the problem <i>a</i> is easier than the problem <i>b</i>, i. e. <i>t</i><sub><i>a</i></sub> &le; <i>t</i><sub><i>b</i></sub>. The training lasts <i>T</i> minutes. <br /><br />What is the best performance can show the team? You may assume that the team will not do failed attempts and that they estimated time for solving each problem correctly. Calculate maximal number of problems that they can solve and the corresponding minimal penalty time. Please also determine which problems and in what order the team should solve.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains two integer numbers <i>N</i> and <i>T</i> (1 &le; <i>N</i> &le; 1000; 1 &le; <i>T</i> &le; 10<sup>9</sup>), where <i>N</i> is the number of problems, <i>T</i> is the duration of the training. The second line contains <i>N</i> integer numbers <i>t</i><sub><i>i</i></sub> (1 &le; <i>t</i><sub><i>i</i></sub> &le; 3500), where <i>t</i><sub><i>i</i></sub> is the time required to solve <i>i</i>-th problem. The third line contains integer number <i>M</i> (0 &le; <i>M</i> &le; 10000) &mdash; number of constraints. Each of the next <i>M</i> lines contains one constraint represented by pair of integer numbers <i>a</i><sub><i>i</i></sub>, <i>b</i><sub><i>i</i></sub> (1 &le; <i>a</i><sub><i>i</i></sub>,<i>b</i><sub><i>i</i></sub> &le; <i>N</i>; <i>a</i><sub><i>i</i></sub> <> <i>b</i><sub><i>i</i></sub>), denoting that the problem <i>a</i><sub><i>i</i></sub> must be solved before the problem <i>b</i><sub><i>i</i></sub> can be solved. It is guaranteed that <i>t</i><sub><i>a</i><sub><i>i</i></sub></sub> &le; <i>t</i><sub><i>b</i><sub><i>i</i></sub></sub>. All numbers in the input file are integer.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>On the first line of the output file print the maximal number of problems that the team can solve and the corresponding minimal penalty time. On the second line print numbers of problems that need to be solved in the order they must be solved. Problems are numbered 1 through <i>N</i>. If there are several solutions, output any of them.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 1
+1
+0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 1
+1
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 10
+1 1 1
+3
+1 2
+2 3
+3 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+0 0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 2
+1 2 1 2
+1
+1 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 3
+1 3
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=367 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

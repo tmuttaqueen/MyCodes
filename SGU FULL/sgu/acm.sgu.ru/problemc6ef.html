@@ -1,0 +1,159 @@
+                               <HTML>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=104 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:00:58 GMT -->
+<HEAD><TITLE>
+104. Little shop of flowers
+</TITLE><META http-equiv=Content-Type content="text/html; charset=windows-1251"><META HTTP-EQUIV="Expires" content="Дата"><META HTTP-EQUIV="Cache-Control" content="no-cache"><META HTTP-EQUIV="pragma" content="no-cache"><META NAME="keywords" CONTENT="ACM, programming contest, programming, contest, informatics, ioi, saratov, ICPC, программирование, информатика, алгоритм, саратов, контест"><META NAME="description" CONTENT="That site consists of some amount of programming problems. Online Contester system check your solution right now. You can participate in programming contests. Train your programming skills."><link rel="stylesheet" href="style.html" type="text/css"><STYLE type=text/css>TD{font-size:9pt;}</STYLE></HEAD>
+<BODY>
+<table width=95%><tr><td>
+<H3><B><P ALIGN="CENTER">
+104. Little shop of flowers
+</P></H3></B>
+<P ALIGN="CENTER">
+time limit per test: 0.5 sec. <BR> memory limit per test: 4096
+ KB
+</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">
+
+<FONT SIZE=2>
+</FONT><B><FONT FACE="Tahoma" SIZE=2><P>PROBLEM</P>
+</B></FONT><FONT SIZE=2>
+<P ALIGN="JUSTIFY">You want to arrange the window of your flower shop in a most pleasant way. You have <I>F </I>bunches of flowers, each being of a different kind, and at least as many vases ordered in a row. The vases are glued onto the shelf and are numbered consecutively 1 through <I>V</I>, where <I>V</I> is the number of vases, from left to right so that the vase 1 is the leftmost, and the vase <I>V</I> is the rightmost vase. The bunches are moveable and are uniquely identified by integers between 1 and <I>F</I>. These id-numbers have a significance: They determine the required order of appearance of the flower bunches in the row of vases so that the bunch <I>i</I> must be in a vase to the left of the vase containing bunch <I>j</I> whenever <I>i</I> &lt; <I>j</I>. Suppose, for example, you have bunch of azaleas (id-number=1), a bunch of begonias (id-number=2) and a bunch of carnations (id-number=3). Now, all the bunches must be put into the vases keeping their id-numbers in order. The bunch of azaleas must be in a vase to the left of begonias, and the bunch of begonias must be in a vase to the left of carnations. If there are more vases than bunches of flowers then the excess will be left empty. A vase can hold only one bunch of flowers.</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">Each vase has a distinct characteristic (just like flowers do). Hence, putting a bunch of flowers in a vase results in a certain aesthetic value, expressed by an integer. The aesthetic values are presented in a table as shown below. Leaving a vase empty has an aesthetic value of 0.</P>
+<P ALIGN="JUSTIFY"></P></FONT>
+<P ALIGN="LEFT"><TABLE BORDER CELLSPACING=2 BORDERCOLOR="#000000" CELLPADDING=7 WIDTH=90% ALIGN=CENTER>
+<TR><TD WIDTH="6%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="35%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="59%" VALIGN="TOP" COLSPAN=5>
+<B><FONT SIZE=2><P ALIGN="CENTER">V A S E S</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="6%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="35%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="13%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">1</B></FONT></TD>
+<TD WIDTH="11%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">2</B></FONT></TD>
+<TD WIDTH="11%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">3</B></FONT></TD>
+<TD WIDTH="13%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">4</B></FONT></TD>
+<TD WIDTH="11%" VALIGN="TOP">
+<B><FONT SIZE=2><P ALIGN="CENTER">5</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="6%" VALIGN="MIDDLE" ROWSPAN=3 HEIGHT=26>
+<B><FONT SIZE=2><P ALIGN="JUSTIFY"> Bunches</B></FONT></TD>
+<TD WIDTH="35%" VALIGN="MIDDLE" HEIGHT=26>
+<B><FONT SIZE=2><P ALIGN="JUSTIFY">1 (azaleas)</B></FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P> 7</FONT></TD>
+<TD WIDTH="11%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P>23</FONT></TD>
+<TD WIDTH="11%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P>-5</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P>-24</FONT></TD>
+<TD WIDTH="11%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P>16</FONT></TD>
+</TR>
+<TR><TD WIDTH="35%" VALIGN="MIDDLE" HEIGHT=26>
+<B><FONT SIZE=2><P ALIGN="JUSTIFY">2 (begonias)</B></FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P> 5</FONT></TD>
+<TD WIDTH="11%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P>21</FONT></TD>
+<TD WIDTH="11%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P>-4</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P> 10</FONT></TD>
+<TD WIDTH="11%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P>23</FONT></TD>
+</TR>
+<TR><TD WIDTH="35%" VALIGN="MIDDLE" HEIGHT=26>
+<B><FONT SIZE=2><P ALIGN="JUSTIFY">3 (carnations)</B></FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P ALIGN="CENTER">-21</FONT></TD>
+<TD WIDTH="11%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P> 5</FONT></TD>
+<TD WIDTH="11%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P>-4</FONT></TD>
+<TD WIDTH="13%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P>-20</FONT></TD>
+<TD WIDTH="11%" VALIGN="MIDDLE" HEIGHT=26>
+<FONT FACE="Courier" SIZE=2><P>20</FONT></TD>
+</TR>
+</TABLE>
+</P>
+
+<FONT SIZE=2><P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">&nbsp;</P>
+<P ALIGN="JUSTIFY">According to the table, azaleas, for example, would look great in vase 2, but they would look awful in vase 4.</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">To achieve the most pleasant effect you have to maximize the sum of aesthetic values for the arrangement while keeping the required ordering of the flowers. If more than one arrangement has the maximal sum value, any one of them will be acceptable. You have to produce exactly one arrangement.</P>
+<P ALIGN="JUSTIFY"></P>
+</FONT><B><FONT FACE="Tahoma" SIZE=2><P>ASSUMPTIONS</P>
+</B></FONT><FONT SIZE=2>
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>1 &#8804; <I>F</I> &#8804; 100  where <I>F</I> is the number of the bunches of flowers. The bunches are numbered 1 through <I>F</I>. </LI></P>
+<I><P ALIGN="JUSTIFY"><LI>F</I> &#8804; <I>V</I> &#8804; 100  where <I>V</I> is the number of vases. </LI></P>
+<P ALIGN="JUSTIFY"><LI>-50 <FONT FACE="Symbol">&#163;</FONT>
+ <I>A<SUB>ij</SUB> </I> <FONT FACE="Symbol">&#163;</FONT>
+ 50 where <I>A<SUB>ij </I></SUB>is the aesthetic value obtained by putting the flower bunch <I>i</I> into the vase <I>j</I>. </LI></P></UL>
+
+</FONT>
+
+</P>
+<P ALIGN="JUSTIFY"></P>
+<B><P ALIGN="JUSTIFY">Input</P></B>
+<P ALIGN="JUSTIFY">
+
+<FONT SIZE=2>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>The first line contains two numbers: <I>F</I>, <I>V</I>.</LI></P>
+<P ALIGN="JUSTIFY"><LI>The following <I>F</I> lines: Each of these lines contains <I>V</I> integers, so that <I>A<SUB>ij</I></SUB> is given as the <I>j</I>’th number on the (<I>i</I>+1)’st line of the input file. </LI></P></UL>
+
+</FONT>
+
+</P>
+<P ALIGN="JUSTIFY"></P>
+<B><P ALIGN="JUSTIFY">Output</P></B>
+<P ALIGN="JUSTIFY">
+
+<FONT SIZE=2>
+
+
+<UL>
+<P ALIGN="JUSTIFY"><LI>The first line will contain the sum of aesthetic values for your arrangement. </LI></P>
+<P ALIGN="JUSTIFY"><LI>The second line must present the arrangement as a list of <I>F</I> numbers, so that the <I>k</I>’th number on this line identifies the vase in which the bunch <I>k</I> is put.</LI></P></UL>
+
+
+</FONT>
+
+</P>
+<P ALIGN="JUSTIFY"></P>
+<P ALIGN="JUSTIFY">Sample Input</P>
+<FONT FACE="Courier New">
+<PRE>
+3 5 
+7 23 -5 -24 16
+5 21 -4 10 23
+-21 5 -4 -20 20
+</PRE>
+<P ALIGN="JUSTIFY"></P>
+</FONT>
+
+<P ALIGN="JUSTIFY">Sample Output</P>
+<FONT FACE="Courier New">
+<PRE>
+53 
+2 4 5
+</PRE>
+</FONT>
+</td></tr></table>
+</BODY>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=104 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:00:58 GMT -->
+</HTML>

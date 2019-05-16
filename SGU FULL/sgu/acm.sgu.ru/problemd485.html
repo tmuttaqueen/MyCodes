@@ -1,0 +1,62 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=490 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 490. Figure ans Spots </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>490. Figure ans Spots</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Let's consider an infinite sheet of grid paper. Initially all the cells are white and you can paint some of them black.<br /><br />Two cells are called 8-neigbours if they share a side or a corner. An 8-path between black cells <i>A</i> and <i>B</i> is a sequence of cells <i>X</i><sub>0</sub> = <i>A</i>, <i>X</i><sub>1</sub>, &middot;s, <i>X</i><sub><i>L</i>-1</sub>, <i>X</i><sub><i>L</i></sub> = <i>B</i> such that all cells in the sequence are black and for all 0 &le; <i>i</i> < <i>L</i> the cells <i>X</i><sub><i>i</i></sub> and <i>X</i><sub><i>i</i>+1</sub> are 8-neighbours. A set of black cells is called a figure if there is an 8-path from each of them into each other.<br /><br />Two cells are called 4-neighbours if they share a side. A 4-path between white cells <i>A</i> and <i>B</i> is a sequence of cells <i>X</i><sub>0</sub> = <i>A</i>, <i>X</i><sub>1</sub>, &middot;s, <i>X</i><sub><i>L</i>-1</sub>, <i>X</i><sub><i>L</i></sub> = <i>B</i> such that all cells in the sequence are white and for all 0 &le; <i>i</i> < <i>L</i> the cells <i>X</i><sub><i>i</i></sub> and <i>X</i><sub><i>i</i>+1</sub> are 4-neigbours. A finite set of white cells is called a <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/ec1f4295636b41d59d23d4c914eb9d1b.png'/> if: <ul> <li>There is a 4-path from each of them into each other. <li>The previous condition is broken when any other white cell is added to the set. </ul> We say that a figure has the height <i>H</i> and the width <i>W</i> if it fits in a rectangle <i>H</i> rows high and <i>W</i> columns wide, but does not fit in a rectangle <i>H</i>-1 rows high and <i>W</i> columns wide nor in a rectangle <i>H</i>-1 rows high and <i>W</i> columns wide.<br /><br /> <img width = "342px" height="342px" src="http://acm.sgu.ru/problems/0/p490_1.png"/><br> <br /><br />The image above shows a figure with height 7 and width 9 and containing two spots.<br /><br />Given the numbers <i>H</i>, <i>W</i> and <i>N</i>, construct a figure with height exactly <i>H</i> and width exactly <i>W</i> and containing exactly <i>N</i> spots.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input file contains several test cases. The first line of the file contains <i>T</i> (1 &le; <i>T</i> &le; 100), the number of test cases. Each of the following <i>T</i> lines describes one test case and contains three integers <i>H</i>, <i>W</i> and <i>N</i> (1 &le; <i>H</i>, <i>W</i> &le; 20, 1 &le; <i>N</i> &le; 200), separated by spaces.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>The output file should contain the following data for each test case: <ul> <li>If it is possible to construct a figure with the given parameters, output any of the possible figures as <i>H</i> rows consisting of <i>W</i> characters each; output the character <pre style='display:inline;font-size:120%;'>.</pre> for a black cell and the character <pre style='display:inline;font-size:120%;'>#</pre> for a white cell. <li>If it is impossible to construct the required figure, output a single line containing the word <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/64d90be750226d015dbf912b7b592f83.png'/>. </ul> The output data for two different test cases should be separated by an empty line.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3
+7 9 2
+20 20 22
+5 5 10
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+#......##
+#.#.....#
+#.##.....
+....####.
+.#..##.#.
+.#..##.#.
+.#.......
+
+.#####.######.#####.
+..###...####...###..
+...#.....##.....#...
+....................
+....##..##..#...#...
+...#.#.#..#.##.##...
+...###.#....#.#.#...
+...#.#.#..#.#...#...
+...#.#..##..#...#...
+....................
+....................
+.###..##..###...##..
+..#..#..#.#..#.#..#.
+..#..#....###..#....
+..#..#..#.#....#..#.
+.###..##..#.....##..
+....................
+...#.....##.....#...
+..###...####...###..
+.#####.######.#####.
+
+Impossible
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=490 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

@@ -1,0 +1,67 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=545 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 545. Cut the rope, another rope and so on! </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>545. Cut the rope, another rope and so on!</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />A game called "Cut the rope, another rope and so on!" is very popular in Berland. People all over the country just cut ropes on their bPads and bPhones over and over again.<br /><br />The game is about sequentially cutting ropes with a small ball hanging on their ends. At the beginning of the game all ropes have one end attached to the top of the screen, that is, we can assume that the ends are located on the horizontal axis <i>Ox</i>. The other ends of the ropes are connected together and a small ball is attached to them. The ropes never shrink or stretch. At the beginning of the game the system is in a static state &mdash; some ropes are tight, some might be loose. In this game, the ball should be considered as a material point, that is, we assume that it is infinitely small.<br /><br /><center> <img src="http://acm.sgu.ru/Problems/39/rope.png"/> </center><br /><br />Let's suppose that at the beginning the ball is suspended on <i>n</i> ropes. A player cuts off <i>n</i>-1 uncut ropes, one after another. The ball may move in some way after some ropes are cut. The next cutting is made as soon as the ball becomes static after the previous cutting (the first cutting is made immediately). If the present cutting does not change the ball's position, then the next cutting is done immediately.<br /><br />The physics in this game is a bit peculiar: educated people say that the motion of the ball is going in a perfectly viscous medium. This means that at any time the ball is moving so that it reduces the potential energy in the fastest way. For example, if the ball can fall straight down, it moves exactly this way. Note that the ball never swings, that is, its movement always moves it below its current position. You should assume that ropes have negligible masses compared with the mass of the ball. <br /><br />Assuming that the ball always moves at the constant speed of 1 unit of length per unit of time, find the position of the ball at the given moments of time <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>,..., <i>t</i><sub><i>m</i></sub>.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first input line contains two integers <i>n</i> and <i>m</i> (2 &le; <i>n</i> &le; 20;&nbsp;1 &le; <i>m</i> &le; 1000) &mdash; the number of ropes and the number of ball position queries, correspondingly.<br /><br />The second line contains <i>n</i> integers <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,..., <i>x</i><sub><i>n</i></sub> (1 &le; <i>x</i><sub><i>i</i></sub> &le; 200) &mdash; the coordinates of the ropes' attachment points on the horizontal axis.<br /><br />The third line contains <i>n</i> integers <i>l</i><sub>1</sub>, <i>l</i><sub>2</sub>,..., <i>l</i><sub><i>n</i></sub> (1 &le; <i>l</i><sub><i>i</i></sub> &le; 200), <i>l</i><sub><i>i</i></sub> is the length of the <i>i</i>-th rope. It is guaranteed that values <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>,..., <i>x</i><sub><i>n</i></sub> and <i>l</i><sub>1</sub>, <i>l</i><sub>2</sub>,..., <i>l</i><sub><i>n</i></sub> are such that the initial configuration really exists, that is, the lower ends of all ropes can be simultaneously tied to a ball. It is guaranteed that no two ropes have equal lengths and attached to the same point at the same time.<br /><br />The fourth line describes the sequence of cuts, it contains <i>n</i>-1 distinct integers <i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>,..., <i>p</i><sub><i>n</i>-1</sub> (1 &le; <i>p</i><sub><i>j</i></sub> &le; <i>n</i>), where <i>p</i><sub><i>j</i></sub> is the index of the rope that is the <i>j</i>-th one to be cut.<br /><br />The last input line contains <i>m</i> real numbers <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>,..., <i>t</i><sub><i>m</i></sub> (0 &le; <i>t</i><sub><i>k</i></sub> &le; 1000) &mdash; the moments of time for determining the ball's position. All <i>t</i><sub><i>i</i></sub> are given with no more than three digits after the decimal point. The first rope is cut at time 0, each of the other ropes is cut at the moment the ball becomes stable after the cutting of the previous rope. If the current cutting doesn't change the ball's position, then the next rope is cut immediately. All values <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>,..., <i>t</i><sub><i>m</i></sub> are distinct and are given in the increasing order.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print <i>m</i> lines, the <i>k</i>-th line must contain the coordinates of the ball at time <i>t</i><sub><i>k</i></sub>. Consider all ropes attached to the <i>Ox</i> axis, and the <i>Oy</i> axis is directed upwards. Print the numbers with at least 5 digits after the decimal point. After the ball hangs on the last rope, it doesn't move anymore.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3 4
+1 1 3
+5 10 20
+1 2
+2.5 10 16 20
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>1.0000000000 -7.5000000000
+1.0000000000 -15.0000000000
+2.0972097000 -19.9796138520
+3.0000000000 -20.0000000000
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3 7
+2 22 19
+12 12 10
+2 1
+0 0.18 0.19 4.39 6 7 9
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>12.0000000000 -6.6332495807
+11.8993800085 -6.7824977292
+11.8937244905 -6.7907448565
+15.0867736994 -9.2025355158
+16.6125973239 -9.7108345914
+17.5939901889 -9.9006634329
+19.0000000000 -10.0000000000
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=545 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

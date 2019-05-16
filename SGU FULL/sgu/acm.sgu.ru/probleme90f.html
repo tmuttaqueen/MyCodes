@@ -1,0 +1,51 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=427 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 427. Hamiltonian polyhedron </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>427. Hamiltonian polyhedron</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />You are given a convex polyhedron with the sum of its solid angles less than 4 (in steradians; the full angle is in this case equal to 4<i>pi</i>). Find out whether there exists a cycle that passes through all vertices of the polyhedron exactly once. The cycle must have edges of the polyhedron as its edges, and no edge can be used more than once in the cycle. You can leave some of the edges of the polyhedron unused.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains one integer number <i>f</i> &mdash; the number of facets of the polyhedron. Then all <i>f</i> facets are described. Each description begins with a line with single integer <i>k</i> &mdash; the number of vertices of the facet. The next <i>k</i> lines contain 3 real numbers each &mdash; the vertex coordinates. The points are given in the order they appear on the border of the facet (either clockwise or counter-clockwise). The numbers are given with exactly 9 digits after the decimal point. If a point is listed in several facet descriptions, its coordinates in all descriptions will be exactly the same.<br /><br />The overall number of vertices of the polyhedron will be at most 100. The overall number of facets and the number of vertices on any facet will be at most 100 as well.<br /><br />The coordinates of the points are not the exact coordinates in 3-dimensional space, they are rounded to 9 digits after the decimal point from their true value. Some of the points can be very close, but the distance between any two different points is at least 5 &middot; 10<sup>-7</sup>. The absolute values of the coordinates of the points do not exceed 1000.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>If there is no such cycle as described in the problem statement, output "<pre style='display:inline;font-size:120%;'>No</pre>" on the first line of the output file, otherwise output "<pre style='display:inline;font-size:120%;'>Yes</pre>". In the latter case, output the description of the cycle: on the second line output <i>n</i> &mdash; the number of vertices of the polyhedron; on the next <i>n</i> lines output the coordinates of the vertices in the order they appear along the cycle, exactly as they were given in the input file, with the same 9 digits after the decimal point.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4
+3
+100.146488845 0.000000000 0.000000000 
+100.145878719 0.349576483 0.000000000 
+-100.145878719 -0.349576483 0.000000000 
+3
+33.382162948 0.000000000 1.219611194 
+100.146488845 0.000000000 0.000000000 
+100.145878719 0.349576483 0.000000000 
+3
+33.382162948 0.000000000 1.219611194 
+100.145878719 0.349576483 0.000000000 
+-100.145878719 -0.349576483 0.000000000 
+3
+33.382162948 0.000000000 1.219611194 
+-100.145878719 -0.349576483 0.000000000 
+100.146488845 0.000000000 0.000000000 
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+Yes
+4
+-100.145878719 -0.349576483 0.000000000 
+33.382162948 0.000000000 1.219611194 
+100.146488845 0.000000000 0.000000000 
+100.145878719 0.349576483 0.000000000 
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=427 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

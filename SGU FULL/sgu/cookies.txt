@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+acm.sgu.ru	TRUE	/	FALSE	1999999999	acmsguru	v776p8jq0j1ggavesh1kbiq6o3
+codeforces.com	TRUE	/	FALSE	1999999999	JSESSIONID	C8A972D2E3C5848CF3D97CC498007E1B-n1
+

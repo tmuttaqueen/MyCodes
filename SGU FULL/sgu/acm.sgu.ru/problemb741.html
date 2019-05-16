@@ -1,0 +1,89 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=408 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 408. Game with points </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>408. Game with points</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Recently Petya has discovered new game with points. Rules of the game are quite simple. First, there is only
+one point <i>A</i><sub>0</sub> with coordinates (0, 0). Then Petya have to draw <i>N</i> another points. Points must be drawn
+consequently and each new point must be connected with exactly one of the previous points by a segment.
+Let's decribe the game process more formally. At the <i>i</i>-th step Petya chooses the position of the point <i>A</i><sub><i>i</i></sub> (not
+necessarily with integer coordinates). Than he chooses one of the previously drawn points in order to connect it with the
+point <i>A</i><sub><i>i</i></sub>. Lets call this point <i>B</i>. The following conditions must be held:
+
+
+<li>Point <i>A</i><sub><i>i</i></sub> must not coincide with any of the previous points.
+<li>Point <i>A</i><sub><i>i</i></sub> must not lie on the previously drawn segments.
+<li>Segment <i>A</i><sub><i>i</i></sub>B must not have common points with previously drawn segments, except possibly the point <i>B</i>.
+<li>Segment <i>A</i><sub><i>i</i></sub>B must not cover any of the previous points, except the point <i>B</i>. 
+<li>Length of the segment <i>A</i><sub><i>i</i></sub>B must not exceed 1. 
+
+
+After drawing each point Petya computes two values.
+
+
+<li>The largest number of segments which share a common point. 
+<li>The largest euclid distance between some pair of points. 
+
+
+After each step Petya gains the score which is equal to the product of these values.
+
+Find out which is the maximal score Petya can gain after the whole game.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>Input contains single integer number <i>N</i> (0 &le; <i>N</i> &le; 1000).
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output the maximal score that Petya can gain. Your answer must be accurate up to 10<sup>-3</sup>.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5.000
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+20.000
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=408 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

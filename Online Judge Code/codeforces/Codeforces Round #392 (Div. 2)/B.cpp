@@ -1,0 +1,61 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const double pi = 3.141592653589793;
+
+#define xx          first
+#define yy          second
+#define mp          make_pair
+#define intl        long long
+#define filein      freopen("input.txt", "r", stdin)
+#define fileout     freopen("output.txt", "w", stdout)
+#define debug       printf("yes\n")
+#define val_of(x)   cout << #x << " is " << x << "   "
+#define what_is(x)  cout << #x << " is " << x << endl
+#define pb          push_back
+#define eb          emplace_back
+#define pii         pair<int, int>
+#define piii        pair<pii, int>
+#define double      long double
+
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    //filein;
+    int n, r = -1, g = -1, b = -1, y = -1;
+    int ara[4] = {0};
+    string s;
+    cin >> s;
+    for( int i = 0; i < s.length(); i++ )
+    {
+        if( s[i] == '!' )
+        {
+            ara[i%4]++;
+        }
+        if( s[i] == 'R' )
+        {
+            r = i%4;
+        }
+        if( s[i] == 'G' )
+        {
+            g = i%4;
+        }
+        if( s[i] == 'B' )
+        {
+            b = i%4;
+        }
+        if( s[i] == 'Y' )
+        {
+            y = i%4;
+        }
+    }
+
+    cout << ara[r] << " " << ara[b] << " " << ara[y] << " " << ara[g] << endl;
+
+    return 0;
+}
+
+
+

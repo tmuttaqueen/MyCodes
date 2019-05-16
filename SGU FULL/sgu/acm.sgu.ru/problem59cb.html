@@ -1,0 +1,84 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=407 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 407. Number of Paths in the Empire </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>407. Number of Paths in the Empire</h4></div><div align=center>Time limit per test: 1.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+During the period of Tsam dynasty ruling people rarely fought against each other and their
+neighbours, because they just could not afford themselves such a waste of time. 
+The matter for it is that they were entirely absorbed with solving various problems 
+which were connected with trade, craft, agriculture and other spheres of human activity.
+
+In a wide list of problems the ones of tax collection stand out. As one of such problems
+was posed by Emperor himself, it was of great importance. The problem was to count the number
+of different paths consisting of exactly <i>m</i> roads. Every path should have started and ended in the 
+capital of Empire. Paths were supposed to cover the same towns and roads any times, moreover
+they could cover the capital several times.
+
+Now you are to solve this problem given information about Empire: there were <i>n</i> country towns
+situated at the foot of a hill, they formed a circle at the bottom, and the capital was 
+on the top of the hill. The capital was connected to all other towns, and each country town
+was also connected to other two neighbouring country towns both to the left and to the right.
+
+<image src = "http://acm.sgu.ru/problems/0/p407.bmp" width = "300">
+
+Pic. 1 Empire comprising the capital (index 0) and four country towns (indices 1&nbsp;&mdash;&nbsp;4).
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>The only line of input file contains two integers <i>n</i> and <i>m</i> (3 &le; <i>n</i> &le; 1000, 0 &le; <i>m</i> &le; 5000).
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output the answer without leading zeros.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+4 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+8
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+3 4
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+21
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+Commentary to the first sample test. There are 8 paths in the Empire.
+0-1-2-0, 0-2-3-0, 0-3-4-0, 0-4-1-0,
+0-2-1-0, 0-3-2-0, 0-4-3-0, 0-1-4-0.
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=407 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

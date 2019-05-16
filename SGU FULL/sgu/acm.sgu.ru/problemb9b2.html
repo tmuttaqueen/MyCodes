@@ -1,0 +1,87 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=189 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:21:42 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="templates.css" type="text/css">
+  <link rel="stylesheet" href="js/ui.datepicker.html" type="text/css">
+  <script type="text/javascript" language="javascript" src="js/jquery.html"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.example.html"></script>
+  <script type="text/javascript" language="javascript" src="js/ui.datepicker-2.html"></script>
+
+  <link rel="stylesheet" href="templates.css" type="text/css">
+  <link rel="stylesheet" href="js/ui.datepicker.html" type="text/css">
+  <script type="text/javascript" language="javascript" src="js/jquery.html"></script>
+  <script type="text/javascript" language="javascript" src="js/jquery.example.html"></script>
+  <script type="text/javascript" language="javascript" src="js/ui.datepicker-2.html"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>189. Perl-like Substr
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 4096
+ KB</div><div align=center>input: standard input<br>output: standard output</div><br><br><br><div align = left>A small Russian offshore company H&H decided to strike the world community and develop their own analogue (faster and with lots of features) of a well-known scripting language Perl. You are hired to participate in this project and your task is very simple - to code the function substr.
+<br>Function substr writes and reads separate substrings:
+<br>	$value = substr($string, $offset, $count);
+<br>	$value = substr($string, $offset);
+<br>	substr($string, $offset, $count) = $newstring;
+<br>	substr($string, $offset) = $newstring; 
+<br>$string (symbol $ in Perl marks a scalar variable, the strings in Perl are scalar variables) contains the initial string. $offset defines the beginning of the substring. Positive values of $offset are counted out from the beginning of the string, negative - from the end. If the $offset equals to zero, the substring begins from the first symbol of string. The third argument $count defines the length of the substring. If $count is omitted, substr returns everything to the end of the string. If $count is negative, substr leaves that many characters off the end of the string. 
+<br>Function substr can be used not only to get the substring from the string, but also to replace the substring with the new string. In the last case the lengths of the old substring and the new one can be different. 
+<br>You are given a simple Perl-like program (refer to the input and output specifications) and your task is to output the result of its execution.
+</div><div align = left><br><b>Input</b></div><div align = left>The first line contains two natural numbers N (1&lt;=N&lt;=20) - the number of initialization lines in the program and M (1&lt;=M&lt;=300) - the number of remaining lines in the program. Next N lines (no one more than 10000 symbols) contain the string initialization in the following form: 
+<br>	$name = "value";
+<br>$name is the name of the string variable (always starts with symbol $). The name of the variable consists of up to 20 (including symbol $) alfa-numerical letters (and the $ in the beginning). The name of the variable is followed by symbol "=", and then follows the value of the variable - a sequence of alfa-numerical symbols and the punctuators (space, comma, dot, hyphen, underline, colon, exclamation and question marks) enclosed in double quotes. The length of the value is not more than 255 symbols. The name of the variable, symbol "=", and the value can be delimited by one or more spaces. There is always a semicolon at the end of the line.
+<br>Each of the following M lines contains the line of the program in one of the following 6 types:
+<br>	1.	print($name);	Output the value of variable $name 
+<br>	2.	print(substr($name, $o[, $c]));	Output the substring from variable $name
+<br>	3.	$name1 = $name2;	Assign the value of variable $name1 to the value of variable $name2
+<br>	4.	$name1 = substr($name2, $o[, $c]);	Assign the value of variable $name1 to the substring from variable $name2
+<br>	5.	substr($name1, $o[, $c]) = $name2;	Replace the substring in $name1with the value of $name2
+<br>	6.	substr($name1, $o[, $c]) = substr($name2, $o[, $c]);	Replace the substring in $name1 with the substring from $name2
+<br>
+<br>The square brackets indicate that the third argument in substr can be omitted. There may be no spaces inside the names of the variables and the names of functions, but there may be one or several spaces in all other places. There is symbol ";" at the end of each line, the length of each line is not more than 255 symbols. The values of the variables which weren't initialized in the first N lines of the input file are considered as empty strings "". The total number of different variables in the program is not more than 100. No variable value will have the length of more than 1000 symbols in the course of the program execution. 
+<br>The parameters $c and $o have been chosen so, that the substr returns the "correct" substring, i.e. the beginning and the end of the substring are within the initial string, and the beginning proceeds the end (substring is not empty). 
+<br>You must assume that names of variables are case sensitive.
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>The output file must contain the result of the program execution - one line for each print() operator. No additional symbols, spaces or line brakes in the output file are permitted. 
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>2 9
+<br>$a = "0123456789";
+<br>$b = "abcdefghigklmn";
+<br>print($a);
+<br>print( substr($b, 1, 2) );
+<br>substr($b, 0, 1) = substr($a, 2, 7);
+<br>$c = $b;
+<br>print(substr($c,0));
+<br>print(substr($a, -2, -1));
+<br>print(substr($a, -6, 2));
+<br>print(substr($a, -5));
+<br>print(substr($a, 1, 2));
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>0123456789
+<br>bc
+<br>2345678bcdefghigklmn
+<br>8
+<br>45
+<br>56789
+<br>12
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'submit8382.html?problem=189'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'forumb9b2.html?contest=0&amp;problem=189'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Ilya V. Elterman
+</td></tr><tr><td>Resource:</td><td>ACM International Collegiate Programming Contest 2003-2004
+<br>North-Eastern European Region, Southern Subregion
+</td></tr><tr><td>Date:</td><td>2003 October, 9
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:39:43</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=189 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:21:44 GMT -->
+</html> 

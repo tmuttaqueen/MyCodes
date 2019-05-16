@@ -1,0 +1,35 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=488 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 488. Dales and Hills </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>488. Dales and Hills</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Let's consider a number sequence <i>a</i><sub>1</sub>, &middot;s, <i>a</i><sub><i>N</i></sub>. We call the continuous subsequence <i>a</i><sub><i>i</i></sub>, &middot;s, <i>a</i><sub><i>j</i></sub>, &middot;s, <i>a</i><sub><i>k</i></sub> (1 &le; <i>i</i> < <i>j</i> < <i>k</i> &le; <i>N</i>) of the sequence a <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/76780f09fb4fc03a765ac10177a28321.png'/> if <i>a</i><sub><i>t</i></sub> < <i>a</i><sub><i>t</i>+1</sub> for any <i>i</i> &le; <i>t</i> < <i>j</i> and <i>a</i><sub><i>t</i></sub> > <i>a</i><sub><i>t</i>+1</sub> for any <i>j</i> &le; <i>t</i> < <i>k</i>. In this case we call <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/c5760859bd9d4345103a4f75a2b775bb.png'/> the <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/3e1ff96f265ce3ec6af3741d521007d0.png'/> of the hill. Similarly, we call the continuous subsequence a <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/d78d6c978e1e4391ea3e1260987626a2.png'/> if <i>a</i><sub><i>t</i></sub> > <i>a</i><sub><i>t</i>+1</sub> for any <i>i</i> &le; <i>t</i> < <i>j</i> and <i>a</i><sub><i>t</i></sub> < <i>a</i><sub><i>t</i>+1</sub> for any <i>j</i> &le; <i>t</i> < <i>k</i>. In this case we call <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/c5760859bd9d4345103a4f75a2b775bb.png'/> the <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/5cc29f41f78da14cdd536241b106eed4.png'/> of the dale.<br /><br />Compute the height of the highest hill and the depth of the deepest dale in the given sequence.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains <i>T</i> (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/d4fa0b70cac5a7d6f5e1fd18bef99ac1.png'/>), the number of test cases. The test cases follow, occupying two lines each. The first of the two lines contains <i>N</i> (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/b03f87de20aa49ff926ff38c14bd6b19.png'/>), the second the members of the sequence, separated by spaces. The sum of values of <i>N</i> over all test cases in the file does not exceed <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/df8db923a5461f2f6f8be89ae708cf18.png'/>. The absolute values of the members of the sequences do not exceed <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/d4fefd66acb781af63a094e1840deb1d.png'/>.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>The output file should consist of <i>T</i> lines and each line should contain two integers, the height of the highest hill and the depth of the deepest dale. If there are no hills or no dales, output 0 in the corresponding position.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2
+10
+4 4 1 6 3 2 1 2 5 7
+10
+2 3 4 5 6 7 8 9 10 9
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 3
+1 0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /></div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=488 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

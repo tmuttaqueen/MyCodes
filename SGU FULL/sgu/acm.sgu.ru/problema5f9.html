@@ -1,0 +1,77 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=539 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 539. Multiswap Sorting </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>539. Multiswap Sorting</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ You are employed to implement a new fast sorting algorithm called multiswap sorting. The basic idea is simultaneous execution of multiple parallel swaps. You are given an array containing <i>n</i> integer elements <i>a</i><sub>1</sub>, <i>a</i><sub>2</sub>,..., <i>a</i><sub><i>n</i></sub>. At each step of the algorithm you must select one or more nonintersecting pairs of elements and swap the elements in each of the selected pairs.<br /><br />For example, you are given the array [5, 4, 3, 2, 1]. At one step you can select two pairs (5, 1) and (4, 2), swap elements in them and get the array 1, 2, 3, 4, 5. Pairs (1, 2) and (2, 3) cannot be selected at one step, because they have the common element 2. So it is possible to sort the array [5, 4, 3, 2, 1] in one step.<br /><br />Sort the given array in the minimum possible number of steps carrying out selection of pairs at each step optimally. Note that you are not required to minimize the total number of single swaps but the number of steps.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line contains an integer <i>n</i> (1 &le; <i>n</i> &le; 1000) &mdash; the number of elements in the array. In the second line the elements <i>a</i><sub><i>i</i></sub> are given. The numbers <i>a</i><sub><i>i</i></sub> are integers not exceeding 10<sup>9</sup> by absolute value.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>In the first line output the minimum number of steps <i>k</i>. The next <i>k</i> lines should describe multiswaps in the form "<i>p</i> <i>i</i><sub>1</sub> <i>j</i><sub>1</sub> <i>i</i><sub>2</sub> <i>j</i><sub>2</sub> <img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/63975f390397d0e50d9e6152d7f57799.png'/><i>i</i><sub><i>p</i></sub> <i>j</i><sub><i>p</i></sub>", where <i>p</i> > 0 is a number of pairs selected at the current step, <i>i</i><sub><i>s</i></sub> <i>j</i><sub><i>s</i></sub> are the indices of elements in the <i>s</i>-th pair (<i>i</i><sub><i>s</i></sub> &ne; <i>j</i><sub><i>s</i></sub>, indices of elements in distinct pairs must be distinct). The elements are indexed by integers from 1 to <i>n</i> according to their positions in the array at the current step. The order of pairs and the order of elements in pairs are unimportant. If there are multiple solutions with the minimum number of steps, output any. <br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3
+1 2 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>0
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>5
+5 4 3 2 1
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>1
+2 1 5 2 4
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+3 1 2 2
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2
+2 1 2 3 4
+1 4 2</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>In the last example, after the first step the array takes the form 1, 3, 2, 2. At the second step 3 is swapped with the last 2. Note that the swap of the 3-rd and the 4-th elements at the first step does not change the array (these elements are equal). However, the answer with this pointless swap, as well as without it, is optimal, because your goal is to minimize the number of steps but not the number of swaps.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=539 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

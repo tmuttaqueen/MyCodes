@@ -1,0 +1,62 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=550 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 550. Tree Queries Online </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>550. Tree Queries Online</h4></div><div align=center>Time limit per test: 6
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />This problem is a little unusual &mdash; here you must implement an online algorithm for processing special queries. This means that your program can start reading a request only after it prints the response to the previous one. Note that this problem has standard input/output (i.e., from the keyboard and to the screen). After writing response to a request, be sure to use the stream flushing function. Otherwise you risk leaving part of your output in i/o buffer. For example, you must use the <pre style='display:inline;font-size:120%;'>fflush(stdout)</pre> function in C++, call <pre style='display:inline;font-size:120%;'>System.out.flush()</pre> in Java, and <pre style='display:inline;font-size:120%;'>flush(output)</pre> in Pascal.<br /><br />You are given a weighted undirected tree containing <i>n</i> vertices. The vertices are indexed by integers from 1 to <i>n</i>. A tree is a connected graph without cycles. Your task is to process <i>n</i>-1 requests for it. Each request means removing one of its edges. Of course, after the first request the tree is no longer a tree, but it becomes a forest (a set of trees).<br /><br />After processing each request your program should output the weight of the removed edge <i>w</i><sub><i>i</i></sub>. In addition, the requests change the weights of other edges. When you remove an edge, the connected component that contains it splits into two. In the smaller (by the number of vertices) of the two resulting components the weights of the edges are multiplied by the weight <i>w</i><sub><i>i</i></sub> of the removed edge, and in the larger component the weight of the removed edge <i>w</i><sub><i>i</i></sub> is added to the weight of each edge. If both components have equal number of vertices, you should assume that the smaller one is the one that contains the vertex with the smallest index among the vertices of these two components.<br /><br />All arithmetic operations must be performed modulo 99990001. That is, you only operate with numbers from 0 to 99990000, and in any arithmetic operation the result is the remainder of dividing the operation outcome by 99990001.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The input to this problem must be read from the standard input stream. The first input line contains an integer <i>n</i> (2 &le; <i>n</i> &le; 2&middot;10<sup>5</sup>) &mdash; the number of vertexes in the tree. The next <i>n</i>-1 lines contain descriptions of the edges of the tree, one description per line. Each description consists of three integers <i>x</i><sub><i>i</i></sub>, <i>y</i><sub><i>i</i></sub>, <i>w</i><sub><i>i</i></sub> (1 &le; <i>x</i><sub><i>i</i></sub>,<i>y</i><sub><i>i</i></sub> &le; <i>n</i>; <i>x</i><sub><i>i</i></sub> &ne; <i>y</i><sub><i>i</i></sub>; 0 &le; <i>w</i><sub><i>i</i></sub> &le; 99990000) &mdash; the indexes of vertexes connected by the <i>i</i>-th edge and the initial weight of the <i>i</i>-th edge. The last input line contains sequence <i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>,..., <i>p</i><sub><i>n</i>-1</sub> &mdash; the permutation of integers from 1 to <i>n</i>-1, where <i>p</i><sub><i>i</i></sub> is the number of the removed edge. The edges are numbered from 1 to <i>n</i>-1 in the order they follow in the input.<br /><br />Remember that you can only read the next element of permutation <i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>,..., <i>p</i><sub><i>n</i>-1</sub> after the response to the current query is printed. During the testing the system won't let you read the data unless you follow this rule.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>The output must be written to the standard output. Print <i>n</i>-1 lines, the <i>j</i>-th line must contain the weight of the removed edge during the <i>j</i>-th query. Flush the output after each printed line, i.e. each time after your program writes end-of-line.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+1 2 3
+2 3 4
+3 4 5
+1 2 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3
+7
+15
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+1 2 3
+2 3 4
+3 4 5
+2 1 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+12
+9
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /></div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=550 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

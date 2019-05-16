@@ -1,0 +1,95 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=405 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+<head><title> SSU Online Contester :: 405. Totalizator </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>405. Totalizator</h4></div><div align=center>Time limit per test: 0.5 second(s)<br />Memory limit: 65536
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+
+Some time ago Vasya was cleaning up the garret. After the hours of hard work he suddenly found the notes of the totalizator,
+which his grandfather had organised during the XII Berland football championship. It followed from the notes that each participant
+of the totalizator made his prediction about the result of every match (the result of the match is an ordered pair of numbers &nbsp;&mdash; number of goals
+scored by the first team and number of goals scored by the second team). Each prediction is such pair of numbers too. Every participant got score
+for the every prediction he made by the following rules:
+<ul>
+<li>if he guesses the winner (or a tie), his score is inscreased by 2.
+<li>if he guesses the difference between the number of goals scored by the first and the second team, his score is inscreased by 3.
+<li>if he guesses the number of goals scored by the first team, his score is increased by 1.
+<li>if he guesses the number of goals scored by the second team, his score is increased by 1.
+</ul>
+So, if the participant guesses the exact result of the match, he gets 7 points. Or, for example, if he guesses only the winner and
+the difference, he scores 5 points. Unfortunately, the list with the results of the totalizator was lost. But Vasya wants 
+to know how many scores each totalizator participant got. Help him to find the scores.
+
+<br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line contains two integer numbers <i>n</i> and <i>m</i> (1 &le; <i>n</i> &le; 100, 1 &le; <i>m</i> &le; 100)&nbsp;&mdash;
+the number of participants and the number of games. After it <i>m</i> blocks of <i>n</i>+1 lines follow. Each block corresponds to one match.
+The first line of each block contains two integer numbers <i>a</i>,<i>b</i> (0 &le; <i>a</i>,<i>b</i> &le; 10)&nbsp;&mdash; numbers of goals scored by the first and
+the second team. Other <i>n</i> lines of each block contain predictions of all participants in the same format, the <i>i</i>-th line is a prediction 
+of the <i>i</i>-th participant.
+
+<br /><div align = left style='margin-top:1em;'><b>Output</b></div>Output <i>n</i> numbers separated by spaces&nbsp;&mdash; scores of participants. The <i>i</i>-th number should be the score of the <i>i</i>-th participant. 
+Participants are numbered from 1 to <i>n</i> as their predictions are given in the input.
+
+<br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+1 2
+3 2
+2 1
+0 2
+0 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+6
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+2 3
+4 3
+2 2
+2 0
+0 0
+1 1
+1 0
+5 0
+3 0
+2 0
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+8 6
+</pre>
+ </td>
+ </tr>
+</table><br>
+
+
+
+</div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=405 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:42 GMT -->
+</html>

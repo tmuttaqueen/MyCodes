@@ -1,0 +1,33 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=469 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 469. Ghostbusters </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>469. Ghostbusters</h4></div><div align=center>Time limit per test: 1 second(s)<br />Memory limit: 262144
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />Now famous Ghostbusters want your help. As you probably know, all ghosts that are caught are put in asylum to stay there forever (since they are already dead and cannot be obliterated). The problem is that though usually ghosts can intersect and even lie inside each other, some new ghosts by yet unknown to Egon reasons are afraid of some old ghosts and cannot intersect with them. That's what your problem is&nbsp;&mdash; to find the maximum radius of a new ghost that can be put to the asylum in the worst case (i.e., when it is afraid of all other ghosts in the asylum). You task is simplified by the fact that all ghosts are in fact perfect solid spheres and stay at the same points forever. Also don't forget that new ghost cannot intersect borders of the asylum (but can touch them as well as other ghosts).<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input file contains three integer numbers <i>W</i>, <i>H</i> and <i>D</i>&nbsp;&mdash; sizes of the asylum given in meters (<img style='vertical-align:text-bottom;position:relative;top:-2px;' src='http://acm.sgu.ru/cache/79e335502e63d19a96e3fd8a1bc7ca61.png'/>). Asylum is a rectangular parallelepiped. Let us introduce coordinate system in such a way that two opposite corners of the asylum have coordinates (0,0,0) and (<i>W</i>,<i>H</i>,<i>D</i>). Then position of the <i>i</i>-th ghost can be described in this system as sphere centered at point with coordinates (<i>X</i><sub><i>i</i></sub>,<i>Y</i><sub><i>i</i></sub>,<i>Z</i><sub><i>i</i></sub>) and having radius <i>R</i><sub><i>i</i></sub>. Second line of the input file contains integer number <i>N</i>&nbsp;&mdash; number of ghosts in the asylum (0 &le; <i>N</i> &le; 10). <i>i</i>-th of the next <i>N</i> lines contains four numbers <i>X</i><sub><i>i</i></sub>, <i>Y</i><sub><i>i</i></sub>, <i>Z</i><sub><i>i</i></sub> and <i>R</i><sub><i>i</i></sub> (-1000 < <i>X</i><sub><i>i</i></sub>,<i>Y</i><sub><i>i</i></sub>,<i>Z</i><sub><i>i</i></sub> <2000, 0 &le; <i>R</i><sub><i>i</i></sub> &le; 1000). Though new ghost cannot intersect other ghosts and borders of the asylum, old ghosts may violate these rules and cross each other and boundaries of the asylum. However, it is guaranteed that at least some part of a ghost is contained inside the asylum. Ghost of radius 0 is supposed to consist of one point and cannot lie inside your ghost.<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>To the output file write three numbers&nbsp;&mdash; coordinates of a point where ghost of required maximal radius, centered at this point, may stay. If there are several such points, output coordinates of any of them (but only one). Your output will be considered correct if maximal radius of a ghost centered at the point found by your program will be within 1 mm of the optimal one. To avoid any precision problems we recommend to output coordinates with maximal possible accuracy. It is guaranteed that at least one solution with positive radius will exist.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+9 13 15
+2
+3 9 6 1
+4 8 3 5
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>
+5 4 11
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br />In the example, the first ghost is inside the second one. Ghost of maximum radius of 4 can stay at the point (5, 4, 11)&nbsp;&mdash; in this case it touches three borders of the asylum and the second ghost.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=469 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

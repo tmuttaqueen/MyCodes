@@ -1,0 +1,14 @@
+13
+insert -851839419
+removeMin
+removeMin
+getMin -624068418
+insert 119194510
+removeMin
+removeMin
+removeMin
+getMin -179673992
+getMin 520596304
+insert -265233646
+getMin -222234500
+removeMin

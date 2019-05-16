@@ -1,0 +1,51 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+const double pi = 3.141592653589793;
+
+#define xx          first
+#define yy          second
+#define mp          make_pair
+#define intl        long long
+#define filein      freopen("input.txt", "r", stdin)
+#define fileout     freopen("output.txt", "w", stdout)
+#define debug       printf("yes \n")
+#define what_is(x)  cout << #x << " is " << x << endl
+#define pb          push_back
+#define eb          emplace_back
+#define pii         pair<int, int>
+
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    //filein;
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int n, ans1 = -1000000, ans2 = 0, sum = 0, mm = 10000000;
+        cin >> n;
+        for( int i = 0; i < n; i++ )
+        {
+            int a;
+            cin >> a;
+            mm = min( abs(a), mm );
+            sum += a;
+            if( sum < 0 )
+                sum = 0;
+            if( a > 0 ) ans2 += a;
+            ans1 = max(ans1, sum);
+        }
+        if( ans1 > 0 )
+            cout << ans1 << " " << ans2 << endl;
+        else
+            cout << -mm << " " << -mm << endl;
+    }
+
+    return 0;
+}
+
+
+

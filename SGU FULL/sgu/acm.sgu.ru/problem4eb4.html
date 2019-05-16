@@ -1,0 +1,54 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=546 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 546. Ternary Password </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>546. Ternary Password</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />In the ternary world all passwords are ternary, that is, they consist only of digits "<pre style='display:inline;font-size:120%;'>0</pre>", "<pre style='display:inline;font-size:120%;'>1</pre>" and "<pre style='display:inline;font-size:120%;'>2</pre>". Terentius is trying to register on a famous internet service site Toogle, but the problem is, according to the security policy of this service the password must contain exactly <i>a</i> characters "<pre style='display:inline;font-size:120%;'>0</pre>" and exactly <i>b</i> characters "<pre style='display:inline;font-size:120%;'>1</pre>". All other characters of the password must be "<pre style='display:inline;font-size:120%;'>2</pre>".<br /><br />Terentius was fond of his password, he spent much time trying to remember it and now he can type it even with his eyes closed. That's the reason Terentius wants to replace the minimum number of characters in his password so that it meets the strict requirements of the Toogle policy. Terentius wants only to replace (substitute) some characters in password, he doesn't intend to perform other operations with the password.<br /><br />Help Terentius find the minimum number of replacements and print the corresponding possible variant of the password to Toogle.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line of the input contains three integers <i>n</i>, <i>a</i> and <i>b</i> (1 &le; <i>n</i> &le; 200; 0 &le; <i>a</i>,<i>b</i> &le; 200) &mdash; the length of Terentius's password, the expected number of characters "<pre style='display:inline;font-size:120%;'>0</pre>" and the expected number of characters "<pre style='display:inline;font-size:120%;'>1</pre>" in the password to Toogle. The second line contains Terentius's password. All characters in this line are digits "<pre style='display:inline;font-size:120%;'>0</pre>", "<pre style='display:inline;font-size:120%;'>1</pre>" or "<pre style='display:inline;font-size:120%;'>2</pre>".<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>In the first output line print <i>t</i> &mdash; the minimum number of replacements. In the second line print the possible variant of the Toogle password &mdash; the password that satisfies the Toogle safety policy, that differs from Terentius's password in exactly <i>t</i> positions. If there are several passwords, print any of them. Obviously, the length of the printed password must equal <i>n</i>.<br /><br />It is possible that Terentius's password already meets the Toogle policy. In this case the first line must contain "<pre style='display:inline;font-size:120%;'>0</pre>", and the second line must contain Terentius's password.<br /><br />If the solution doesn't exist, that is, if it is impossible to get a password to Toogle if Terentius uses replacements only, then print "<pre style='display:inline;font-size:120%;'>-1</pre>" in the first line of the output. In this case print empty second line or don't print the second line at all.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>6 1 3
+012022
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2
+111022
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>5 5 0
+02211
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4
+00000
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=546 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

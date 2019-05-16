@@ -1,0 +1,129 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=215 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>215. PL/Cool
+</h4></div><div align=center>time limit per test: 1 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>The new IMB compiler "Unvisual Age for PL/Cool" is planned for release next month. Your task in this problem is to write the interpreter for the PL/Cool language so that the compiler programmers could test their product.
+<br>
+<br>Program on PL/Cool can contain expressions. Each expression can contain integer constants and variables. The following operations are allowed:  + (add), - (substract), * (multiply), / (divide), % (modulo), and ^ (raise). ll operations have their usual meaning and priority   (^) &gt; (*) = (/) = (%) &gt; (+) = (-), all  operations except ^ are evaluated from left to right,  ^ is evaluated from right to left. Parenthesis can be used to change the order of evaluation, as usually. Unary minus and plus are allowed, their priority in this case is  the highest. 
+<br>
+<br>Divide operation acts like integer division: first both operands are replaced with their absolute values, next integer division is performed, remainder is dropped, and finally the sign of the quotient is set  equal to the sign of the true quotient of the operands.  Taking modulo is perfomed the same way, except that the quotient is dropped and remainder is kept. For example, (80+4*75)/(56-2^2^3) = -1. 
+<br>
+<br>Program may contain variables. Variable name starts with a  letter, which may be followed by letters and digits.  Variable names are case insensitive. Maximal name length is 10 characters.
+<br>
+<br>PL/Cool has two operators: "print" and "define". Program is the sequence of the operators, one on a line.
+<br>
+<br>Operator "print" has the following syntax:
+<br><center>
+<br>    print &lt;expression&gt;
+<br></center>
+<br>
+<br>Here &lt;expression&gt; is any expression that may contain variables and integer constants. Operator "print" prints the value of the expression.
+<br>
+<br>Operator "define" has the following syntax:
+<br><center>
+<br>    define &lt;operand1&gt; &lt;operand2&gt;
+<br></center>
+<br>
+<br>Here &lt;operand1&gt; and &lt;operand2&gt; are either variables or non-negative integer constants. After execution of the "define" operator, all occurences of the &lt;operand1&gt; are replaced with the &lt;operand2&gt;. Define operator can be used even to change the value of the integer constants, for example after 
+<br><center>
+<br>    define 2 4
+<br></center>
+<br>the value of 2+2 is 8.
+<br>
+<br>Note that substitution is performed recursively, until some undefined constant is met, for example the following sequence of operators prints 8 and 10:
+<br><center>
+<br>        define 2 4
+<br>        define 3 2
+<br>        print 3+3
+<br>        define 4 5
+<br>        print 3+3
+<br></center>
+<br>
+<br>An attempt to redefine some variable or constant is ignored. An attempt to make a definition that leads to circular dependence is also ignored. For example, the following sequence prints 4 and 4, because the last two definitions are ignored.
+<br><center>
+<br>        define 2 4
+<br>        define 3 2
+<br>        define 2 5
+<br>        print 3
+<br>        define 4 2
+<br>        print 3
+<br></center>
+<br>
+<br>If some identifier is used in the expression that is not yet defined to be substituted by some integer constant, its value is set to zero. For example, the following operator prints 3:
+<br><center>
+<br>        print x + 3
+<br></center>
+<br>
+</div><div align = left><br><b>Input</b></div><div align = left>
+<br>Input file contains the program on PL/Cool. All numbers in the expressions, including numbers that occur during expression evaluation, do not exceed 10<sup>9</sup> by their absolute value. The total number of "define" operators does not exceed 30000, the total number of "print" operators does not exceed 2000, the length of each line does not exceed 200 characters. 
+<br>
+<br>In case of division denominator is never zero, zero is not raised to zero power and power exponent is always non-negative.
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>
+<br>Output file must contain the output of all print operators in the order they are executed, one on a line.
+<br>
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>print (80+4*75)/(56-2^ 2^ 3)
+<br>print 30/-1
+<br>print 31%-5
+<br>print 0^3
+<br>print 2+2
+<br>define 2 3
+<br>print 2+2
+<br>define 3 x
+<br>print 2+2
+<br>define x 2
+<br>print 2+2
+<br>define 2 5
+<br>print 2+2
+<br>define x 7
+<br>print 2+2
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>-1
+<br>-30
+<br>-1
+<br>0
+<br>4
+<br>6
+<br>0
+<br>0
+<br>0
+<br>14
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=215'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=215'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Andrew Stankevich
+</td></tr><tr><td>Resource:</td><td>Petrozavodsk Summer Trainings 2003
+</td></tr><tr><td>Date:</td><td>2003-08-30
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:41:18</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=215 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+</html> 

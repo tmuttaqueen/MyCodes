@@ -1,0 +1,77 @@
+BODY {
+  FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11pt;
+}
+TD {
+  FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11pt
+}
+H4 {
+  color : #112255;
+};
+H5 {
+  color : #112255;
+};
+.main {
+  FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif; FONT-SIZE: 11pt
+}
+A:link {
+  COLOR: #224488; TEXT-DECORATION: none
+}
+A:hover {
+  COLOR: #AA0000;
+}
+A:visited {
+  TEXT-DECORATION: none
+}
+.dh {
+  font-size : 12 pt;
+}
+HR {
+  COLOR : #6587B9; HEIGHT : 1;
+};
+.frm {background-color: #F0F9FF; border: 1 solid #000000;}  
+.frm, small {font-family: Verdana, Arial; font-size: 11px;}
+
+UL {
+  margin: 1 1 1 10;
+  padding: 1 1 1 10;
+}
+
+LI {
+  margin: 1 1 1 10;
+}
+
+.frow {
+  background-color : #A0D5FF;
+}
+
+.btab {
+  color : #112255;
+}
+
+.inp {
+  color : #112255;;
+  border-color : #F0F5FF;
+  border-style : groove;
+}
+
+select {
+  color : #112255;
+  background-color : #FFFFFF;
+  border-color : #F0F5FF;
+  border-style : groove;
+}
+
+.st0 {
+  background-color : #E0E5EF;
+}
+
+.st1 {
+  background-color : #F3F8FF;
+}
+
+.tb {
+  border-width : 0;
+  padding : 0 0 0 0;
+  background-color : #000000;
+}
+

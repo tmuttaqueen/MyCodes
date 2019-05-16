@@ -1,0 +1,83 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=202 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>202. The Towers of Hanoi Revisited
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>You all must know the puzzle named ``The Towers of Hanoi''. The puzzle has three pegs and N discs of different radii, initially all disks are located on the first peg, ordered by their radii - the largest at the bottom, the mallest at the top. In a turn you may take the topmost disc from any peg and move it to another peg, the only rule says that you may not place the disc atop any smaller disk. The problem is to move all disks to the last peg making the smallest possible number of moves.
+<br>
+<br>There is the legend that somewhere in Tibet there is a monastery where monks tirelessly move disks from peg to peg solving the puzzle for 64 discs. The legend says that when they finish, the end of the world would come. 
+<br>
+<br>Since it is well known that to solve the puzzle you need to make 2<sup>N</sup>-1 moves, a small calculation shows that the world seems to be a quite safe place for a while. 
+<br>
+<br>However, recent archeologists discoveries have shown that the things can be a bit worse. The manuscript found in Tibet mountains says that the puzzle the monks are solving has not 3 but M pegs. This is the problem, because when increasing the number of pegs, the number of moves needed to move all discs from the first peg to the last one following the rules described, decreases dramatically.
+<br>
+<br>Calculate how many moves one needs to move N discs from the first peg to the last one when the puzzle has M pegs and provide the scenario for moving the discs.
+<br>
+</div><div align = left><br><b>Input</b></div><div align = left>Input file contains N and M (1 &le; N &le; 64, 4 &le; M &le; 65).
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>On the first line output L - the number of moves needed to solve the puzzle. Next L lines must contain the moves themselves. For each move print the line of the form
+<br><center>
+<br>    <tt>move &lt;disc-radius&gt; from &lt;source-peg&gt; to &lt;target-peg&gt;</tt>
+<br></center>
+<br>if the disc is moved to the empty peg or
+<br><center>
+<br>    <tt>move &lt;disc-radius&gt; from &lt;source-peg&gt; to &lt;target-peg&gt; atop &lt;target-top-disc-radius&gt;</tt>
+<br></center>
+<br>if the disc is moved atop some other disc.
+<br>
+<br>Disc radii are integer numbers from 1 to N, pegs are numbered from 1 to M.
+<br>
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>5 4
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>13
+<br>move 1 from 1 to 3
+<br>move 2 from 1 to 2
+<br>move 1 from 3 to 2 atop 2
+<br>move 3 from 1 to 4
+<br>move 4 from 1 to 3
+<br>move 3 from 4 to 3 atop 4
+<br>move 5 from 1 to 4
+<br>move 3 from 3 to 1
+<br>move 4 from 3 to 4 atop 5
+<br>move 3 from 1 to 4 atop 4
+<br>move 1 from 2 to 1
+<br>move 2 from 2 to 4 atop 3
+<br>move 1 from 1 to 4 atop 2
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=202'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=202'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Andrew Stankevich
+</td></tr><tr><td>Resource:</td><td>Petrozavodsk Summer Trainings 2003
+</td></tr><tr><td>Date:</td><td>2003-08-23
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:40:44</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=202 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+</html> 

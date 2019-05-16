@@ -1,0 +1,74 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=201 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>201. Non Absorbing DFA
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 65536
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>In the theory of compilers and languages <em>finite state machines</em>, also known as <em>finite automata</em> are widely used. Deterministic finite automation (DFA) is an ordered set &lt;&Sigma;, U, s, T, &phi;&gt; where &Sigma; is the finite set called <em>input alphabet</em>, U is the finite set of <em>states</em>, s from U is the <em>initial state</em>, T subset of U is the set of <em>terminal states</em> and &phi; : U &times; &Sigma; &rarr; U is the  <em>transition function</em>. 
+<br>
+<br>The input of the automation is the string &alpha; over &Sigma;. Initially the automation is in state s. Each step it reads the first character c of the input string and changes its state to &phi;(u, c) where u is the current state. After that the first character of the input string is removed and the step repeats. If when its input string is empty the automation is in the terminal state, it is said that it <em>accepts</em> the initial string &alpha;, in the other case it <em>rejects</em> it.
+<br>
+<br>In some cases to simplify the automation the concept of <em>nonabsorbing edges</em> is introduced. That is, in addition to &phi; the function &chi; : U &times; &Sigma; &rarr; {0, 1}  is introduced and when making a transition from some state u with some character c, the leading character is removed from the input string only if &chi;(u, c) = 0. If &chi;(u, c) = 1, the input string is kept intact and next transition is performed with the new state and the same character.
+<br>
+<br>It is said that such automation accepts some string &alpha;  if after a number of steps it transits to the terminal  state and the input string becomes empty. 
+<br>
+<br>Your task is given the DFA with nonabsorbing edges to compute the number of strings of the given length N that it accepts.
+<br>
+</div><div align = left><br><b>Input</b></div><div align = left>
+<br>The first line of the input file contains &Sigma; &mdash; a subset of the English alphabet, several different small letters. Next line contains K = | U | &mdash; the number of states of the automation (1 &le; K &le; 1000). Let states be numbered from 1 to K. Next line contains S (1 &le; S &le; K) &mdash; the initial state, followed by L = | T | &mdash; the number of terminal states and then L different integer numbers ranging from 1 to K &mdash; the numbers of terminal states. 
+<br>
+<br>Next K lines contain  | &Sigma; | integer numbers each and define &phi;. Next K lines define &chi; in a similar way.  The last line of the input file contains N (1 &le; N &le; 60).
+<br>
+</div><div align = left><br><b>Output</b></div><div align = left>
+<br>Output the only number &mdash; the number of different strings of length N over &Sigma; that the given DFA accepts.
+<br>
+<br>In the given example the two strings accepted by the automation are ``aaa'' and ``abb''.
+<br>
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>ab 
+<br>2 
+<br>1 1 2 
+<br>2 1 
+<br>1 2 
+<br>0 1 
+<br>0 0 
+<br>3
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>2
+<br>
+<br>
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=201'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=201'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Andrew Stankevich
+</td></tr><tr><td>Resource:</td><td>Petrozavodsk Summer Trainings 2003
+</td></tr><tr><td>Date:</td><td>2003-08-23
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:40:42</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=201 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+</html> 

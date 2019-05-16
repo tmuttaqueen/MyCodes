@@ -1,0 +1,57 @@
+                               <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=234 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+<head>
+<title>Saratov State University :: Online Contester</title>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META NAME="keywords" CONTENT="???">
+<META NAME="description" CONTENT="???">
+<meta name="google-site-verification" content="YvG5TvZLtlRLnK2EX22Dz815tDU7UKdDeXE_yJQp3cQ" />
+<meta name="verify-v1" content="MCzwwWrZt7qOC1A2HZusdjMbXjHR+zXtTCKpx2CRSEU=" />
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+
+  <link rel="stylesheet" href="http://acm.sgu.ru/templates.css" type="text/css">
+  <link rel="stylesheet" href="http://acm.sgu.ru/js/ui.datepicker.css" type="text/css">
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/jquery.example.js"></script>
+  <script type="text/javascript" language="javascript" src="http://acm.sgu.ru/js/ui.datepicker.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript"> 
+    /*Load jQuery if not already loaded*/ if(typeof jQuery == 'undefined'){ document.write("<script type=\"text/javascript\"   src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></"+"script>"); var __noconflict = true; } 
+    var IE6UPDATE_OPTIONS = {
+        icons_path: "http://static.ie6update.com/hosted/ie6update/images/"
+    }
+</script>
+<script type="text/javascript" src="http://static.ie6update.com/hosted/ie6update/ie6update.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="http://acm.sgu.ru/style-1024.css" type="text/css">
+</head>      <body bgcolor=#F3F6F9 style = 'font-size : 9pt;' text=#000000 link=#336699 vlink=#336699 alink=#336699><div align="center">
+    <div align=center><h4>234. Black-White King Strikes Back
+</h4></div><div align=center>time limit per test: 0.5 sec.<br>memory limit per test: 4096
+ KB</div><div align=center>input: standard<br>output: standard</div><br><br><br><div align = left>An irrecoverable event happened today's morning in the Chess World. Black King was killed. Of course, a letter about it was immediately sent to his old ally, White King. Frightened witnesses said that injuries on the King's body appeared from nothing. Axes began to move themselves and stroke King. After all, a strange force raised him up and threw down from a palace balcony mortally.
+<br>After White King had knew about it, he began to feel real danger. He understood that it's an awful deed of invisible Black-White King, who was considered dead after a legendary year, when Black and White King united to catch Black-White King, after what he was brutally hanged.
+<br>The danger seemed to be over, and Kings got back to their kingdoms and returned to their basic life. But now White King needs to defend his life without Black King. Fortunately, when Black King was still alive, he created a new chess piece, Guardian. This awful piece is always attacking all neighboring cells and a cell under itself, even if it's nothing (seen) in this cell (of course, that precautions were made special to defend from Black-White Kings, in case of their sudden appearance). It can't injure itself, but it kills all spirited, occupying the same or neighboring cell with this piece, including other Guardians. The cell is declared neighboring in the Chess World if it shares a common edge with the corresponding cell. It's well-known that retired Black King used these pieces to defend himself and his kingdom (a kingdom in the Chess World is a rectangle with M rows and N columns with some cells removed). For full protection, he had put Guardians in some cells of his kingdom, so that all cells were defended by at least one Guardian, and the number of Guardians used was minimal possible.
+<br>But, as a time had shown, it wasn't enough to protect Black King from an awful avenger. White King is now in horror. He realizes, that Black-White King had avoided punishment (it's not very amazing, because nobody had seen his corpse), and now, after killing Black King, he will want to kill White King too. So, really, this strange subject could be even another Black-White King, while nothing knows how they appear in the world (maybe except Black and White Kings. They can naturally know it, because they spent very much time together and shared the same secrets).
+<br>That's why White King urgently needs a new way of defending his kingdom, but while it's not developed yet, he wants to defend his kingdom maximally using Guardians. For this purpose he wants to put as many Guardians as possible. Of course, he understands that if he puts Guardians in every cell of his kingdom, they will kill each other immediately and the kingdom will become absolutely unsafe. As he feels a real danger, he is ready to do everything for the sake of kingdom's safety. You have a real chance to help White King to put maximal possible number of Guardians inside the kingdom, so that no one of them will kill another Guardian, and they will defend all the cells of the kingdom from invisible Black-White Kings and other genetic mutants.
+</div><div align = left><br><b>Input</b></div><div align = left>On the first line of input file there are two numbers M and N, (1&lt;=N,M&lt;=200). Then M lines of N numbers follow. I-th number in J-th line is 0 if respective cell in kingdom is removed or 1 in other case.
+</div><div align = left><br><b>Output</b></div><div align = left>On the first line of output file must be only one integer - maximal possible number of Guardians. Next M lines, N symbols each, represent the placement of K guardians in the kingdom. Symbol must be ".", if respective cell is empty, "G", if Guardian placed in it, or "#" if cell is removed from board. Note that you do not need to defend removed cells. If there are several solutions, output any one of them.
+</div><div align = left><br><b>Sample test(s)</b></div><div align = left><br>Input</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>3 5
+<br>1 1 1 0 0
+<br>1 0 0 0 1 
+<br>1 1 0 1 1
+</div><div align = left></pre></div><div align = left></font></div><div align = left><br>Output</div><div align = left><font face='Courier New'></div><div align = left><pre></div><div align = left>5
+<br>G.G##
+<br>.###G
+<br>G.#G.
+</div><div align = left></pre></div><div align = left></font></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/submit.php?problem=234'>[submit]</a> </div></div><div align = left><div align = right> <a href = 'http://acm.sgu.ru/forum.php?contest=0&amp;problem=234'>[forum]</a> </div></div><div align = left><hr></div><table align=left cellspacing=7><tr><td>Author:</td><td>Alexey Preobrajensky
+</td></tr><tr><td>Resource:</td><td>---
+</td></tr><tr><td>Date:</td><td>October, 2003
+</td></tr></table><br><br><br><br><br><br><br><br><br><br><br><table width=100% class=tb cellpadding=0 cellspacing=0><tr><td><table width=100% cellspacing=1 ><tr><td bgcolor=#FFFFFF> <table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=left>Server time: 2013-11-15 16:43:31</td><td align=right><a target=_top href='mailto:acm@sgu.ru'>Online Contester</a> Team &copy; 2002 - 2013. All rights reserved.</td></tr></table></td></tr></table></td></tr></table></div></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=234 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:40 GMT -->
+</html> 

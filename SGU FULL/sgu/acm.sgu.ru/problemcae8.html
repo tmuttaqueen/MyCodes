@@ -1,0 +1,80 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=541 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 541. BR Privatization </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>541. BR Privatization</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/>
+ Berland Railways (BR) is about to finish their existence as public property. Privatization is approaching. <br /><br />Currently, BR consists of <i>n</i> stations, some pairs are connected by bidirectional roads. Between each pair of stations there is no more than one road and any road connects exactly two different stations. <br /><br />Since each Berland railway network was developed independently, the topology of BR has an interesting form. BR consists of areas. Each area is a set of stations connected in a cycle in some order. Each area borders with exactly two different other areas and shares a single station with each of them. So exactly two stations in each area are shared by neighbouring areas. Thus, each station <ul> <li>either belongs to one area and has two roads going from it <li>or belongs to two neighbouring areas at the same time and has four roads going from it. </ul> Since the BR form a connected network, one can say that the areas also form a single cycle of areas.<br /><br />The figure below illustrates BR's possible structure. <br /><br /><div style="text-align: center; margin-bottom: 1em;"> <img src="http://acm.sgu.ru/problems/38/railways.bmp"/> </div>In this case BR has 14 stations, 18 roads and consists of four areas numbered from 1 to 4: <ul> <li>the first one borders with the second and the third and has four stations; <li>the second one borders with the first and the fourth and has six stations; <li>the third one borders with the first and the fourth and has three stations; <li>the fourth one borders with the second and the third and has five stations. </ul><br /><br />Two major companies are planning to buy most of the BR stations. However the antitrust committee has its own requirements. No two stations connected by a road should belong to the same company. It frustrates the owners of the first and the second company, they may not even be able to purchase all the stations without violating this condition. <br /><br />Both companies have decided to buy stations in such a way that the total number of stations purchased by both companies is maximal. If there are multiple ways for such distribution, they agree on any of them.<br /><br />Help them to carry out their plans, write a program that finds the desired buying plan. Note that the information about BR is given to you as a list of stations and roads, but the information about areas is not explicitly defined. <br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The first line contains a pair of integers <i>n</i>, <i>m</i> (6 &le; <i>n</i> &le; 10<sup>5</sup>; 9 &le; <i>m</i> &le; 10<sup>5</sup>), where <i>n</i> is the number of stations, and <i>m</i> is the number of roads. All stations are arbitrarily numbered from 1 to <i>n</i>. Then <i>m</i> lines follow, each containing a pair of integers <i>a</i><sub><i>i</i></sub>,<i>b</i><sub><i>i</i></sub> (1 &le; <i>a</i><sub><i>i</i></sub>,<i>b</i><sub><i>i</i></sub> &le; <i>n</i>; <i>a</i><sub><i>i</i></sub> &ne; <i>b</i><sub><i>i</i></sub>) and indicating the road that connects the stations with numbers <i>a</i><sub><i>i</i></sub> and <i>b</i><sub><i>i</i></sub>. The roads are given in arbitrary order. <br /><br />BR consists of at least three areas, each contains at least three stations. <br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>In the first line print non-negative integer number <i>n</i><sub>1</sub> &mdash; the number of stations to be purchased by the first company. Then <i>n</i><sub>1</sub> numbers follow &mdash; the numbers of stations to be purchased by the first company.<br /><br />In the second line print non-negative integer number <i>n</i><sub>2</sub> &mdash; the number of stations to be purchased by the second company. Then <i>n</i><sub>2</sub> numbers follow &mdash; the numbers of stations to be purchased by the second company.<br /><br />If there are multiple solutions, print any of them.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>14 18
+1 2
+1 4
+1 7
+1 8
+2 4
+3 4
+3 14
+4 5
+5 6
+6 14
+7 11
+7 10
+7 9
+8 9
+10 12
+11 14
+12 13
+13 14
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>6 2 5 7 8 12 14
+7 1 3 6 9 10 11 13
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>6 9
+1 2
+1 6
+2 6
+2 4
+2 3
+3 4
+4 6
+4 5
+5 6
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>2 2 5
+2 1 3
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>The first example corresponds to the illustration from the problem statement.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=541 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>

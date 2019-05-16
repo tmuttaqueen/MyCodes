@@ -1,0 +1,8 @@
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>PyParsing does a great job.  Paul McGuire has several scrips that are easy to adopt for various uses on the pyparsing wiki. (<a href="http://pyparsing.wikispaces.com/Examples" rel="nofollow noreferrer">http://pyparsing.wikispaces.com/Examples</a>) One reason for investing a little time with pyparsing is that he has also written a very brief very well organized O'Reilly Short Cut manual that is also inexpensive.</p>
+
+<p>Having said that, I use BeautifulSOup a lot and it is not that hard to deal with the entitites issues, you can convert them before you run BeautifulSoup.  </p>
+
+<p>Goodluck   </p>

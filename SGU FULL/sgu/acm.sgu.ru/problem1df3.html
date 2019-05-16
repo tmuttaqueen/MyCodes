@@ -1,0 +1,71 @@
+                               <html>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=551 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+<head><title> SSU Online Contester :: 551. Preparing Problem </title><META http-equiv='content-type' content='text/html; charset=windows-1251'><link rel=stylesheet type=text/css href='http://acm.sgu.ru/texstyle.css'></head><body><div style='line-height:1.3em;'><div align=center><h4>551. Preparing Problem</h4></div><div align=center>Time limit per test: 2
+ second(s)<br />Memory limit: 262144 
+ kilobytes</div><div align=center>input: standard<br />output: standard</div><br/><br /><br />It is not easy to prepare a problem for a programming contest. Petya and Vasya decided that problem "A+B" needs at least <i>n</i> distinct solutions to be written. It doesn't matter how many solutions each of them will write, they need to write at least <i>n</i> solutions in total. We know that Petya needs <i>t</i><sub>1</sub> units of time to write a solution, and Vasya needs <i>t</i><sub>2</sub> units of time. They start to work simultaneously at time 0. Thus, for example, Petya finishes writing his first solution at time <i>t</i><sub>1</sub>, his second solution at 2 &middot; <i>t</i><sub>1</sub> and so on.<br /><br />Petya and Vasya are working by the same algorithm. Each time Petya (Vasya) finishes writing a solution, he checks on how many solutions have already been written up to the current time moment <i>t</i>. Ready solutions are the solutions that have been fully written by this time. The solutions that were fully finished exactly at time <i>t</i> are also considered ready. If the number of such solutions is strictly less than <i>n</i>, then Petya (Vasya) starts writing the next solution. If a member of the jury began working on a problem, he doesn't stop working under any circumstances, and he will surely finish it.<br /><br />Petya and Vasya realize that if they act on this algorithm, they will not necessarily write exactly <i>n</i> solutions in total. Maybe they'll write more solutions.<br /><br />Considering that Petya and Vasya work non-stop, find, how many solutions they wrote in total and the moment when the latest solution was finished. The latest solution is one which was finished last.<br /><br /><div align = left style='margin-top:1em;'><b>Input</b></div>The only input line contains three integers <i>n</i>, <i>t</i><sub>1</sub> and <i>t</i><sub>2</sub> (1 &le; <i>n</i>, <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub> &le; 5000).<br /><br /><div align = left style='margin-top:1em;'><b>Output</b></div>Print two integers &mdash; <i>m</i> and <i>f</i>, where <i>m</i> is the number of written solutions, and <i>f</i> is the moment when the last solution was finished.<br /><br /><div align = left style='margin-top:1em;'><b>Example(s)</b></div>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>5 2 3
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>5 6
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>5 2 4
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>6 8
+</pre>
+ </td>
+ </tr>
+</table><br>
+<table cellspacing=0 cellpadding=4
+ style='border-collapse:collapse; border: 1px black solid;'>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample input</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>sample output</pre>
+ </td>
+ </tr>
+ <tr >
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>3 30 50
+</pre>
+ </td>
+ <td width=400 valign=top style='border-collapse:collapse; border: 1px black solid;'>
+ <pre>4 100
+</pre>
+ </td>
+ </tr>
+</table><br>
+<br /><br /><div align = left style='margin-top:1em;'><b>Note</b></div>In the first sample Petya finished his solutions at time 2, 4 and 6, and Vasya &mdash; at time 3 and 6. They finished writing their last solutions simultaneously, at time 6, and at this exact moment they already had the total of 5 written solutions and stopped working.<br /><br /> </div><hr><table width=100% cellpadding=0 cellspacing=0 border=0><tr style='background-color : #FFFFFF;'><td align=right><a target=_top href='mailto:acm@cs.sgu.ru'>Online Contester</a> Team &copy; 2002 - 2010. All rights reserved.</td></tr></table></body>
+<!-- Mirrored from acm.sgu.ru/problem.php?contest=0&problem=551 by HTTrack Website Copier/3.x [XR&CO'2008], Fri, 15 Nov 2013 13:22:43 GMT -->
+</html>
